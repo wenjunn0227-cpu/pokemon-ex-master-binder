@@ -6,9 +6,10 @@ body{margin:0;font-family:Inter,system-ui;background:#0b0f14;color:#f5f7fa}.app{
 </style></head><body>
 <div class="app"><aside class="side"><div class="brand">Pokémon <span>ex</span> Binder</div><p class="meta">Grey = missing · lit = collected</p><div id="series"></div></aside><main class="main"><div class="head"><div><h1 id="title"></h1><div class="meta" id="meta"></div></div><div id="global" class="meta"></div></div><div id="grid" class="grid"></div><div class="pager"><button class="btn" id="prev">‹ Prev</button><span id="page" class="meta"></span><button class="btn" id="next">Next ›</button></div></main></div>
 <script src="cards_1.js"></script>
+<script src="cards_2.js"></script>
 <script>
 const cards=(window.CARD_CHUNKS||[]).flat();
-const setMap={"Scarlet & Violet":"sv1","Paldea Evolved":"sv2","Obsidian Flames":"sv3","151":"sv3pt5","Paradox Rift":"sv4","Paldean Fates":"sv4pt5"};
+const setMap={"Scarlet & Violet":"sv1","Paldea Evolved":"sv2","Obsidian Flames":"sv3","151":"sv3pt5","Paradox Rift":"sv4","Paldean Fates":"sv4pt5","Temporal Forces":"sv5","Twilight Masquerade":"sv6","Shrouded Fable":"sv6pt5","Stellar Crown":"sv7","Surging Sparks":"sv8","Prismatic Evolutions":"sv8pt5","Journey Together":"sv9","Destined Rivals":"sv10"};
 const order=[...new Set(cards.map(x=>x.series))];
 let state={series:order[0],page:0,owned:JSON.parse(localStorage.getItem("owned")||"{}")};
 const key=c=>c.series+"|"+c.number+"|"+c.name;
