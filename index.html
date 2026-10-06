@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pokémon ex Master Binder</title>
+<style>
+body{margin:0;font-family:Inter,system-ui;background:#0b0f14;color:#f5f7fa}.app{display:grid;grid-template-columns:280px 1fr;min-height:100vh}.side{padding:18px;background:#10151d;border-right:1px solid #252b36;overflow:auto}.brand{font-size:28px;font-weight:800}.brand span{color:#d8b36a}.sbtn{width:100%;margin:4px 0;padding:10px;border-radius:10px;border:1px solid transparent;background:#171d27;color:white;text-align:left;cursor:pointer}.sbtn.on{border-color:#d8b36a;background:#211d16}.main{padding:22px}.head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;background:#e8edf3;padding:18px;border-radius:18px}.pocket{aspect-ratio:63/88;background:#fff;border-radius:14px;padding:7px}.card{width:100%;height:100%;position:relative;background:#111;border-radius:11px;overflow:hidden;cursor:pointer}.card img{width:100%;height:100%;object-fit:contain;display:block}.card.missing img{filter:grayscale(1) brightness(.45);opacity:.7}.card.owned{box-shadow:0 0 0 3px #73e6a2,0 0 25px #73e6a2}.dot{position:absolute;right:8px;top:8px;width:14px;height:14px;border-radius:50%;background:#777}.owned .dot{background:#73e6a2;box-shadow:0 0 12px #73e6a2}.pager{display:flex;gap:10px;justify-content:center;margin-top:18px}.btn{padding:10px 14px;border:1px solid #303846;border-radius:10px;background:#171d27;color:white}.meta{color:#9ca6b6;font-size:13px}@media(max-width:800px){.app{grid-template-columns:1fr}.side{max-height:32vh}.grid{grid-template-columns:repeat(2,1fr)}}
+</style></head><body>
+<div class="app"><aside class="side"><div class="brand">Pokémon <span>ex</span> Binder</div><p class="meta">Grey = missing · lit = collected</p><div id="series"></div></aside><main class="main"><div class="head"><div><h1 id="title"></h1><div class="meta" id="meta"></div></div><div id="global" class="meta"></div></div><div id="grid" class="grid"></div><div class="pager"><button class="btn" id="prev">‹ Prev</button><span id="page" class="meta"></span><button class="btn" id="next">Next ›</button></div></main></div>
+<script src="cards_1.js"></script>
+<script>
+const cards=(window.CARD_CHUNKS||[]).flat();
+const setMap={"Scarlet & Violet":"sv1","Paldea Evolved":"sv2","Obsidian Flames":"sv3","151":"sv3pt5","Paradox Rift":"sv4","Paldean Fates":"sv4pt5"};
+const order=[...new Set(cards.map(x=>x.series))];
+let state={series:order[0],page:0,owned:JSON.parse(localStorage.getItem("owned")||"{}")};
+const key=c=>c.series+"|"+c.number+"|"+c.name;
+function imgsrc(c){let n=c.number.includes("/")?parseInt(c.number.split("/")[0],10):parseInt(c.number.replace(/^[A-Z]+\s*/,""),10);let set=c.number.startsWith("SVP")?"svp":setMap[c.series];return set?("https://images.pokemontcg.io/"+set+"/"+n+"_hires.png"):"";}
+function render(){
+  let side="";
+  for(const s of order){let cs=cards.filter(c=>c.series===s),o=cs.filter(c=>state.owned[key(c)]||c.owned).length;side+="<button class=\"sbtn "+(s===state.series?"on":"")+"\" data-series=\""+s.replace(/&/g,"&amp;").replace(/"/g,"&quot;")+"\">"+s+"<span style=\"float:right\">"+o+"/"+cs.length+"</span></button>";}
+  document.getElementById("series").innerHTML=side;
+  document.querySelectorAll(".sbtn").forEach(b=>b.onclick=()=>{state.series=b.dataset.series;state.page=0;render();});
+  let cs=cards.filter(c=>c.series===state.series),pages=Math.max(1,Math.ceil(cs.length/9));state.page=Math.min(state.page,pages-1);let pc=cs.slice(state.page*9,state.page*9+9);
+  document.getElementById("title").textContent=state.series;
+  let own=cs.filter(c=>state.owned[key(c)]||c.owned).length;document.getElementById("meta").textContent=own+" / "+cs.length+" collected";
+  document.getElementById("page").textContent=(state.page+1)+" / "+pages;
+  let allOwned=cards.filter(c=>state.owned[key(c)]||c.owned).length;document.getElementById("global").textContent=allOwned+" / "+cards.length+" total";
+  let html="";for(const c of pc){let o=state.owned[key(c)]||c.owned;html+="<div class=\"pocket\"><div class=\"card "+(o?"owned":"missing")+"\" data-key=\""+encodeURIComponent(key(c))+"\"><img src=\""+imgsrc(c)+"\" alt=\"card\"><div class=\"dot\"></div></div></div>";}document.getElementById("grid").innerHTML=html;
+  document.querySelectorAll(".card").forEach(el=>el.onclick=()=>{let k=decodeURIComponent(el.dataset.key);state.owned[k]=!state.owned[k];localStorage.setItem("owned",JSON.stringify(state.owned));render();});
+}
+document.getElementById("prev").onclick=()=>{let cs=cards.filter(c=>c.series===state.series),p=Math.max(1,Math.ceil(cs.length/9));state.page=(state.page-1+p)%p;render();};
+document.getElementById("next").onclick=()=>{let cs=cards.filter(c=>c.series===state.series),p=Math.max(1,Math.ceil(cs.length/9));state.page=(state.page+1)%p;render();};
+render();
+</script></body></html>
