@@ -21,6 +21,7 @@ const isOwned=c=>state.owned[key(c)]||c.owned;
 function cardNum(c){return c.number.includes("/")?parseInt(c.number.split("/")[0],10):parseInt(c.number.replace(/^[A-Z]+\s*/,""),10)}
 function sources(c){
   const n=cardNum(c),out=[];
+  if(c.imageId){out.push("https://images.scrydex.com/pokemon/"+c.imageId+"/large");return out;}
   if(c.number.startsWith("SVP")){out.push("https://images.scrydex.com/pokemon/svp-"+n+"/large");out.push("https://images.pokemontcg.io/svp/"+n+"_hires.png");}
   else if(c.number.startsWith("MEP")){out.push("https://images.scrydex.com/pokemon/mep-"+n+"/large");}
   else{
