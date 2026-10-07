@@ -7,4 +7,4 @@ window.CARD_CHUNKS=window.CARD_CHUNKS||[];window.CARD_CHUNKS.push([
 {"series":"Ascended Heroes","era":"Mega Evolution","name":"Mega Meganium ex","number":"MEP 034","type":"Promo ex","owned":false,"note":"Mega Meganium ex Box"},
 {"series":"Ascended Heroes","era":"Mega Evolution","name":"Mega Emboar ex","number":"MEP 035","type":"Promo ex","owned":false,"note":"Mega Emboar ex Box"},
 {"series":"Ascended Heroes","era":"Mega Evolution","name":"Mega Feraligatr ex","number":"MEP 036","type":"Promo ex","owned":false,"note":"Mega Feraligatr ex Box"}
-]);
+,{"series":"Prismatic Evolutions","era":"Scarlet & Violet","name":"Kyogre ex","number":"SVP 178","type":"Promo ex","owned":false,"note":"Azure Legends Tins"}]);
