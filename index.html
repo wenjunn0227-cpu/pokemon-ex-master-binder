@@ -3,6 +3,41 @@
 <title>Pokémon ex Master Binder</title>
 <style>
 body{margin:0;font-family:Inter,system-ui;background:#0b0f14;color:#f5f7fa}.app{display:grid;grid-template-columns:280px 1fr;min-height:100vh}.side{padding:18px;background:#10151d;border-right:1px solid #252b36;overflow:auto}.brand{font-size:28px;font-weight:800}.brand span{color:#d8b36a}.collection-btn{width:100%;margin:14px 0 4px;padding:12px;border-radius:12px;border:1px solid #3b4656;background:#18202b;color:#fff;text-align:left;cursor:pointer;font-weight:800}.collection-btn.on{border-color:#73e6a2;background:#13251c;box-shadow:0 0 0 1px rgba(115,230,162,.2) inset}.era-label{margin:16px 0 7px;color:#d8b36a;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.sbtn{width:100%;margin:4px 0;padding:10px;border-radius:10px;border:1px solid transparent;background:#171d27;color:white;text-align:left;cursor:pointer}.sbtn.on{border-color:#d8b36a;background:#211d16}.main{padding:22px}.head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;background:#e8edf3;padding:18px;border-radius:18px}.pocket{aspect-ratio:63/88;background:#fff;border-radius:14px;padding:7px}.card{width:100%;height:100%;position:relative;background:#111;border-radius:11px;overflow:hidden;cursor:pointer}.card img{width:100%;height:100%;object-fit:contain;display:block}.card.missing img{filter:grayscale(1) brightness(.45);opacity:.7}.card.owned{box-shadow:0 0 0 3px #73e6a2,0 0 25px #73e6a2}.dot{position:absolute;right:8px;top:8px;width:14px;height:14px;border-radius:50%;background:#777}.owned .dot{background:#73e6a2;box-shadow:0 0 12px #73e6a2}.series-tag{position:absolute;left:8px;bottom:8px;background:rgba(0,0,0,.72);color:#fff;padding:4px 7px;border-radius:999px;font-size:10px;font-weight:700;max-width:78%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.pager{display:flex;gap:10px;justify-content:center;margin-top:18px}.btn{padding:10px 14px;border:1px solid #303846;border-radius:10px;background:#171d27;color:white}.meta{color:#9ca6b6;font-size:13px}.fallback{display:grid;place-items:center;height:100%;padding:16px;text-align:center;color:#b7c0cf;font-size:12px}.fallback b{display:block;color:#fff;margin-bottom:6px}.empty{grid-column:1/-1;color:#5f6978;text-align:center;padding:70px 20px;font-weight:700}@media(max-width:800px){.app{grid-template-columns:1fr}.side{max-height:32vh}.grid{grid-template-columns:repeat(2,1fr)}}
+
+/* Responsive binder sizing: keep every card inside its pocket and the pager below. */
+*,*::before,*::after{box-sizing:border-box}
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+.app,.main,.head,.grid,.pocket,.card{min-width:0}
+.grid{align-items:start}
+.pocket{width:100%;height:auto;min-height:0;aspect-ratio:63 / 88;overflow:visible}
+.card{width:100%;height:100%;aspect-ratio:63 / 88}
+.card img{max-width:100%;max-height:100%}
+.pager{position:relative;clear:both;flex-wrap:wrap;align-items:center}
+@media(max-width:800px){
+  .app{display:block;min-height:100vh}
+  .side{max-height:none;overflow:visible;padding:14px 14px 12px;border-right:0;border-bottom:1px solid #252b36}
+  #series{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+  .era-label{grid-column:1/-1;margin:9px 0 2px}
+  .sbtn{margin:0;padding:9px 8px;font-size:12px;line-height:1.4}
+  .sbtn span{float:none!important;display:block;color:#9ca6b6;margin-top:2px}
+  .main{padding:14px 10px 24px;width:100%;overflow:hidden}
+  .head{gap:12px;align-items:start;flex-wrap:wrap;margin-bottom:14px}
+  .head h1{font-size:clamp(22px,6vw,30px);margin:0 0 5px;overflow-wrap:anywhere}
+  #global{font-size:12px}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:12px;border-radius:14px;overflow:visible}
+  .pocket{padding:5px;border-radius:10px}
+  .card{border-radius:8px}
+  .card.owned{box-shadow:0 0 0 2px #73e6a2,0 0 12px rgba(115,230,162,.45)}
+  .dot{width:11px;height:11px;top:5px;right:5px}
+  .series-tag{font-size:9px;left:4px;bottom:4px;padding:3px 5px;max-width:85%}
+  .pager{margin-top:18px;padding-bottom:16px}
+  .btn{min-height:42px;touch-action:manipulation}
+}
+@media(max-width:380px){
+  .grid{gap:8px;padding:8px}
+  .pocket{padding:4px}
+  #series{gap:5px}
+}
 </style></head><body>
 <div class="app"><aside class="side"><div class="brand">Pokémon <span>ex</span> Binder</div><p class="meta">Grey = missing · lit = collected</p><button id="collectionBtn" class="collection-btn">★ My Collection <span id="collectionCount" style="float:right"></span></button><div id="series"></div></aside><main class="main"><div class="head"><div><h1 id="title"></h1><div class="meta" id="meta"></div></div><div id="global" class="meta"></div></div><div id="grid" class="grid"></div><div class="pager"><button class="btn" id="prev">‹ Prev</button><span id="page" class="meta"></span><button class="btn" id="next">Next ›</button></div></main></div>
 <script src="cards_1.js?v=20261007a"></script>
