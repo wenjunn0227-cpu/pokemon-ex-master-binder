@@ -44,12 +44,12 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 <script src="cards_2.js?v=20261007c"></script>
 <script src="cards_3.js?v=20261007c"></script>
 <script src="cards_4.js?v=20261007c"></script>
-<script src="cards_5.js?v=20261007c"></script>
+<script src="cards_5.js?v=20261007d"></script>
 <script>
 const cards=(window.CARD_CHUNKS||[]).flat();
 const scrydexMap={"Scarlet & Violet":"sv1","Paldea Evolved":"sv2","Obsidian Flames":"sv3","151":"sv3pt5","Paradox Rift":"sv4","Paldean Fates":"sv4pt5","Temporal Forces":"sv5","Twilight Masquerade":"sv6","Shrouded Fable":"sv6pt5","Stellar Crown":"sv7","Surging Sparks":"sv8","Prismatic Evolutions":"sv8pt5","Journey Together":"sv9","Destined Rivals":"sv10","White Flare":"rsv10pt5","Black Bolt":"zsv10pt5","Mega Evolution":"me1","Phantasmal Flames":"me2","Ascended Heroes":"me2pt5","Perfect Order":"me3","Chaos Rising":"me4","Pitch Black":"me5","30th Celebration":"me55"};
 const ptcgMap={"Scarlet & Violet":"sv1","Paldea Evolved":"sv2","Obsidian Flames":"sv3","151":"sv3pt5","Paradox Rift":"sv4","Paldean Fates":"sv4pt5","Temporal Forces":"sv5","Twilight Masquerade":"sv6","Shrouded Fable":"sv6pt5","Stellar Crown":"sv7","Surging Sparks":"sv8","Prismatic Evolutions":"sv8pt5","Journey Together":"sv9","Destined Rivals":"sv10"};
-const order=["Scarlet & Violet","Paldea Evolved","Obsidian Flames","151","Paradox Rift","Paldean Fates","Temporal Forces","Twilight Masquerade","Shrouded Fable","Stellar Crown","Surging Sparks","Prismatic Evolutions","Journey Together","Destined Rivals","White Flare","Black Bolt","Mega Evolution","Phantasmal Flames","Ascended Heroes","Perfect Order","Chaos Rising","Pitch Black","30th Celebration"];
+const order=["Scarlet & Violet","Paldea Evolved","Obsidian Flames","151","Paradox Rift","Pokémon TCG Classic","Paldean Fates","Temporal Forces","Twilight Masquerade","Shrouded Fable","Stellar Crown","Surging Sparks","Prismatic Evolutions","Journey Together","Destined Rivals","White Flare","Black Bolt","Mega Evolution","Phantasmal Flames","Ascended Heroes","Perfect Order","Chaos Rising","Pitch Black","30th Celebration"];
 const seriesRank=new Map(order.map((s,i)=>[s,i]));
 function numValue(c){
   if(c.number.startsWith("SVP")) return 100000+parseInt(c.number.replace(/\D/g,""),10);
@@ -66,6 +66,7 @@ const isOwned=c=>Object.prototype.hasOwnProperty.call(state.owned,key(c))?state.
 function cardNum(c){return c.number.includes("/")?parseInt(c.number.split("/")[0],10):parseInt(c.number.replace(/^[A-Z]+\s*/,""),10)}
 function sources(c){
   const n=cardNum(c),out=[];
+  if(c.imageUrl){out.push(c.imageUrl);return out;}
   if(c.imageId){out.push("https://images.scrydex.com/pokemon/"+c.imageId+"/large");return out;}
   if(c.number.startsWith("SVP")){out.push("https://images.scrydex.com/pokemon/svp-"+n+"/large");out.push("https://images.pokemontcg.io/svp/"+n+"_hires.png");}
   else if(c.number.startsWith("MEP")){out.push("https://images.scrydex.com/pokemon/mep-"+n+"/large");}
