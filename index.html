@@ -43,14 +43,14 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 </style></head><body>
 <div class="app"><aside class="side"><div class="brand">Pokémon <span>ex</span> Binder</div><p class="meta">Grey = missing · lit = collected</p><button id="collectionBtn" class="collection-btn">★ My Collection <span id="collectionCount" style="float:right"></span></button><div id="series"></div></aside><main class="main"><div class="head"><div><h1 id="title"></h1><div class="meta" id="meta"></div></div><div id="global" class="meta"></div></div><div id="grid" class="grid"></div><div class="pager"><button class="btn" id="prev">‹ Prev</button><span id="page" class="meta"></span><button class="btn" id="next">Next ›</button></div></main></div>
 <script>
-document.querySelector('.side .meta').insertAdjacentHTML('afterend','<button id="binderBtn" class="collection-btn">▦ 實體 Binder · 3×3</button><details class="audit-info"><summary>格位說明與核對範圍</summary><p>格位從左至右、由上至下：</p><div class="position-guide"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></div><p>每一面算一頁，正面第 1 頁、背面第 2 頁。主系列連續排列，不另外空頁；Promo 獨立成 SVP Promos 與 MEP Promos，放在主系列後方。搜尋與已收藏清單的畫面頁碼不影響實體位置。</p><p id="auditSummary">核對版 v1 · 405 張 / 45 頁 · 2026-10-08 核對，發售範圍截至 2026-10-07。收錄普通 ex、普通版 Black Star Promo ex（獨立分類）、2023 Classic 三張 ex，以及 30th 復刻三張 EX。排除 Full Art、SIR、Gold、Shiny Full Art、Mega Attack Rare、Jumbo。相同卡號的印章與閃膜變體共用一格。</p><p>現有位置固定；未來新卡追加至空格，不自動插入前面的系列。</p><a href="audit.html" target="_blank" rel="noopener">查看核對紀錄與來源</a></details>');
+document.querySelector('.side .meta').insertAdjacentHTML('afterend','<button id="binderBtn" class="collection-btn">▦ 實體 Binder · 3×3</button><details class="audit-info"><summary>格位說明與核對範圍</summary><p>格位從左至右、由上至下：</p><div class="position-guide"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></div><p>每一面算一頁，正面第 1 頁、背面第 2 頁。主系列依原格位排列；移除大寫 EX 後的三格保留為空格；Promo 獨立成 SVP Promos 與 MEP Promos，放在主系列後方。搜尋與已收藏清單的畫面頁碼不影響實體位置。</p><p id="auditSummary">核對版 v2 · 402 張 / 45 頁 · 2026-10-08 核對，發售範圍截至 2026-10-07。收錄普通 ex、普通版 Black Star Promo ex（獨立分類）、2023 Classic 三張小寫 ex；不收錄大寫 EX／Classic Collection 復刻 EX。排除 Full Art、SIR、Gold、Shiny Full Art、Mega Attack Rare、Jumbo。相同卡號的印章與閃膜變體共用一格。</p><p>現有位置固定；未來新卡追加至空格，不自動插入前面的系列。</p><a href="audit.html" target="_blank" rel="noopener">查看核對紀錄與來源</a></details>');
 document.getElementById('grid').insertAdjacentHTML('beforebegin','<div class="toolbar"><input id="search" type="search" placeholder="搜尋卡名、卡號或系列…" aria-label="搜尋卡片"><form id="jumpForm"><label for="jumpPage" class="meta" style="align-self:center">跳至實體頁</label><input id="jumpPage" type="number" min="1" max="60" value="1" aria-label="實體頁碼"><button class="btn" type="submit">Go</button></form></div>');
 </script>
-<script src="cards_1.js?v=20261008v1"></script>
-<script src="cards_2.js?v=20261008v1"></script>
-<script src="cards_3.js?v=20261008v1"></script>
-<script src="cards_4.js?v=20261008v1"></script>
-<script src="cards_5.js?v=20261008v1"></script>
+<script src="cards_1.js?v=20261008v2"></script>
+<script src="cards_2.js?v=20261008v2"></script>
+<script src="cards_3.js?v=20261008v2"></script>
+<script src="cards_4.js?v=20261008v2"></script>
+<script src="cards_5.js?v=20261008v2"></script>
 <script>
 const cards=(window.CARD_CHUNKS||[]).flat();
 const scrydexMap={"Scarlet & Violet":"sv1","Paldea Evolved":"sv2","Obsidian Flames":"sv3","151":"sv3pt5","Paradox Rift":"sv4","Paldean Fates":"sv4pt5","Temporal Forces":"sv5","Twilight Masquerade":"sv6","Shrouded Fable":"sv6pt5","Stellar Crown":"sv7","Surging Sparks":"sv8","Prismatic Evolutions":"sv8pt5","Journey Together":"sv9","Destined Rivals":"sv10","White Flare":"rsv10pt5","Black Bolt":"zsv10pt5","Mega Evolution":"me1","Phantasmal Flames":"me2","Ascended Heroes":"me2pt5","Perfect Order":"me3","Chaos Rising":"me4","Pitch Black":"me5","30th Celebration":"me55"};
@@ -71,6 +71,14 @@ function positionLabel(c){const p=position(c);return '第 '+p.page+' 頁 · 第 
 function keySeed(c){return c.series+"|"+c.number+"|"+c.name;}
 let savedOwned={};try{savedOwned=JSON.parse(localStorage.getItem('owned')||'{}');if(!savedOwned||typeof savedOwned!=='object'||Array.isArray(savedOwned))savedOwned={};}catch(e){}
 for(const c of cards){for(const alias of c.previousKeys||[]){if(!Object.prototype.hasOwnProperty.call(savedOwned,keySeed(c))&&Object.prototype.hasOwnProperty.call(savedOwned,alias))savedOwned[keySeed(c)]=savedOwned[alias];}}
+// The owner confirmed all 12 ordinary 30th ex targets collected on 2026-10-08.
+// Apply once so subsequent manual unchecks remain respected.
+const collectionConfirmation='30th-lowercase-complete-20261008';
+if(localStorage.getItem(collectionConfirmation)!=='1'){
+  for(const c of cards.filter(c=>c.series==='30th Celebration'))savedOwned[keySeed(c)]=true;
+  localStorage.setItem('owned',JSON.stringify(savedOwned));
+  localStorage.setItem(collectionConfirmation,'1');
+}
 let state={series:order[0],page:0,mode:"binder",query:"",owned:savedOwned};
 const key=c=>keySeed(c);
 const isOwned=c=>Object.prototype.hasOwnProperty.call(state.owned,key(c))?state.owned[key(c)]:!!c.owned;

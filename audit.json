@@ -1,5 +1,5 @@
 {
-  "version": "2026-10-08-v1",
+  "version": "2026-10-08-v2",
   "reviewedAt": "2026-10-08",
   "releaseCutoff": "2026-10-07",
   "status": "Audited snapshot within the explicitly defined scope; not a guarantee of all future cards or all print variants.",
@@ -10,8 +10,7 @@
     "include": [
       "Main expansion ordinary Double Rare ex / Mega ex",
       "Ordinary overlapping ex Black Star promos",
-      "Three 2023 Pokémon TCG Classic deck ex",
-      "Three overlapping 30th Celebration Classic Collection EX reprints"
+      "Three 2023 Pokémon TCG Classic deck ex"
     ],
     "exclude": [
       "Full Art",
@@ -22,16 +21,16 @@
       "Mega Attack Rare artwork",
       "Jumbo",
       "Vintage framed ex such as the 30th Scizor ex reprint",
-      "Japanese and other non-English printings"
+      "Japanese and other non-English printings",
+      "Uppercase EX, including the three 30th Celebration Classic Collection EX reprints"
     ],
     "variantRule": "Same set/card number with stamp, foil, or regional finish differences shares one target. Different card numbers are separate targets."
   },
-  "total": 405,
+  "total": 402,
   "typeCounts": {
     "Regular ex": 329,
-    "Promo ex": 70,
     "Classic Deck ex": 3,
-    "Classic Collection EX": 3
+    "Promo ex": 70
   },
   "corrections": {
     "added": [
@@ -79,6 +78,29 @@
         "number": "SVP 204",
         "name": "Cynthia's Garchomp ex",
         "reason": "Full Art promo"
+      }
+    ],
+    "removedByOwnerScope": [
+      {
+        "name": "Genesect-EX",
+        "number": "11/101",
+        "series": "30th Celebration",
+        "formerSlot": 333,
+        "reason": "Owner collects modern lowercase ex only; uppercase EX reprints excluded."
+      },
+      {
+        "name": "Rayquaza-EX",
+        "number": "85/124",
+        "series": "30th Celebration",
+        "formerSlot": 334,
+        "reason": "Owner collects modern lowercase ex only; uppercase EX reprints excluded."
+      },
+      {
+        "name": "M Gardevoir-EX",
+        "number": "106/160",
+        "series": "30th Celebration",
+        "formerSlot": 335,
+        "reason": "Owner collects modern lowercase ex only; uppercase EX reprints excluded."
       }
     ]
   },
@@ -5256,42 +5278,6 @@
       ]
     },
     {
-      "key": "30th Celebration|11/101|Genesect-EX",
-      "name": "Genesect-EX",
-      "number": "11/101",
-      "series": "30th Celebration",
-      "slot": 333,
-      "page": 37,
-      "pocket": 9,
-      "sources": [
-        "https://www.serebii.net/card/30thcelebration/H20.shtml"
-      ]
-    },
-    {
-      "key": "30th Celebration|85/124|Rayquaza-EX",
-      "name": "Rayquaza-EX",
-      "number": "85/124",
-      "series": "30th Celebration",
-      "slot": 334,
-      "page": 38,
-      "pocket": 1,
-      "sources": [
-        "https://www.serebii.net/card/30thcelebration/H19.shtml"
-      ]
-    },
-    {
-      "key": "30th Celebration|106/160|M Gardevoir-EX",
-      "name": "M Gardevoir-EX",
-      "number": "106/160",
-      "series": "30th Celebration",
-      "slot": 335,
-      "page": 38,
-      "pocket": 2,
-      "sources": [
-        "https://www.serebii.net/card/30thcelebration/H21.shtml"
-      ]
-    },
-    {
       "key": "SVP Promos|SVP 004|Mimikyu ex",
       "name": "Mimikyu ex",
       "number": "SVP 004",
@@ -6135,7 +6121,7 @@
       ]
     }
   ],
-  "layoutNote": "Promos are separate sets (SVP Promos, then MEP Promos) after the ordinary main sets; each promo set sorts by promo number. This layout supersedes the unpublished mixed-series draft.",
+  "layoutNote": "Promos are separate sets (SVP Promos, then MEP Promos) after the ordinary main sets; each promo set sorts by promo number. This layout supersedes the unpublished mixed-series draft. v2 removes uppercase EX at slots 333–335 and leaves these positions empty; all 402 remaining positions are unchanged.",
   "promoSets": [
     {
       "series": "SVP Promos",
@@ -6147,5 +6133,17 @@
       "total": 18,
       "startSlot": 388
     }
-  ]
+  ],
+  "reservedSlots": [
+    333,
+    334,
+    335
+  ],
+  "collectionConfirmation": {
+    "series": "30th Celebration",
+    "collected": 12,
+    "total": 12,
+    "confirmedAt": "2026-10-08",
+    "source": "Owner confirmed complete after excluding uppercase EX."
+  }
 }
