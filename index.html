@@ -38,18 +38,24 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
   .pocket{padding:4px}
   #series{gap:5px}
 }
+.pocket{aspect-ratio:auto}.card{height:auto;display:block;border:0;padding:0;color:inherit;font:inherit}.card-caption{color:#18202b;padding:8px 2px 3px;line-height:1.4}.card-caption strong,.card-caption span,.card-caption small{display:block}.card-caption strong{font-size:14px}.card-caption span{font-size:12px;margin-top:3px}.card-caption small{font-size:10px;color:#596579;margin-top:2px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}.toolbar input{background:#171d27;border:1px solid #3b4656;color:#fff;border-radius:10px;padding:11px;min-width:0}.toolbar #search{flex:1;min-width:200px}.toolbar form{display:flex;gap:6px}.toolbar #jumpPage{width:76px}.reserved-inner{aspect-ratio:63/88;border:1px dashed #b2bccb;border-radius:10px;display:grid;place-content:center;text-align:center;color:#6b7686;font-size:12px;line-height:1.7}.audit-info{margin:14px 0;color:#9ca6b6;font-size:12px;line-height:1.7}.audit-info summary{cursor:pointer;color:#d8b36a}.audit-info a{color:#d8b36a}.position-guide{display:grid;grid-template-columns:repeat(3,22px);gap:3px;margin:6px 0}.position-guide span{background:#26303e;text-align:center;border-radius:3px}.grid.physical{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:800px){.grid.physical{gap:8px;padding:8px}.physical .card-caption strong{font-size:11px}.physical .card-caption span{font-size:10px}.physical .card-caption small{font-size:9px}.toolbar #search{min-width:100%;}.card-caption strong{font-size:12px}.reserved-inner{font-size:10px}}
 </style></head><body>
 <div class="app"><aside class="side"><div class="brand">Pokémon <span>ex</span> Binder</div><p class="meta">Grey = missing · lit = collected</p><button id="collectionBtn" class="collection-btn">★ My Collection <span id="collectionCount" style="float:right"></span></button><div id="series"></div></aside><main class="main"><div class="head"><div><h1 id="title"></h1><div class="meta" id="meta"></div></div><div id="global" class="meta"></div></div><div id="grid" class="grid"></div><div class="pager"><button class="btn" id="prev">‹ Prev</button><span id="page" class="meta"></span><button class="btn" id="next">Next ›</button></div></main></div>
-<script src="cards_1.js?v=20261007c"></script>
-<script src="cards_2.js?v=20261007c"></script>
-<script src="cards_3.js?v=20261007c"></script>
-<script src="cards_4.js?v=20261007c"></script>
-<script src="cards_5.js?v=20261007d"></script>
+<script>
+document.querySelector('.side .meta').insertAdjacentHTML('afterend','<button id="binderBtn" class="collection-btn">▦ 實體 Binder · 3×3</button><details class="audit-info"><summary>格位說明與核對範圍</summary><p>格位從左至右、由上至下：</p><div class="position-guide"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></div><p>每一面算一頁，正面第 1 頁、背面第 2 頁。主系列連續排列，不另外空頁；Promo 獨立成 SVP Promos 與 MEP Promos，放在主系列後方。搜尋與已收藏清單的畫面頁碼不影響實體位置。</p><p id="auditSummary">核對版 v1 · 405 張 / 45 頁 · 2026-10-08 核對，發售範圍截至 2026-10-07。收錄普通 ex、普通版 Black Star Promo ex（獨立分類）、2023 Classic 三張 ex，以及 30th 復刻三張 EX。排除 Full Art、SIR、Gold、Shiny Full Art、Mega Attack Rare、Jumbo。相同卡號的印章與閃膜變體共用一格。</p><p>現有位置固定；未來新卡追加至空格，不自動插入前面的系列。</p><a href="audit.html" target="_blank" rel="noopener">查看核對紀錄與來源</a></details>');
+document.getElementById('grid').insertAdjacentHTML('beforebegin','<div class="toolbar"><input id="search" type="search" placeholder="搜尋卡名、卡號或系列…" aria-label="搜尋卡片"><form id="jumpForm"><label for="jumpPage" class="meta" style="align-self:center">跳至實體頁</label><input id="jumpPage" type="number" min="1" max="60" value="1" aria-label="實體頁碼"><button class="btn" type="submit">Go</button></form></div>');
+</script>
+<script src="cards_1.js?v=20261008v1"></script>
+<script src="cards_2.js?v=20261008v1"></script>
+<script src="cards_3.js?v=20261008v1"></script>
+<script src="cards_4.js?v=20261008v1"></script>
+<script src="cards_5.js?v=20261008v1"></script>
 <script>
 const cards=(window.CARD_CHUNKS||[]).flat();
 const scrydexMap={"Scarlet & Violet":"sv1","Paldea Evolved":"sv2","Obsidian Flames":"sv3","151":"sv3pt5","Paradox Rift":"sv4","Paldean Fates":"sv4pt5","Temporal Forces":"sv5","Twilight Masquerade":"sv6","Shrouded Fable":"sv6pt5","Stellar Crown":"sv7","Surging Sparks":"sv8","Prismatic Evolutions":"sv8pt5","Journey Together":"sv9","Destined Rivals":"sv10","White Flare":"rsv10pt5","Black Bolt":"zsv10pt5","Mega Evolution":"me1","Phantasmal Flames":"me2","Ascended Heroes":"me2pt5","Perfect Order":"me3","Chaos Rising":"me4","Pitch Black":"me5","30th Celebration":"me55"};
 const ptcgMap={"Scarlet & Violet":"sv1","Paldea Evolved":"sv2","Obsidian Flames":"sv3","151":"sv3pt5","Paradox Rift":"sv4","Paldean Fates":"sv4pt5","Temporal Forces":"sv5","Twilight Masquerade":"sv6","Shrouded Fable":"sv6pt5","Stellar Crown":"sv7","Surging Sparks":"sv8","Prismatic Evolutions":"sv8pt5","Journey Together":"sv9","Destined Rivals":"sv10"};
-const order=["Scarlet & Violet","Paldea Evolved","Obsidian Flames","151","Paradox Rift","Pokémon TCG Classic","Paldean Fates","Temporal Forces","Twilight Masquerade","Shrouded Fable","Stellar Crown","Surging Sparks","Prismatic Evolutions","Journey Together","Destined Rivals","White Flare","Black Bolt","Mega Evolution","Phantasmal Flames","Ascended Heroes","Perfect Order","Chaos Rising","Pitch Black","30th Celebration"];
+const order=["Scarlet & Violet","Paldea Evolved","Obsidian Flames","151","Paradox Rift","Pokémon TCG Classic","Paldean Fates","Temporal Forces","Twilight Masquerade","Shrouded Fable","Stellar Crown","Surging Sparks","Prismatic Evolutions","Journey Together","Destined Rivals","White Flare","Black Bolt","Mega Evolution","Phantasmal Flames","Ascended Heroes","Perfect Order","Chaos Rising","Pitch Black","30th Celebration","SVP Promos","MEP Promos"];
 const seriesRank=new Map(order.map((s,i)=>[s,i]));
 function numValue(c){
   if(c.number.startsWith("SVP")) return 100000+parseInt(c.number.replace(/\D/g,""),10);
@@ -58,15 +64,20 @@ function numValue(c){
   return c.type==="Classic Collection EX"?300000+n:n;
 }
 cards.sort((a,b)=>(seriesRank.get(a.series)-seriesRank.get(b.series)) || (numValue(a)-numValue(b)) || a.name.localeCompare(b.name));
-const slotMap=new Map(cards.map((c,i)=>[keySeed(c),i+1]));
+const slotMap=new Map(cards.map(c=>[keySeed(c),c.binderSlot]));
+const capacity=540;
+function position(c){const slot=slotMap.get(keySeed(c));return {slot,page:Math.floor((slot-1)/9)+1,pocket:(slot-1)%9+1};}
+function positionLabel(c){const p=position(c);return '第 '+p.page+' 頁 · 第 '+p.pocket+' 格';}
 function keySeed(c){return c.series+"|"+c.number+"|"+c.name;}
-let state={series:order[0],page:0,mode:"series",owned:JSON.parse(localStorage.getItem("owned")||"{}")};
+let savedOwned={};try{savedOwned=JSON.parse(localStorage.getItem('owned')||'{}');if(!savedOwned||typeof savedOwned!=='object'||Array.isArray(savedOwned))savedOwned={};}catch(e){}
+for(const c of cards){for(const alias of c.previousKeys||[]){if(!Object.prototype.hasOwnProperty.call(savedOwned,keySeed(c))&&Object.prototype.hasOwnProperty.call(savedOwned,alias))savedOwned[keySeed(c)]=savedOwned[alias];}}
+let state={series:order[0],page:0,mode:"binder",query:"",owned:savedOwned};
 const key=c=>keySeed(c);
 const isOwned=c=>Object.prototype.hasOwnProperty.call(state.owned,key(c))?state.owned[key(c)]:!!c.owned;
 function cardNum(c){return c.number.includes("/")?parseInt(c.number.split("/")[0],10):parseInt(c.number.replace(/^[A-Z]+\s*/,""),10)}
 function sources(c){
   const n=cardNum(c),out=[];
-  if(c.imageUrl){out.push(c.imageUrl);return out;}
+  if(c.imageUrl){out.push(c.imageUrl,...(c.fallbackImageUrls||[]));return out;}
   if(c.imageId){out.push("https://images.scrydex.com/pokemon/"+c.imageId+"/large");return out;}
   if(c.number.startsWith("SVP")){out.push("https://images.scrydex.com/pokemon/svp-"+n+"/large");out.push("https://images.pokemontcg.io/svp/"+n+"_hires.png");}
   else if(c.number.startsWith("MEP")){out.push("https://images.scrydex.com/pokemon/mep-"+n+"/large");}
@@ -86,11 +97,13 @@ function bindFallbacks(){
     img.onerror=()=>{
       let arr=[];try{arr=JSON.parse(decodeURIComponent(img.dataset.fallbacks||"%5B%5D"))}catch(e){}
       if(arr.length){img.dataset.fallbacks=encodeURIComponent(JSON.stringify(arr.slice(1)));img.src=arr[0];}
-      else{const c=img.closest(".card");const tag=c.querySelector(".series-tag");c.innerHTML='<div class="fallback"><div><b>Image unavailable</b>Card data is still in the binder.</div></div><div class="dot"></div>'+(tag?tag.outerHTML:"");}
+      else{const c=img.closest(".card");const tags=Array.from(c.querySelectorAll('.series-tag,.slot-tag')).map(t=>t.outerHTML).join('');c.innerHTML='<div class="fallback"><div><b>Image unavailable</b>Card data is still in the binder.</div></div><div class="dot"></div>'+tags;}
     };
   });
 }
 function currentCards(){
+  if(state.query){const q=state.query.toLowerCase();return cards.filter(c=>[c.name,c.number,c.series].join(' ').toLowerCase().includes(q));}
+  if(state.mode==="binder")return cards.slice().sort((a,b)=>a.binderSlot-b.binderSlot);
   if(state.mode==="collection") return cards.filter(isOwned);
   return cards.filter(c=>c.series===state.series);
 }
@@ -98,6 +111,8 @@ function render(){
   const allOwned=cards.filter(isOwned).length;
   document.getElementById("collectionCount").textContent=allOwned;
   document.getElementById("collectionBtn").className="collection-btn"+(state.mode==="collection"?" on":"");
+  document.getElementById('binderBtn').className='collection-btn'+(state.mode==='binder'&&!state.query?' on':'');
+  document.getElementById('grid').classList.toggle('physical',state.mode==='binder'&&!state.query);
 
   let side="",lastEra="";
   for(const s of order){
@@ -107,39 +122,54 @@ function render(){
     side+='<button class="sbtn '+(state.mode==="series"&&s===state.series?"on":"")+'" data-series="'+s.replace(/&/g,"&amp;").replace(/"/g,"&quot;")+'">'+s+'<span style="float:right">'+o+'/'+cs.length+'</span></button>';
   }
   document.getElementById("series").innerHTML=side;
-  document.querySelectorAll(".sbtn").forEach(b=>b.onclick=()=>{state.mode="series";state.series=b.dataset.series;state.page=0;render();});
-  document.getElementById("collectionBtn").onclick=()=>{state.mode="collection";state.page=0;render();};
+  document.querySelectorAll(".sbtn").forEach(b=>b.onclick=()=>{clearSearch();state.mode="series";state.series=b.dataset.series;state.page=0;render();});
+  document.getElementById("collectionBtn").onclick=()=>{clearSearch();state.mode="collection";state.page=0;render();};
+  document.getElementById('binderBtn').onclick=()=>{clearSearch();state.mode='binder';state.page=0;render();};
 
-  let cs=currentCards(),pages=Math.max(1,Math.ceil(cs.length/9));state.page=Math.min(state.page,pages-1);let pc=cs.slice(state.page*9,state.page*9+9);
-  if(state.mode==="collection"){
+  let cs=currentCards(),physical=state.mode==='binder'&&!state.query,pages=physical?Math.ceil(capacity/9):Math.max(1,Math.ceil(cs.length/9));state.page=Math.min(state.page,pages-1);let pc=physical?Array.from({length:9},(_,i)=>cs.find(c=>c.binderSlot===state.page*9+i+1)||null):cs.slice(state.page*9,state.page*9+9);
+  if(state.query){
+    document.getElementById('title').textContent='搜尋結果';
+    document.getElementById('meta').textContent=cs.length+' 張符合 · 下方標示為固定實體格位';
+  }else if(physical){
+    document.getElementById('title').textContent='實體 Binder · 第 '+(state.page+1)+' 頁';
+    document.getElementById('meta').textContent='每一面算 1 頁 · 左上到右下 1–9 格 · 共 60 頁 / 540 格';
+  }else if(state.mode==="collection"){
     document.getElementById("title").textContent="My Collection";
     document.getElementById("meta").textContent=cs.length+" collected cards";
   }else{
     document.getElementById("title").textContent=state.series;
     document.getElementById("meta").textContent=cs.filter(isOwned).length+" / "+cs.length+" collected";
   }
-  document.getElementById("page").textContent=(state.page+1)+" / "+pages;
-  document.getElementById("global").textContent=allOwned+" / "+cards.length+" total · "+order.length+" series";
+  document.getElementById("page").textContent=(physical?'實體頁 ':'畫面頁 ')+(state.page+1)+" / "+pages;
+  document.getElementById("global").textContent=allOwned+" / "+cards.length+" collected · "+(capacity-cards.length)+" 空格";
 
   let html="";
   if(pc.length===0){
     html='<div class="empty">You have not collected any cards yet.</div>';
   }else{
     for(const c of pc){
+      if(!c){const pocket=html.match(/class="pocket/g)?.length||0;html+='<div class="pocket reserved"><div class="reserved-inner">預留空格<br>第 '+(state.page+1)+' 頁 · 第 '+(pocket+1)+' 格</div></div>';continue;}
       let o=isOwned(c);
-      html+='<div class="pocket"><div class="card '+(o?"owned":"missing")+'" data-key="'+encodeURIComponent(key(c))+'">'+imgHTML(c)+'<div class="dot"></div><div class="slot-tag">Slot '+String(slotMap.get(key(c))).padStart(3,"0")+'</div>'+(state.mode==="collection"?'<div class="series-tag">'+c.series+'</div>':"")+'</div></div>';
+      html+='<div class="pocket"><button type="button" aria-label="'+escapeHTML(c.name+' '+c.number+' '+positionLabel(c)+(o?'，已收藏':'，未收藏'))+'" aria-pressed="'+o+'" class="card '+(o?"owned":"missing")+'" data-key="'+encodeURIComponent(key(c))+'">'+imgHTML(c)+'<div class="dot"></div><div class="slot-tag">#'+String(slotMap.get(key(c))).padStart(3,"0")+'</div></button><div class="card-caption"><strong>'+positionLabel(c)+'</strong><span>'+escapeHTML(c.name)+' · '+escapeHTML(c.number)+'</span><small>'+escapeHTML(c.series)+'</small></div></div>';
     }
   }
   document.getElementById("grid").innerHTML=html;
   bindFallbacks();
   document.querySelectorAll(".card").forEach(el=>el.onclick=()=>{
     let k=decodeURIComponent(el.dataset.key);
-    state.owned[k]=!state.owned[k];
+    const c=cards.find(c=>key(c)===k);state.owned[k]=!isOwned(c);
     localStorage.setItem("owned",JSON.stringify(state.owned));
     render();
   });
 }
 document.getElementById("prev").onclick=()=>{let cs=currentCards(),p=Math.max(1,Math.ceil(cs.length/9));state.page=(state.page-1+p)%p;render();};
 document.getElementById("next").onclick=()=>{let cs=currentCards(),p=Math.max(1,Math.ceil(cs.length/9));state.page=(state.page+1)%p;render();};
+function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function clearSearch(){state.query='';document.getElementById('search').value='';}
+function viewPages(){return state.mode==='binder'&&!state.query?Math.ceil(capacity/9):Math.max(1,Math.ceil(currentCards().length/9));}
+document.getElementById('prev').onclick=()=>{const p=viewPages();state.page=(state.page-1+p)%p;render();};
+document.getElementById('next').onclick=()=>{const p=viewPages();state.page=(state.page+1)%p;render();};
+document.getElementById('search').oninput=e=>{state.query=e.target.value.trim();state.page=0;render();};
+document.getElementById('jumpForm').onsubmit=e=>{e.preventDefault();const p=Number(document.getElementById('jumpPage').value);if(!Number.isInteger(p)||p<1||p>60)return;clearSearch();state.mode='binder';state.page=p-1;render();};
 render();
 </script></body></html>
