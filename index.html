@@ -43,29 +43,31 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 </style></head><body>
 <div class="app"><aside class="side"><div class="brand">Pokémon <span>ex</span> Binder</div><p class="meta">Grey = missing · lit = collected</p><button id="collectionBtn" class="collection-btn">★ My Collection <span id="collectionCount" style="float:right"></span></button><div id="series"></div></aside><main class="main"><div class="head"><div><h1 id="title"></h1><div class="meta" id="meta"></div></div><div id="global" class="meta"></div></div><div id="grid" class="grid"></div><div class="pager"><button class="btn" id="prev">‹ Prev</button><span id="page" class="meta"></span><button class="btn" id="next">Next ›</button></div></main></div>
 <script>
-document.querySelector('.side .meta').insertAdjacentHTML('afterend','<button id="binderBtn" class="collection-btn">▦ 實體 Binder · 3×3</button><details class="audit-info"><summary>格位說明與核對範圍</summary><p>格位從左至右、由上至下：</p><div class="position-guide"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></div><p>每一面算一頁，正面第 1 頁、背面第 2 頁。主系列依原格位排列；移除大寫 EX 後的三格保留為空格；Promo 獨立成 SVP Promos 與 MEP Promos，放在主系列後方。搜尋與已收藏清單的畫面頁碼不影響實體位置。</p><p id="auditSummary">核對版 v2 · 402 張 / 45 頁 · 2026-10-08 核對，發售範圍截至 2026-10-07。收錄普通 ex、普通版 Black Star Promo ex（獨立分類）、2023 Classic 三張小寫 ex；不收錄大寫 EX／Classic Collection 復刻 EX。排除 Full Art、SIR、Gold、Shiny Full Art、Mega Attack Rare、Jumbo。相同卡號的印章與閃膜變體共用一格。</p><p>現有位置固定；未來新卡追加至空格，不自動插入前面的系列。</p><a href="audit.html" target="_blank" rel="noopener">查看核對紀錄與來源</a></details>');
+document.querySelector('.side .meta').insertAdjacentHTML('afterend','<button id="binderBtn" class="collection-btn">▦ 實體 Binder · 3×3</button><details class="audit-info"><summary>格位說明與核對範圍</summary><p>格位從左至右、由上至下：</p><div class="position-guide"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></div><p>每一面算一頁，正面第 1 頁、背面第 2 頁。每個 set 從新頁開始；普通 ex 按卡號在前，同期 Promo ex 按 Promo 卡號接在後面。系列最後一頁的空格保留給該系列。搜尋與已收藏清單的畫面頁碼不影響實體位置。</p><p id="auditSummary">編排版 v3 · 402 張 / 56 頁 · 2026-10-14 重新編排；卡片收錄快照截至 2026-10-07。收錄普通 ex、普通版 Black Star Promo ex（放入對應發售期的 set）、2023 Classic 三張小寫 ex；不收錄大寫 EX／Classic Collection 復刻 EX。排除 Full Art、SIR、Gold、Shiny Full Art、Mega Attack Rare、Jumbo。相同卡號的印章與閃膜變體共用一格。</p><p>本版重新計算頁碼與格位。日後新 set 從第 57 頁接續；同系列補卡先使用該系列預留空格。空格不足時需另安排位置，不自動移動後方系列。Promo 仍屬官方 SVP／MEP；此處系列歸位是 Binder 的整理方式。</p><a href="audit.html" target="_blank" rel="noopener">查看系列頁碼、Promo 歸位與核對來源</a></details>');
 document.getElementById('grid').insertAdjacentHTML('beforebegin','<div class="toolbar"><input id="search" type="search" placeholder="搜尋卡名、卡號或系列…" aria-label="搜尋卡片"><form id="jumpForm"><label for="jumpPage" class="meta" style="align-self:center">跳至實體頁</label><input id="jumpPage" type="number" min="1" max="60" value="1" aria-label="實體頁碼"><button class="btn" type="submit">Go</button></form></div>');
 </script>
-<script src="cards_1.js?v=20261008v2"></script>
-<script src="cards_2.js?v=20261008v2"></script>
-<script src="cards_3.js?v=20261008v2"></script>
-<script src="cards_4.js?v=20261008v2"></script>
-<script src="cards_5.js?v=20261008v2"></script>
+<script src="cards_1.js?v=20261014v3"></script>
+<script src="cards_2.js?v=20261014v3"></script>
+<script src="cards_3.js?v=20261014v3"></script>
+<script src="cards_4.js?v=20261014v3"></script>
+<script src="cards_5.js?v=20261014v3"></script>
 <script>
 const cards=(window.CARD_CHUNKS||[]).flat();
 const scrydexMap={"Scarlet & Violet":"sv1","Paldea Evolved":"sv2","Obsidian Flames":"sv3","151":"sv3pt5","Paradox Rift":"sv4","Paldean Fates":"sv4pt5","Temporal Forces":"sv5","Twilight Masquerade":"sv6","Shrouded Fable":"sv6pt5","Stellar Crown":"sv7","Surging Sparks":"sv8","Prismatic Evolutions":"sv8pt5","Journey Together":"sv9","Destined Rivals":"sv10","White Flare":"rsv10pt5","Black Bolt":"zsv10pt5","Mega Evolution":"me1","Phantasmal Flames":"me2","Ascended Heroes":"me2pt5","Perfect Order":"me3","Chaos Rising":"me4","Pitch Black":"me5","30th Celebration":"me55"};
 const ptcgMap={"Scarlet & Violet":"sv1","Paldea Evolved":"sv2","Obsidian Flames":"sv3","151":"sv3pt5","Paradox Rift":"sv4","Paldean Fates":"sv4pt5","Temporal Forces":"sv5","Twilight Masquerade":"sv6","Shrouded Fable":"sv6pt5","Stellar Crown":"sv7","Surging Sparks":"sv8","Prismatic Evolutions":"sv8pt5","Journey Together":"sv9","Destined Rivals":"sv10"};
-const order=["Scarlet & Violet","Paldea Evolved","Obsidian Flames","151","Paradox Rift","Pokémon TCG Classic","Paldean Fates","Temporal Forces","Twilight Masquerade","Shrouded Fable","Stellar Crown","Surging Sparks","Prismatic Evolutions","Journey Together","Destined Rivals","White Flare","Black Bolt","Mega Evolution","Phantasmal Flames","Ascended Heroes","Perfect Order","Chaos Rising","Pitch Black","30th Celebration","SVP Promos","MEP Promos"];
+const order=["Scarlet & Violet","Paldea Evolved","Obsidian Flames","151","Paradox Rift","Pokémon TCG Classic","Paldean Fates","Temporal Forces","Twilight Masquerade","Shrouded Fable","Stellar Crown","Surging Sparks","Prismatic Evolutions","Journey Together","Destined Rivals","White Flare","Black Bolt","Mega Evolution","Phantasmal Flames","Ascended Heroes","Perfect Order","Chaos Rising","Pitch Black","30th Celebration"];
 const seriesRank=new Map(order.map((s,i)=>[s,i]));
 function numValue(c){
   if(c.number.startsWith("SVP")) return 100000+parseInt(c.number.replace(/\D/g,""),10);
   if(c.number.startsWith("MEP")) return 200000+parseInt(c.number.replace(/\D/g,""),10);
   const n=parseInt(c.number.split("/")[0],10)||0;
-  return c.type==="Classic Collection EX"?300000+n:n;
+  return n;
 }
 cards.sort((a,b)=>(seriesRank.get(a.series)-seriesRank.get(b.series)) || (numValue(a)-numValue(b)) || a.name.localeCompare(b.name));
 const slotMap=new Map(cards.map(c=>[keySeed(c),c.binderSlot]));
 const capacity=540;
+const setLayouts=[{"series":"Scarlet & Violet","mainEx":12,"promoEx":4,"total":16,"startSlot":1,"endSlot":18,"startPage":1,"endPage":2,"reservedPockets":2},{"series":"Paldea Evolved","mainEx":17,"promoEx":5,"total":22,"startSlot":19,"endSlot":45,"startPage":3,"endPage":5,"reservedPockets":5},{"series":"Obsidian Flames","mainEx":21,"promoEx":3,"total":24,"startSlot":46,"endSlot":72,"startPage":6,"endPage":8,"reservedPockets":3},{"series":"151","mainEx":12,"promoEx":4,"total":16,"startSlot":73,"endSlot":90,"startPage":9,"endPage":10,"reservedPockets":2},{"series":"Paradox Rift","mainEx":20,"promoEx":2,"total":22,"startSlot":91,"endSlot":117,"startPage":11,"endPage":13,"reservedPockets":5},{"series":"Pokémon TCG Classic","mainEx":3,"promoEx":0,"total":3,"startSlot":118,"endSlot":126,"startPage":14,"endPage":14,"reservedPockets":6},{"series":"Paldean Fates","mainEx":10,"promoEx":2,"total":12,"startSlot":127,"endSlot":144,"startPage":15,"endPage":16,"reservedPockets":6},{"series":"Temporal Forces","mainEx":15,"promoEx":3,"total":18,"startSlot":145,"endSlot":162,"startPage":17,"endPage":18,"reservedPockets":0},{"series":"Twilight Masquerade","mainEx":14,"promoEx":8,"total":22,"startSlot":163,"endSlot":189,"startPage":19,"endPage":21,"reservedPockets":5},{"series":"Shrouded Fable","mainEx":6,"promoEx":4,"total":10,"startSlot":190,"endSlot":207,"startPage":22,"endPage":23,"reservedPockets":8},{"series":"Stellar Crown","mainEx":14,"promoEx":3,"total":17,"startSlot":208,"endSlot":225,"startPage":24,"endPage":25,"reservedPockets":1},{"series":"Surging Sparks","mainEx":18,"promoEx":2,"total":20,"startSlot":226,"endSlot":252,"startPage":26,"endPage":28,"reservedPockets":7},{"series":"Prismatic Evolutions","mainEx":25,"promoEx":4,"total":29,"startSlot":253,"endSlot":288,"startPage":29,"endPage":32,"reservedPockets":7},{"series":"Journey Together","mainEx":16,"promoEx":3,"total":19,"startSlot":289,"endSlot":315,"startPage":33,"endPage":35,"reservedPockets":8},{"series":"Destined Rivals","mainEx":17,"promoEx":2,"total":19,"startSlot":316,"endSlot":342,"startPage":36,"endPage":38,"reservedPockets":8},{"series":"White Flare","mainEx":6,"promoEx":0,"total":6,"startSlot":343,"endSlot":351,"startPage":39,"endPage":39,"reservedPockets":3},{"series":"Black Bolt","mainEx":6,"promoEx":3,"total":9,"startSlot":352,"endSlot":360,"startPage":40,"endPage":40,"reservedPockets":0},{"series":"Mega Evolution","mainEx":10,"promoEx":2,"total":12,"startSlot":361,"endSlot":378,"startPage":41,"endPage":42,"reservedPockets":6},{"series":"Phantasmal Flames","mainEx":10,"promoEx":2,"total":12,"startSlot":379,"endSlot":396,"startPage":43,"endPage":44,"reservedPockets":6},{"series":"Ascended Heroes","mainEx":39,"promoEx":5,"total":44,"startSlot":397,"endSlot":441,"startPage":45,"endPage":49,"reservedPockets":1},{"series":"Perfect Order","mainEx":9,"promoEx":0,"total":9,"startSlot":442,"endSlot":450,"startPage":50,"endPage":50,"reservedPockets":0},{"series":"Chaos Rising","mainEx":10,"promoEx":4,"total":14,"startSlot":451,"endSlot":468,"startPage":51,"endPage":52,"reservedPockets":4},{"series":"Pitch Black","mainEx":10,"promoEx":3,"total":13,"startSlot":469,"endSlot":486,"startPage":53,"endPage":54,"reservedPockets":5},{"series":"30th Celebration","mainEx":12,"promoEx":2,"total":14,"startSlot":487,"endSlot":504,"startPage":55,"endPage":56,"reservedPockets":4}];
+const reservedSetForSlot=slot=>setLayouts.find(s=>slot>=s.startSlot&&slot<=s.endSlot);
 function position(c){const slot=slotMap.get(keySeed(c));return {slot,page:Math.floor((slot-1)/9)+1,pocket:(slot-1)%9+1};}
 function positionLabel(c){const p=position(c);return '第 '+p.page+' 頁 · 第 '+p.pocket+' 格';}
 function keySeed(c){return c.series+"|"+c.number+"|"+c.name;}
@@ -78,6 +80,15 @@ if(localStorage.getItem(collectionConfirmation)!=='1'){
   for(const c of cards.filter(c=>c.series==='30th Celebration'))savedOwned[keySeed(c)]=true;
   localStorage.setItem('owned',JSON.stringify(savedOwned));
   localStorage.setItem(collectionConfirmation,'1');
+}
+const layoutMigration='promo-release-layout-20261014-v3';
+if(localStorage.getItem(layoutMigration)!=='1'){
+  for(const c of cards.filter(c=>c.type==='Promo ex')){
+    const alias=(c.previousKeys||[]).find(k=>k.startsWith('SVP Promos|')||k.startsWith('MEP Promos|'));
+    if(alias&&Object.prototype.hasOwnProperty.call(savedOwned,alias))savedOwned[keySeed(c)]=savedOwned[alias];
+  }
+  localStorage.setItem('owned',JSON.stringify(savedOwned));
+  localStorage.setItem(layoutMigration,'1');
 }
 let state={series:order[0],page:0,mode:"binder",query:"",owned:savedOwned};
 const key=c=>keySeed(c);
@@ -146,7 +157,9 @@ function render(){
     document.getElementById("meta").textContent=cs.length+" collected cards";
   }else{
     document.getElementById("title").textContent=state.series;
-    document.getElementById("meta").textContent=cs.filter(isOwned).length+" / "+cs.length+" collected";
+    const main=cs.filter(c=>c.type!=='Promo ex'),promo=cs.filter(c=>c.type==='Promo ex');
+    document.getElementById('meta').textContent=main.filter(isOwned).length+' / '+main.length+' 普通 ex · '+promo.filter(isOwned).length+' / '+promo.length+' Promo ex';
+    if(state.series==='Black Bolt')document.getElementById('meta').textContent+=' · Promo 為 Black Bolt／White Flare 同期共用歸位';
   }
   document.getElementById("page").textContent=(physical?'實體頁 ':'畫面頁 ')+(state.page+1)+" / "+pages;
   document.getElementById("global").textContent=allOwned+" / "+cards.length+" collected · "+(capacity-cards.length)+" 空格";
@@ -156,9 +169,9 @@ function render(){
     html='<div class="empty">You have not collected any cards yet.</div>';
   }else{
     for(const c of pc){
-      if(!c){const pocket=html.match(/class="pocket/g)?.length||0;html+='<div class="pocket reserved"><div class="reserved-inner">預留空格<br>第 '+(state.page+1)+' 頁 · 第 '+(pocket+1)+' 格</div></div>';continue;}
+      if(!c){const pocket=html.match(/class="pocket/g)?.length||0,slot=state.page*9+pocket+1,reserved=reservedSetForSlot(slot);html+='<div class="pocket reserved"><div class="reserved-inner">'+(reserved?escapeHTML(reserved.series)+'<br>系列預留空格':'新系列預留空格')+'<br>第 '+(state.page+1)+' 頁 · 第 '+(pocket+1)+' 格</div></div>';continue;}
       let o=isOwned(c);
-      html+='<div class="pocket"><button type="button" aria-label="'+escapeHTML(c.name+' '+c.number+' '+positionLabel(c)+(o?'，已收藏':'，未收藏'))+'" aria-pressed="'+o+'" class="card '+(o?"owned":"missing")+'" data-key="'+encodeURIComponent(key(c))+'">'+imgHTML(c)+'<div class="dot"></div><div class="slot-tag">#'+String(slotMap.get(key(c))).padStart(3,"0")+'</div></button><div class="card-caption"><strong>'+positionLabel(c)+'</strong><span>'+escapeHTML(c.name)+' · '+escapeHTML(c.number)+'</span><small>'+escapeHTML(c.series)+'</small></div></div>';
+      html+='<div class="pocket"><button type="button" aria-label="'+escapeHTML(c.name+' '+c.number+' '+positionLabel(c)+(o?'，已收藏':'，未收藏'))+'" aria-pressed="'+o+'" class="card '+(o?"owned":"missing")+'" data-key="'+encodeURIComponent(key(c))+'">'+imgHTML(c)+'<div class="dot"></div><div class="slot-tag">#'+String(slotMap.get(key(c))).padStart(3,"0")+'</div></button><div class="card-caption"><strong>'+positionLabel(c)+'</strong><span>'+escapeHTML(c.name)+' · '+escapeHTML(c.number)+'</span><small>'+escapeHTML(c.series)+(c.type==='Promo ex'?' · Promo · '+c.promoReleaseDate:'')+'</small></div></div>';
     }
   }
   document.getElementById("grid").innerHTML=html;
