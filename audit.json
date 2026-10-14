@@ -2291,8 +2291,9 @@
       "page": 14,
       "pocket": 1,
       "sources": [
-        "https://www.serebii.net/card/classiccharizard/007.shtml"
-      ]
+        "https://www.tcgcollector.com/cards/43845/ho-oh-ex-pokemon-tcg-classic-charizard-007-034"
+      ],
+      "imageLanguage": "English"
     },
     {
       "key": "Pokémon TCG Classic|010/034|Suicune ex",
@@ -2303,8 +2304,9 @@
       "page": 14,
       "pocket": 2,
       "sources": [
-        "https://www.serebii.net/card/classicblastoise/010.shtml"
-      ]
+        "https://www.tcgcollector.com/cards/43814/suicune-ex-pokemon-tcg-classic-blastoise-010-034"
+      ],
+      "imageLanguage": "English"
     },
     {
       "key": "Pokémon TCG Classic|017/034|Lugia ex",
@@ -2315,8 +2317,9 @@
       "page": 14,
       "pocket": 3,
       "sources": [
-        "https://www.serebii.net/card/classicvenusaur/017.shtml"
-      ]
+        "https://www.tcgcollector.com/cards/43889/lugia-ex-pokemon-tcg-classic-venusaur-017-034"
+      ],
+      "imageLanguage": "English"
     },
     {
       "key": "Paldean Fates|002/091|Forretress ex",
@@ -7272,6 +7275,18 @@
       "releaseSource": "https://www.pokemon.com/us/news/pokemon-tcg-30th-celebration-product-showcase",
       "assignmentBasis": "named-expansion",
       "assignmentNote": ""
+    }
+  ],
+  "imageCorrections": [
+    {
+      "date": "2026-10-14",
+      "cards": [
+        "Ho-Oh ex",
+        "Suicune ex",
+        "Lugia ex"
+      ],
+      "issue": "English checklist entries incorrectly used Japanese Serebii images.",
+      "fix": "Full English card scans visually verified and substituted; ownership keys, numbers and slots unchanged."
     }
   ]
 }
