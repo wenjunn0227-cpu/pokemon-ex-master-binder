@@ -1,5 +1,5 @@
 {
-  "version": "2026-10-14-v4",
+  "version": "2026-10-16-v5",
   "reviewedAt": "2026-10-08",
   "releaseCutoff": "2026-10-07",
   "status": "Audited snapshot within the explicitly defined scope; not a guarantee of all future cards or all print variants.",
@@ -26,11 +26,11 @@
     ],
     "variantRule": "Same set/card number with stamp, foil, or regional finish differences shares one target. Different card numbers are separate targets."
   },
-  "total": 402,
+  "total": 401,
   "typeCounts": {
     "Regular ex": 329,
-    "Classic Deck ex": 3,
-    "Promo ex": 70
+    "Promo ex": 69,
+    "Classic Deck ex": 3
   },
   "corrections": {
     "added": [
@@ -78,6 +78,13 @@
         "number": "SVP 204",
         "name": "Cynthia's Garchomp ex",
         "reason": "Full Art promo"
+      },
+      {
+        "number": "SVP 166",
+        "name": "Teal Mask Ogerpon ex",
+        "reason": "Full Art ultra rare promo artwork",
+        "correctedAt": "2026-10-16",
+        "source": "https://bulbapedia.bulbagarden.net/wiki/Teal_Mask_Ogerpon_ex_(Twilight_Masquerade_25)"
       }
     ],
     "removedByOwnerScope": [
@@ -635,9 +642,9 @@
     {
       "number": "SVP 166",
       "name": "Teal Mask Ogerpon ex",
-      "included": true,
-      "reason": "Ordinary overlapping ex artwork",
-      "source": "https://www.serebii.net/card/svpromos/166.shtml"
+      "included": false,
+      "reason": "Full Art ultra rare promo artwork; previously misclassified as ordinary ex.",
+      "source": "https://bulbapedia.bulbagarden.net/wiki/Teal_Mask_Ogerpon_ex_(Twilight_Masquerade_25)"
     },
     {
       "number": "SVP 174",
@@ -955,7 +962,7 @@
       "source": "https://www.serebii.net/card/megapromos/110.shtml"
     }
   ],
-  "positionRule": "Continuous occupied slots 1–402, nine pockets per page left-to-right then top-to-bottom. Ordinary ex precede associated promo ex within each set; next set starts immediately in the next pocket. No inter-set empty pockets or forced page breaks.",
+  "positionRule": "Continuous occupied slots 1–401, nine pockets per page left-to-right then top-to-bottom. Ordinary ex precede associated promo ex within each set; next set starts immediately in the next pocket. No inter-set empty pockets or forced page breaks.",
   "boundaryNotes": [
     {
       "number": "SVP 196",
@@ -3603,27 +3610,13 @@
       ]
     },
     {
-      "key": "Surging Sparks|SVP 166|Teal Mask Ogerpon ex",
-      "name": "Teal Mask Ogerpon ex",
-      "number": "SVP 166",
-      "series": "Surging Sparks",
-      "slot": 201,
-      "page": 23,
-      "pocket": 3,
-      "sources": [
-        "https://www.serebii.net/card/svpromos/166.shtml"
-      ],
-      "promoReleaseDate": "2024-11-15",
-      "promoReleaseSource": "https://www.pokebeach.com/2024/08/ogerpon-ex-premium-collection-releasing-in-november"
-    },
-    {
       "key": "Surging Sparks|SVP 177|Bloodmoon Ursaluna ex",
       "name": "Bloodmoon Ursaluna ex",
       "number": "SVP 177",
       "series": "Surging Sparks",
-      "slot": 202,
+      "slot": 201,
       "page": 23,
-      "pocket": 4,
+      "pocket": 3,
       "sources": [
         "https://www.serebii.net/card/svpromos/177.shtml"
       ],
@@ -3635,9 +3628,9 @@
       "name": "Leafeon ex",
       "number": "006/131",
       "series": "Prismatic Evolutions",
-      "slot": 203,
+      "slot": 202,
       "page": 23,
-      "pocket": 5,
+      "pocket": 4,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17505/",
         "https://www.serebii.net/card/prismaticevolutions/006.shtml"
@@ -3648,9 +3641,9 @@
       "name": "Hydrapple ex",
       "number": "011/131",
       "series": "Prismatic Evolutions",
-      "slot": 204,
+      "slot": 203,
       "page": 23,
-      "pocket": 6,
+      "pocket": 5,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17510/",
         "https://www.serebii.net/card/prismaticevolutions/011.shtml"
@@ -3661,9 +3654,9 @@
       "name": "Teal Mask Ogerpon ex",
       "number": "012/131",
       "series": "Prismatic Evolutions",
-      "slot": 205,
+      "slot": 204,
       "page": 23,
-      "pocket": 7,
+      "pocket": 6,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17511/",
         "https://www.serebii.net/card/prismaticevolutions/012.shtml"
@@ -3674,9 +3667,9 @@
       "name": "Flareon ex",
       "number": "014/131",
       "series": "Prismatic Evolutions",
-      "slot": 206,
+      "slot": 205,
       "page": 23,
-      "pocket": 8,
+      "pocket": 7,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17513/",
         "https://www.serebii.net/card/prismaticevolutions/014.shtml"
@@ -3687,9 +3680,9 @@
       "name": "Hearthflame Mask Ogerpon ex",
       "number": "017/131",
       "series": "Prismatic Evolutions",
-      "slot": 207,
+      "slot": 206,
       "page": 23,
-      "pocket": 9,
+      "pocket": 8,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17516/",
         "https://www.serebii.net/card/prismaticevolutions/017.shtml"
@@ -3700,9 +3693,9 @@
       "name": "Vaporeon ex",
       "number": "023/131",
       "series": "Prismatic Evolutions",
-      "slot": 208,
-      "page": 24,
-      "pocket": 1,
+      "slot": 207,
+      "page": 23,
+      "pocket": 9,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17522/",
         "https://www.serebii.net/card/prismaticevolutions/023.shtml"
@@ -3713,9 +3706,9 @@
       "name": "Glaceon ex",
       "number": "026/131",
       "series": "Prismatic Evolutions",
-      "slot": 209,
+      "slot": 208,
       "page": 24,
-      "pocket": 2,
+      "pocket": 1,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17525/",
         "https://www.serebii.net/card/prismaticevolutions/026.shtml"
@@ -3726,9 +3719,9 @@
       "name": "Wellspring Mask Ogerpon ex",
       "number": "027/131",
       "series": "Prismatic Evolutions",
-      "slot": 210,
+      "slot": 209,
       "page": 24,
-      "pocket": 3,
+      "pocket": 2,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17526/",
         "https://www.serebii.net/card/prismaticevolutions/027.shtml"
@@ -3739,9 +3732,9 @@
       "name": "Pikachu ex",
       "number": "028/131",
       "series": "Prismatic Evolutions",
-      "slot": 211,
+      "slot": 210,
       "page": 24,
-      "pocket": 4,
+      "pocket": 3,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17527/",
         "https://www.serebii.net/card/prismaticevolutions/028.shtml"
@@ -3752,9 +3745,9 @@
       "name": "Jolteon ex",
       "number": "030/131",
       "series": "Prismatic Evolutions",
-      "slot": 212,
+      "slot": 211,
       "page": 24,
-      "pocket": 5,
+      "pocket": 4,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17529/",
         "https://www.serebii.net/card/prismaticevolutions/030.shtml"
@@ -3765,9 +3758,9 @@
       "name": "Iron Hands ex",
       "number": "031/131",
       "series": "Prismatic Evolutions",
-      "slot": 213,
+      "slot": 212,
       "page": 24,
-      "pocket": 6,
+      "pocket": 5,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17530/",
         "https://www.serebii.net/card/prismaticevolutions/031.shtml"
@@ -3778,9 +3771,9 @@
       "name": "Iron Thorns ex",
       "number": "032/131",
       "series": "Prismatic Evolutions",
-      "slot": 214,
+      "slot": 213,
       "page": 24,
-      "pocket": 7,
+      "pocket": 6,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17531/",
         "https://www.serebii.net/card/prismaticevolutions/032.shtml"
@@ -3791,9 +3784,9 @@
       "name": "Espeon ex",
       "number": "034/131",
       "series": "Prismatic Evolutions",
-      "slot": 215,
+      "slot": 214,
       "page": 24,
-      "pocket": 8,
+      "pocket": 7,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17533/",
         "https://www.serebii.net/card/prismaticevolutions/034.shtml"
@@ -3804,9 +3797,9 @@
       "name": "Sylveon ex",
       "number": "041/131",
       "series": "Prismatic Evolutions",
-      "slot": 216,
+      "slot": 215,
       "page": 24,
-      "pocket": 9,
+      "pocket": 8,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17540/",
         "https://www.serebii.net/card/prismaticevolutions/041.shtml"
@@ -3817,9 +3810,9 @@
       "name": "Lucario ex",
       "number": "051/131",
       "series": "Prismatic Evolutions",
-      "slot": 217,
-      "page": 25,
-      "pocket": 1,
+      "slot": 216,
+      "page": 24,
+      "pocket": 9,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17550/",
         "https://www.serebii.net/card/prismaticevolutions/051.shtml"
@@ -3830,9 +3823,9 @@
       "name": "Sandy Shocks ex",
       "number": "056/131",
       "series": "Prismatic Evolutions",
-      "slot": 218,
+      "slot": 217,
       "page": 25,
-      "pocket": 2,
+      "pocket": 1,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17555/",
         "https://www.serebii.net/card/prismaticevolutions/056.shtml"
@@ -3843,9 +3836,9 @@
       "name": "Cornerstone Mask Ogerpon ex",
       "number": "058/131",
       "series": "Prismatic Evolutions",
-      "slot": 219,
+      "slot": 218,
       "page": 25,
-      "pocket": 3,
+      "pocket": 2,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17557/",
         "https://www.serebii.net/card/prismaticevolutions/058.shtml"
@@ -3856,9 +3849,9 @@
       "name": "Umbreon ex",
       "number": "060/131",
       "series": "Prismatic Evolutions",
-      "slot": 220,
+      "slot": 219,
       "page": 25,
-      "pocket": 4,
+      "pocket": 3,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17559/",
         "https://www.serebii.net/card/prismaticevolutions/060.shtml"
@@ -3869,9 +3862,9 @@
       "name": "Tyranitar ex",
       "number": "064/131",
       "series": "Prismatic Evolutions",
-      "slot": 221,
+      "slot": 220,
       "page": 25,
-      "pocket": 5,
+      "pocket": 4,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17563/",
         "https://www.serebii.net/card/prismaticevolutions/064.shtml"
@@ -3882,9 +3875,9 @@
       "name": "Dragapult ex",
       "number": "073/131",
       "series": "Prismatic Evolutions",
-      "slot": 222,
+      "slot": 221,
       "page": 25,
-      "pocket": 6,
+      "pocket": 5,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17572/",
         "https://www.serebii.net/card/prismaticevolutions/073.shtml"
@@ -3895,9 +3888,9 @@
       "name": "Eevee ex",
       "number": "075/131",
       "series": "Prismatic Evolutions",
-      "slot": 223,
+      "slot": 222,
       "page": 25,
-      "pocket": 7,
+      "pocket": 6,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17574/",
         "https://www.serebii.net/card/prismaticevolutions/075.shtml"
@@ -3908,9 +3901,9 @@
       "name": "Snorlax ex",
       "number": "076/131",
       "series": "Prismatic Evolutions",
-      "slot": 224,
+      "slot": 223,
       "page": 25,
-      "pocket": 8,
+      "pocket": 7,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17575/",
         "https://www.serebii.net/card/prismaticevolutions/076.shtml"
@@ -3921,9 +3914,9 @@
       "name": "Lugia ex",
       "number": "082/131",
       "series": "Prismatic Evolutions",
-      "slot": 225,
+      "slot": 224,
       "page": 25,
-      "pocket": 9,
+      "pocket": 8,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17581/",
         "https://www.serebii.net/card/prismaticevolutions/082.shtml"
@@ -3934,9 +3927,9 @@
       "name": "Noivern ex",
       "number": "091/131",
       "series": "Prismatic Evolutions",
-      "slot": 226,
-      "page": 26,
-      "pocket": 1,
+      "slot": 225,
+      "page": 25,
+      "pocket": 9,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17590/",
         "https://www.serebii.net/card/prismaticevolutions/091.shtml"
@@ -3947,9 +3940,9 @@
       "name": "Terapagos ex",
       "number": "092/131",
       "series": "Prismatic Evolutions",
-      "slot": 227,
+      "slot": 226,
       "page": 26,
-      "pocket": 2,
+      "pocket": 1,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17591/",
         "https://www.serebii.net/card/prismaticevolutions/092.shtml"
@@ -3960,9 +3953,9 @@
       "name": "Kyogre ex",
       "number": "SVP 178",
       "series": "Prismatic Evolutions",
-      "slot": 228,
+      "slot": 227,
       "page": 26,
-      "pocket": 3,
+      "pocket": 2,
       "sources": [
         "https://www.serebii.net/card/svpromos/178.shtml"
       ],
@@ -3974,9 +3967,9 @@
       "name": "Xerneas ex",
       "number": "SVP 179",
       "series": "Prismatic Evolutions",
-      "slot": 229,
+      "slot": 228,
       "page": 26,
-      "pocket": 4,
+      "pocket": 3,
       "sources": [
         "https://www.serebii.net/card/svpromos/179.shtml"
       ],
@@ -3988,9 +3981,9 @@
       "name": "Dialga ex",
       "number": "SVP 180",
       "series": "Prismatic Evolutions",
-      "slot": 230,
+      "slot": 229,
       "page": 26,
-      "pocket": 5,
+      "pocket": 4,
       "sources": [
         "https://www.serebii.net/card/svpromos/180.shtml"
       ],
@@ -4002,9 +3995,9 @@
       "name": "Toxtricity ex",
       "number": "SVP 215",
       "series": "Prismatic Evolutions",
-      "slot": 231,
+      "slot": 230,
       "page": 26,
-      "pocket": 6,
+      "pocket": 5,
       "sources": [
         "https://www.serebii.net/card/svpromos/215.shtml"
       ],
@@ -4016,9 +4009,9 @@
       "name": "Amoonguss ex",
       "number": "011/159",
       "series": "Journey Together",
-      "slot": 232,
+      "slot": 231,
       "page": 26,
-      "pocket": 7,
+      "pocket": 6,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17858/",
         "https://www.serebii.net/card/journeytogether/011.shtml"
@@ -4029,9 +4022,9 @@
       "name": "Blaziken ex",
       "number": "024/159",
       "series": "Journey Together",
-      "slot": 233,
+      "slot": 232,
       "page": 26,
-      "pocket": 8,
+      "pocket": 7,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17871/",
         "https://www.serebii.net/card/journeytogether/024.shtml"
@@ -4042,9 +4035,9 @@
       "name": "Reshiram ex",
       "number": "030/159",
       "series": "Journey Together",
-      "slot": 234,
+      "slot": 233,
       "page": 26,
-      "pocket": 9,
+      "pocket": 8,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17877/",
         "https://www.serebii.net/card/journeytogether/030.shtml"
@@ -4055,9 +4048,9 @@
       "name": "Volcanion ex",
       "number": "031/159",
       "series": "Journey Together",
-      "slot": 235,
-      "page": 27,
-      "pocket": 1,
+      "slot": 234,
+      "page": 26,
+      "pocket": 9,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17878/",
         "https://www.serebii.net/card/journeytogether/031.shtml"
@@ -4068,9 +4061,9 @@
       "name": "Veluza ex",
       "number": "043/159",
       "series": "Journey Together",
-      "slot": 236,
+      "slot": 235,
       "page": 27,
-      "pocket": 2,
+      "pocket": 1,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17890/",
         "https://www.serebii.net/card/journeytogether/043.shtml"
@@ -4081,9 +4074,9 @@
       "name": "Tapu Koko ex",
       "number": "051/159",
       "series": "Journey Together",
-      "slot": 237,
+      "slot": 236,
       "page": 27,
-      "pocket": 3,
+      "pocket": 2,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17898/",
         "https://www.serebii.net/card/journeytogether/051.shtml"
@@ -4094,9 +4087,9 @@
       "name": "Iono's Bellibolt ex",
       "number": "053/159",
       "series": "Journey Together",
-      "slot": 238,
+      "slot": 237,
       "page": 27,
-      "pocket": 4,
+      "pocket": 3,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17900/",
         "https://www.serebii.net/card/journeytogether/053.shtml"
@@ -4107,9 +4100,9 @@
       "name": "Lillie's Clefairy ex",
       "number": "056/159",
       "series": "Journey Together",
-      "slot": 239,
+      "slot": 238,
       "page": 27,
-      "pocket": 5,
+      "pocket": 4,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17903/",
         "https://www.serebii.net/card/journeytogether/056.shtml"
@@ -4120,9 +4113,9 @@
       "name": "Mimikyu ex",
       "number": "069/159",
       "series": "Journey Together",
-      "slot": 240,
+      "slot": 239,
       "page": 27,
-      "pocket": 6,
+      "pocket": 5,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17916/",
         "https://www.serebii.net/card/journeytogether/069.shtml"
@@ -4133,9 +4126,9 @@
       "name": "Alcremie ex",
       "number": "075/159",
       "series": "Journey Together",
-      "slot": 241,
+      "slot": 240,
       "page": 27,
-      "pocket": 7,
+      "pocket": 6,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17922/",
         "https://www.serebii.net/card/journeytogether/075.shtml"
@@ -4146,9 +4139,9 @@
       "name": "Mamoswine ex",
       "number": "079/159",
       "series": "Journey Together",
-      "slot": 242,
+      "slot": 241,
       "page": 27,
-      "pocket": 8,
+      "pocket": 7,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17926/",
         "https://www.serebii.net/card/journeytogether/079.shtml"
@@ -4159,9 +4152,9 @@
       "name": "Paldean Clodsire ex",
       "number": "094/159",
       "series": "Journey Together",
-      "slot": 243,
+      "slot": 242,
       "page": 27,
-      "pocket": 9,
+      "pocket": 8,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17941/",
         "https://www.serebii.net/card/journeytogether/094.shtml"
@@ -4172,9 +4165,9 @@
       "name": "N's Zoroark ex",
       "number": "098/159",
       "series": "Journey Together",
-      "slot": 244,
-      "page": 28,
-      "pocket": 1,
+      "slot": 243,
+      "page": 27,
+      "pocket": 9,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17945/",
         "https://www.serebii.net/card/journeytogether/098.shtml"
@@ -4185,9 +4178,9 @@
       "name": "Hop's Zacian ex",
       "number": "111/159",
       "series": "Journey Together",
-      "slot": 245,
+      "slot": 244,
       "page": 28,
-      "pocket": 2,
+      "pocket": 1,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17958/",
         "https://www.serebii.net/card/journeytogether/111.shtml"
@@ -4198,9 +4191,9 @@
       "name": "Salamence ex",
       "number": "114/159",
       "series": "Journey Together",
-      "slot": 246,
+      "slot": 245,
       "page": 28,
-      "pocket": 3,
+      "pocket": 2,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17961/",
         "https://www.serebii.net/card/journeytogether/114.shtml"
@@ -4211,9 +4204,9 @@
       "name": "Dudunsparce ex",
       "number": "121/159",
       "series": "Journey Together",
-      "slot": 247,
+      "slot": 246,
       "page": 28,
-      "pocket": 4,
+      "pocket": 3,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/17968/",
         "https://www.serebii.net/card/journeytogether/121.shtml"
@@ -4224,9 +4217,9 @@
       "name": "Hop's Zacian ex",
       "number": "SVP 193",
       "series": "Journey Together",
-      "slot": 248,
+      "slot": 247,
       "page": 28,
-      "pocket": 5,
+      "pocket": 4,
       "sources": [
         "https://www.serebii.net/card/svpromos/193.shtml"
       ],
@@ -4238,9 +4231,9 @@
       "name": "Koraidon ex",
       "number": "SVP 197",
       "series": "Journey Together",
-      "slot": 249,
+      "slot": 248,
       "page": 28,
-      "pocket": 6,
+      "pocket": 5,
       "sources": [
         "https://www.serebii.net/card/svpromos/197.shtml"
       ],
@@ -4252,9 +4245,9 @@
       "name": "Zacian ex",
       "number": "SVP 198",
       "series": "Journey Together",
-      "slot": 250,
+      "slot": 249,
       "page": 28,
-      "pocket": 7,
+      "pocket": 6,
       "sources": [
         "https://www.serebii.net/card/svpromos/198.shtml"
       ],
@@ -4266,9 +4259,9 @@
       "name": "Yanmega ex",
       "number": "003/182",
       "series": "Destined Rivals",
-      "slot": 251,
+      "slot": 250,
       "page": 28,
-      "pocket": 8,
+      "pocket": 7,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/19552/",
         "https://www.serebii.net/card/destinedrivals/003.shtml"
@@ -4279,9 +4272,9 @@
       "name": "Arboliva ex",
       "number": "023/182",
       "series": "Destined Rivals",
-      "slot": 252,
+      "slot": 251,
       "page": 28,
-      "pocket": 9,
+      "pocket": 8,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/19572/",
         "https://www.serebii.net/card/destinedrivals/023.shtml"
@@ -4292,9 +4285,9 @@
       "name": "Rabsca ex",
       "number": "025/182",
       "series": "Destined Rivals",
-      "slot": 253,
-      "page": 29,
-      "pocket": 1,
+      "slot": 252,
+      "page": 28,
+      "pocket": 9,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/19574/",
         "https://www.serebii.net/card/destinedrivals/025.shtml"
@@ -4305,9 +4298,9 @@
       "name": "Team Rocket's Moltres ex",
       "number": "031/182",
       "series": "Destined Rivals",
-      "slot": 254,
+      "slot": 253,
       "page": 29,
-      "pocket": 2,
+      "pocket": 1,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/19580/",
         "https://www.serebii.net/card/destinedrivals/031.shtml"
@@ -4318,9 +4311,9 @@
       "name": "Ethan's Ho-Oh ex",
       "number": "039/182",
       "series": "Destined Rivals",
-      "slot": 255,
+      "slot": 254,
       "page": 29,
-      "pocket": 3,
+      "pocket": 2,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/19588/",
         "https://www.serebii.net/card/destinedrivals/039.shtml"
@@ -4331,9 +4324,9 @@
       "name": "Cetitan ex",
       "number": "065/182",
       "series": "Destined Rivals",
-      "slot": 256,
+      "slot": 255,
       "page": 29,
-      "pocket": 4,
+      "pocket": 3,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/19614/",
         "https://www.serebii.net/card/destinedrivals/065.shtml"
@@ -4344,9 +4337,9 @@
       "name": "Dondozo ex",
       "number": "066/182",
       "series": "Destined Rivals",
-      "slot": 257,
+      "slot": 256,
       "page": 29,
-      "pocket": 5,
+      "pocket": 4,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/19615/",
         "https://www.serebii.net/card/destinedrivals/066.shtml"
@@ -4357,9 +4350,9 @@
       "name": "Electivire ex",
       "number": "069/182",
       "series": "Destined Rivals",
-      "slot": 258,
+      "slot": 257,
       "page": 29,
-      "pocket": 6,
+      "pocket": 5,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/19618/",
         "https://www.serebii.net/card/destinedrivals/069.shtml"
@@ -4370,9 +4363,9 @@
       "name": "Team Rocket's Mewtwo ex",
       "number": "081/182",
       "series": "Destined Rivals",
-      "slot": 259,
+      "slot": 258,
       "page": 29,
-      "pocket": 7,
+      "pocket": 6,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/19630/",
         "https://www.serebii.net/card/destinedrivals/081.shtml"
@@ -4383,9 +4376,9 @@
       "name": "Regirock ex",
       "number": "101/182",
       "series": "Destined Rivals",
-      "slot": 260,
+      "slot": 259,
       "page": 29,
-      "pocket": 8,
+      "pocket": 7,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/19647/",
         "https://www.serebii.net/card/destinedrivals/101.shtml"
@@ -4396,9 +4389,9 @@
       "name": "Cynthia's Garchomp ex",
       "number": "104/182",
       "series": "Destined Rivals",
-      "slot": 261,
+      "slot": 260,
       "page": 29,
-      "pocket": 9,
+      "pocket": 8,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/19650/",
         "https://www.serebii.net/card/destinedrivals/104.shtml"
@@ -4409,9 +4402,9 @@
       "name": "Team Rocket's Nidoking ex",
       "number": "119/182",
       "series": "Destined Rivals",
-      "slot": 262,
-      "page": 30,
-      "pocket": 1,
+      "slot": 261,
+      "page": 29,
+      "pocket": 9,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/19665/",
         "https://www.serebii.net/card/destinedrivals/119.shtml"
@@ -4422,9 +4415,9 @@
       "name": "Team Rocket's Crobat ex",
       "number": "122/182",
       "series": "Destined Rivals",
-      "slot": 263,
+      "slot": 262,
       "page": 30,
-      "pocket": 2,
+      "pocket": 1,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/19668/",
         "https://www.serebii.net/card/destinedrivals/122.shtml"
@@ -4435,9 +4428,9 @@
       "name": "Marnie's Grimmsnarl ex",
       "number": "136/182",
       "series": "Destined Rivals",
-      "slot": 264,
+      "slot": 263,
       "page": 30,
-      "pocket": 3,
+      "pocket": 2,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/18072/",
         "https://www.serebii.net/card/destinedrivals/136.shtml"
@@ -4448,9 +4441,9 @@
       "name": "Arven's Mabosstiff ex",
       "number": "139/182",
       "series": "Destined Rivals",
-      "slot": 265,
+      "slot": 264,
       "page": 30,
-      "pocket": 4,
+      "pocket": 3,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/19677/",
         "https://www.serebii.net/card/destinedrivals/139.shtml"
@@ -4461,9 +4454,9 @@
       "name": "Steven's Metagross ex",
       "number": "145/182",
       "series": "Destined Rivals",
-      "slot": 266,
+      "slot": 265,
       "page": 30,
-      "pocket": 5,
+      "pocket": 4,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/18089/",
         "https://www.serebii.net/card/destinedrivals/145.shtml"
@@ -4474,9 +4467,9 @@
       "name": "Team Rocket's Persian ex",
       "number": "150/182",
       "series": "Destined Rivals",
-      "slot": 267,
+      "slot": 266,
       "page": 30,
-      "pocket": 6,
+      "pocket": 5,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/19684/",
         "https://www.serebii.net/card/destinedrivals/150.shtml"
@@ -4487,9 +4480,9 @@
       "name": "Charizard ex",
       "number": "SVP 196",
       "series": "Destined Rivals",
-      "slot": 268,
+      "slot": 267,
       "page": 30,
-      "pocket": 7,
+      "pocket": 6,
       "sources": [
         "https://www.serebii.net/card/svpromos/196.shtml"
       ],
@@ -4501,9 +4494,9 @@
       "name": "Team Rocket's Mewtwo ex",
       "number": "SVP 205",
       "series": "Destined Rivals",
-      "slot": 269,
+      "slot": 268,
       "page": 30,
-      "pocket": 8,
+      "pocket": 7,
       "sources": [
         "https://www.serebii.net/card/svpromos/205.shtml"
       ],
@@ -4515,9 +4508,9 @@
       "name": "Whimsicott ex",
       "number": "005/086",
       "series": "White Flare",
-      "slot": 270,
+      "slot": 269,
       "page": 30,
-      "pocket": 9,
+      "pocket": 8,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/21294/",
         "https://www.serebii.net/card/whiteflare/005.shtml"
@@ -4528,9 +4521,9 @@
       "name": "Reshiram ex",
       "number": "020/086",
       "series": "White Flare",
-      "slot": 271,
-      "page": 31,
-      "pocket": 1,
+      "slot": 270,
+      "page": 30,
+      "pocket": 9,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/21309/",
         "https://www.serebii.net/card/whiteflare/020.shtml"
@@ -4541,9 +4534,9 @@
       "name": "Keldeo ex",
       "number": "030/086",
       "series": "White Flare",
-      "slot": 272,
+      "slot": 271,
       "page": 31,
-      "pocket": 2,
+      "pocket": 1,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/21319/",
         "https://www.serebii.net/card/whiteflare/030.shtml"
@@ -4554,9 +4547,9 @@
       "name": "Jellicent ex",
       "number": "045/086",
       "series": "White Flare",
-      "slot": 273,
+      "slot": 272,
       "page": 31,
-      "pocket": 3,
+      "pocket": 2,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/21334/",
         "https://www.serebii.net/card/whiteflare/045.shtml"
@@ -4567,9 +4560,9 @@
       "name": "Hydreigon ex",
       "number": "067/086",
       "series": "White Flare",
-      "slot": 274,
+      "slot": 273,
       "page": 31,
-      "pocket": 4,
+      "pocket": 3,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/21356/",
         "https://www.serebii.net/card/whiteflare/067.shtml"
@@ -4580,9 +4573,9 @@
       "name": "Bouffalant ex",
       "number": "077/086",
       "series": "White Flare",
-      "slot": 275,
+      "slot": 274,
       "page": 31,
-      "pocket": 5,
+      "pocket": 4,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/21366/",
         "https://www.serebii.net/card/whiteflare/077.shtml"
@@ -4593,9 +4586,9 @@
       "name": "Serperior ex",
       "number": "003/086",
       "series": "Black Bolt",
-      "slot": 276,
+      "slot": 275,
       "page": 31,
-      "pocket": 6,
+      "pocket": 5,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/21120/",
         "https://www.serebii.net/card/blackbolt/003.shtml"
@@ -4606,9 +4599,9 @@
       "name": "Kyurem ex",
       "number": "028/086",
       "series": "Black Bolt",
-      "slot": 277,
+      "slot": 276,
       "page": 31,
-      "pocket": 7,
+      "pocket": 6,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/21145/",
         "https://www.serebii.net/card/blackbolt/028.shtml"
@@ -4619,9 +4612,9 @@
       "name": "Zekrom ex",
       "number": "034/086",
       "series": "Black Bolt",
-      "slot": 278,
+      "slot": 277,
       "page": 31,
-      "pocket": 8,
+      "pocket": 7,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/21151/",
         "https://www.serebii.net/card/blackbolt/034.shtml"
@@ -4632,9 +4625,9 @@
       "name": "Meloetta ex",
       "number": "044/086",
       "series": "Black Bolt",
-      "slot": 279,
+      "slot": 278,
       "page": 31,
-      "pocket": 9,
+      "pocket": 8,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/21161/",
         "https://www.serebii.net/card/blackbolt/044.shtml"
@@ -4645,9 +4638,9 @@
       "name": "Excadrill ex",
       "number": "046/086",
       "series": "Black Bolt",
-      "slot": 280,
-      "page": 32,
-      "pocket": 1,
+      "slot": 279,
+      "page": 31,
+      "pocket": 9,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/21163/",
         "https://www.serebii.net/card/blackbolt/046.shtml"
@@ -4658,9 +4651,9 @@
       "name": "Genesect ex",
       "number": "067/086",
       "series": "Black Bolt",
-      "slot": 281,
+      "slot": 280,
       "page": 32,
-      "pocket": 2,
+      "pocket": 1,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/21184/",
         "https://www.serebii.net/card/blackbolt/067.shtml"
@@ -4671,9 +4664,9 @@
       "name": "Team Rocket's Mewtwo ex",
       "number": "SVP 216",
       "series": "Black Bolt",
-      "slot": 282,
+      "slot": 281,
       "page": 32,
-      "pocket": 3,
+      "pocket": 2,
       "sources": [
         "https://www.serebii.net/card/svpromos/216.shtml"
       ],
@@ -4685,9 +4678,9 @@
       "name": "Team Rocket's Nidoking ex",
       "number": "SVP 217",
       "series": "Black Bolt",
-      "slot": 283,
+      "slot": 282,
       "page": 32,
-      "pocket": 4,
+      "pocket": 3,
       "sources": [
         "https://www.serebii.net/card/svpromos/217.shtml"
       ],
@@ -4699,9 +4692,9 @@
       "name": "Team Rocket's Persian ex",
       "number": "SVP 218",
       "series": "Black Bolt",
-      "slot": 284,
+      "slot": 283,
       "page": 32,
-      "pocket": 5,
+      "pocket": 4,
       "sources": [
         "https://www.serebii.net/card/svpromos/218.shtml"
       ],
@@ -4713,9 +4706,9 @@
       "name": "Mega Venusaur ex",
       "number": "003/132",
       "series": "Mega Evolution",
-      "slot": 285,
+      "slot": 284,
       "page": 32,
-      "pocket": 6,
+      "pocket": 5,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/21595/",
         "https://www.serebii.net/card/megaevolution/003.shtml"
@@ -4726,9 +4719,9 @@
       "name": "Mega Camerupt ex",
       "number": "022/132",
       "series": "Mega Evolution",
-      "slot": 286,
+      "slot": 285,
       "page": 32,
-      "pocket": 7,
+      "pocket": 6,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/21614/",
         "https://www.serebii.net/card/megaevolution/022.shtml"
@@ -4739,9 +4732,9 @@
       "name": "Mega Abomasnow ex",
       "number": "036/132",
       "series": "Mega Evolution",
-      "slot": 287,
+      "slot": 286,
       "page": 32,
-      "pocket": 8,
+      "pocket": 7,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/21628/",
         "https://www.serebii.net/card/megaevolution/036.shtml"
@@ -4752,9 +4745,9 @@
       "name": "Mega Manectric ex",
       "number": "050/132",
       "series": "Mega Evolution",
-      "slot": 288,
+      "slot": 287,
       "page": 32,
-      "pocket": 9,
+      "pocket": 8,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/21642/",
         "https://www.serebii.net/card/megaevolution/050.shtml"
@@ -4765,9 +4758,9 @@
       "name": "Mega Gardevoir ex",
       "number": "060/132",
       "series": "Mega Evolution",
-      "slot": 289,
-      "page": 33,
-      "pocket": 1,
+      "slot": 288,
+      "page": 32,
+      "pocket": 9,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/21652/",
         "https://www.serebii.net/card/megaevolution/060.shtml"
@@ -4778,9 +4771,9 @@
       "name": "Mega Lucario ex",
       "number": "077/132",
       "series": "Mega Evolution",
-      "slot": 290,
+      "slot": 289,
       "page": 33,
-      "pocket": 2,
+      "pocket": 1,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/21669/",
         "https://www.serebii.net/card/megaevolution/077.shtml"
@@ -4791,9 +4784,9 @@
       "name": "Mega Absol ex",
       "number": "086/132",
       "series": "Mega Evolution",
-      "slot": 291,
+      "slot": 290,
       "page": 33,
-      "pocket": 3,
+      "pocket": 2,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/21678/",
         "https://www.serebii.net/card/megaevolution/086.shtml"
@@ -4804,9 +4797,9 @@
       "name": "Mega Mawile ex",
       "number": "094/132",
       "series": "Mega Evolution",
-      "slot": 292,
+      "slot": 291,
       "page": 33,
-      "pocket": 4,
+      "pocket": 3,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/21686/",
         "https://www.serebii.net/card/megaevolution/094.shtml"
@@ -4817,9 +4810,9 @@
       "name": "Mega Latias ex",
       "number": "100/132",
       "series": "Mega Evolution",
-      "slot": 293,
+      "slot": 292,
       "page": 33,
-      "pocket": 5,
+      "pocket": 4,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/21692/",
         "https://www.serebii.net/card/megaevolution/100.shtml"
@@ -4830,9 +4823,9 @@
       "name": "Mega Kangaskhan ex",
       "number": "104/132",
       "series": "Mega Evolution",
-      "slot": 294,
+      "slot": 293,
       "page": 33,
-      "pocket": 6,
+      "pocket": 5,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/21696/",
         "https://www.serebii.net/card/megaevolution/104.shtml"
@@ -4843,9 +4836,9 @@
       "name": "Mega Latias ex",
       "number": "MEP 011",
       "series": "Mega Evolution",
-      "slot": 295,
+      "slot": 294,
       "page": 33,
-      "pocket": 7,
+      "pocket": 6,
       "sources": [
         "https://www.serebii.net/card/megapromos/011.shtml"
       ],
@@ -4857,9 +4850,9 @@
       "name": "Mega Lucario ex",
       "number": "MEP 012",
       "series": "Mega Evolution",
-      "slot": 296,
+      "slot": 295,
       "page": 33,
-      "pocket": 8,
+      "pocket": 7,
       "sources": [
         "https://www.serebii.net/card/megapromos/012.shtml"
       ],
@@ -4871,9 +4864,9 @@
       "name": "Mega Heracross ex",
       "number": "004/094",
       "series": "Phantasmal Flames",
-      "slot": 297,
+      "slot": 296,
       "page": 33,
-      "pocket": 9,
+      "pocket": 8,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/22128/",
         "https://www.serebii.net/card/phantasmalflames/004.shtml"
@@ -4884,9 +4877,9 @@
       "name": "Mega Charizard X ex",
       "number": "013/094",
       "series": "Phantasmal Flames",
-      "slot": 298,
-      "page": 34,
-      "pocket": 1,
+      "slot": 297,
+      "page": 33,
+      "pocket": 9,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/22137/",
         "https://www.serebii.net/card/phantasmalflames/013.shtml"
@@ -4897,9 +4890,9 @@
       "name": "Oricorio ex",
       "number": "018/094",
       "series": "Phantasmal Flames",
-      "slot": 299,
+      "slot": 298,
       "page": 34,
-      "pocket": 2,
+      "pocket": 1,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/22142/",
         "https://www.serebii.net/card/phantasmalflames/018.shtml"
@@ -4910,9 +4903,9 @@
       "name": "Rotom ex",
       "number": "029/094",
       "series": "Phantasmal Flames",
-      "slot": 300,
+      "slot": 299,
       "page": 34,
-      "pocket": 3,
+      "pocket": 2,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/22153/",
         "https://www.serebii.net/card/phantasmalflames/029.shtml"
@@ -4923,9 +4916,9 @@
       "name": "Mismagius ex",
       "number": "036/094",
       "series": "Phantasmal Flames",
-      "slot": 301,
+      "slot": 300,
       "page": 34,
-      "pocket": 4,
+      "pocket": 3,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/22160/",
         "https://www.serebii.net/card/phantasmalflames/036.shtml"
@@ -4936,9 +4929,9 @@
       "name": "Mega Diancie ex",
       "number": "041/094",
       "series": "Phantasmal Flames",
-      "slot": 302,
+      "slot": 301,
       "page": 34,
-      "pocket": 5,
+      "pocket": 4,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/21897/",
         "https://www.serebii.net/card/phantasmalflames/041.shtml"
@@ -4949,9 +4942,9 @@
       "name": "Mega Gengar ex",
       "number": "056/094",
       "series": "Phantasmal Flames",
-      "slot": 303,
+      "slot": 302,
       "page": 34,
-      "pocket": 6,
+      "pocket": 5,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/21904/",
         "https://www.serebii.net/card/phantasmalflames/056.shtml"
@@ -4962,9 +4955,9 @@
       "name": "Mega Sharpedo ex",
       "number": "061/094",
       "series": "Phantasmal Flames",
-      "slot": 304,
+      "slot": 303,
       "page": 34,
-      "pocket": 7,
+      "pocket": 6,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/22173/",
         "https://www.serebii.net/card/phantasmalflames/061.shtml"
@@ -4975,9 +4968,9 @@
       "name": "Empoleon ex",
       "number": "070/094",
       "series": "Phantasmal Flames",
-      "slot": 305,
+      "slot": 304,
       "page": 34,
-      "pocket": 8,
+      "pocket": 7,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/22180/",
         "https://www.serebii.net/card/phantasmalflames/070.shtml"
@@ -4988,9 +4981,9 @@
       "name": "Mega Lopunny ex",
       "number": "084/094",
       "series": "Phantasmal Flames",
-      "slot": 306,
+      "slot": 305,
       "page": 34,
-      "pocket": 9,
+      "pocket": 8,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/22194/",
         "https://www.serebii.net/card/phantasmalflames/084.shtml"
@@ -5001,9 +4994,9 @@
       "name": "Mega Venusaur ex",
       "number": "MEP 013",
       "series": "Phantasmal Flames",
-      "slot": 307,
-      "page": 35,
-      "pocket": 1,
+      "slot": 306,
+      "page": 34,
+      "pocket": 9,
       "sources": [
         "https://www.serebii.net/card/megapromos/013.shtml"
       ],
@@ -5015,9 +5008,9 @@
       "name": "Mega Kangaskhan ex",
       "number": "MEP 025",
       "series": "Phantasmal Flames",
-      "slot": 308,
+      "slot": 307,
       "page": 35,
-      "pocket": 2,
+      "pocket": 1,
       "sources": [
         "https://www.serebii.net/card/megapromos/025.shtml"
       ],
@@ -5029,9 +5022,9 @@
       "name": "Erika's Vileplume ex",
       "number": "003/217",
       "series": "Ascended Heroes",
-      "slot": 309,
+      "slot": 308,
       "page": 35,
-      "pocket": 3,
+      "pocket": 2,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24584/",
         "https://www.serebii.net/card/ascendedheroes/003.shtml"
@@ -5042,9 +5035,9 @@
       "name": "Mega Meganium ex",
       "number": "010/217",
       "series": "Ascended Heroes",
-      "slot": 310,
+      "slot": 309,
       "page": 35,
-      "pocket": 4,
+      "pocket": 3,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24591/",
         "https://www.serebii.net/card/ascendedheroes/010.shtml"
@@ -5055,9 +5048,9 @@
       "name": "Mega Charizard Y ex",
       "number": "022/217",
       "series": "Ascended Heroes",
-      "slot": 311,
+      "slot": 310,
       "page": 35,
-      "pocket": 5,
+      "pocket": 4,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24603/",
         "https://www.serebii.net/card/ascendedheroes/022.shtml"
@@ -5068,9 +5061,9 @@
       "name": "Ethan's Ho-Oh ex",
       "number": "026/217",
       "series": "Ascended Heroes",
-      "slot": 312,
+      "slot": 311,
       "page": 35,
-      "pocket": 6,
+      "pocket": 5,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24607/",
         "https://www.serebii.net/card/ascendedheroes/026.shtml"
@@ -5081,9 +5074,9 @@
       "name": "Mega Emboar ex",
       "number": "031/217",
       "series": "Ascended Heroes",
-      "slot": 313,
+      "slot": 312,
       "page": 35,
-      "pocket": 7,
+      "pocket": 6,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24612/",
         "https://www.serebii.net/card/ascendedheroes/031.shtml"
@@ -5094,9 +5087,9 @@
       "name": "Cinderace ex",
       "number": "038/217",
       "series": "Ascended Heroes",
-      "slot": 314,
+      "slot": 313,
       "page": 35,
-      "pocket": 8,
+      "pocket": 7,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24619/",
         "https://www.serebii.net/card/ascendedheroes/038.shtml"
@@ -5107,9 +5100,9 @@
       "name": "Mega Feraligatr ex",
       "number": "043/217",
       "series": "Ascended Heroes",
-      "slot": 315,
+      "slot": 314,
       "page": 35,
-      "pocket": 9,
+      "pocket": 8,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24624/",
         "https://www.serebii.net/card/ascendedheroes/043.shtml"
@@ -5120,9 +5113,9 @@
       "name": "Mega Froslass ex",
       "number": "047/217",
       "series": "Ascended Heroes",
-      "slot": 316,
-      "page": 36,
-      "pocket": 1,
+      "slot": 315,
+      "page": 35,
+      "pocket": 9,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24628/",
         "https://www.serebii.net/card/ascendedheroes/047.shtml"
@@ -5133,9 +5126,9 @@
       "name": "Regice ex",
       "number": "048/217",
       "series": "Ascended Heroes",
-      "slot": 317,
+      "slot": 316,
       "page": 36,
-      "pocket": 2,
+      "pocket": 1,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24629/",
         "https://www.serebii.net/card/ascendedheroes/048.shtml"
@@ -5146,9 +5139,9 @@
       "name": "Pikachu ex",
       "number": "057/217",
       "series": "Ascended Heroes",
-      "slot": 318,
+      "slot": 317,
       "page": 36,
-      "pocket": 3,
+      "pocket": 2,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24638/",
         "https://www.serebii.net/card/ascendedheroes/057.shtml"
@@ -5159,9 +5152,9 @@
       "name": "Voltorb ex",
       "number": "058/217",
       "series": "Ascended Heroes",
-      "slot": 319,
+      "slot": 318,
       "page": 36,
-      "pocket": 4,
+      "pocket": 3,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24639/",
         "https://www.serebii.net/card/ascendedheroes/058.shtml"
@@ -5172,9 +5165,9 @@
       "name": "Mega Eelektross ex",
       "number": "061/217",
       "series": "Ascended Heroes",
-      "slot": 320,
+      "slot": 319,
       "page": 36,
-      "pocket": 5,
+      "pocket": 4,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24642/",
         "https://www.serebii.net/card/ascendedheroes/061.shtml"
@@ -5185,9 +5178,9 @@
       "name": "Hop's Pincurchin ex",
       "number": "068/217",
       "series": "Ascended Heroes",
-      "slot": 321,
+      "slot": 320,
       "page": 36,
-      "pocket": 6,
+      "pocket": 5,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24649/",
         "https://www.serebii.net/card/ascendedheroes/068.shtml"
@@ -5198,9 +5191,9 @@
       "name": "Iono's Bellibolt ex",
       "number": "070/217",
       "series": "Ascended Heroes",
-      "slot": 322,
+      "slot": 321,
       "page": 36,
-      "pocket": 7,
+      "pocket": 6,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24651/",
         "https://www.serebii.net/card/ascendedheroes/070.shtml"
@@ -5211,9 +5204,9 @@
       "name": "Miraidon ex",
       "number": "073/217",
       "series": "Ascended Heroes",
-      "slot": 323,
+      "slot": 322,
       "page": 36,
-      "pocket": 8,
+      "pocket": 7,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24654/",
         "https://www.serebii.net/card/ascendedheroes/073.shtml"
@@ -5224,9 +5217,9 @@
       "name": "Lillie's Clefairy ex",
       "number": "076/217",
       "series": "Ascended Heroes",
-      "slot": 324,
+      "slot": 323,
       "page": 36,
-      "pocket": 9,
+      "pocket": 8,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24657/",
         "https://www.serebii.net/card/ascendedheroes/076.shtml"
@@ -5237,9 +5230,9 @@
       "name": "Team Rocket's Mewtwo ex",
       "number": "079/217",
       "series": "Ascended Heroes",
-      "slot": 325,
-      "page": 37,
-      "pocket": 1,
+      "slot": 324,
+      "page": 36,
+      "pocket": 9,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24660/",
         "https://www.serebii.net/card/ascendedheroes/079.shtml"
@@ -5250,9 +5243,9 @@
       "name": "Azumarill ex",
       "number": "084/217",
       "series": "Ascended Heroes",
-      "slot": 326,
+      "slot": 325,
       "page": 37,
-      "pocket": 2,
+      "pocket": 1,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24665/",
         "https://www.serebii.net/card/ascendedheroes/084.shtml"
@@ -5263,9 +5256,9 @@
       "name": "Mega Gardevoir ex",
       "number": "089/217",
       "series": "Ascended Heroes",
-      "slot": 327,
+      "slot": 326,
       "page": 37,
-      "pocket": 3,
+      "pocket": 2,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24670/",
         "https://www.serebii.net/card/ascendedheroes/089.shtml"
@@ -5276,9 +5269,9 @@
       "name": "Regirock ex",
       "number": "107/217",
       "series": "Ascended Heroes",
-      "slot": 328,
+      "slot": 327,
       "page": 37,
-      "pocket": 4,
+      "pocket": 3,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24688/",
         "https://www.serebii.net/card/ascendedheroes/107.shtml"
@@ -5289,9 +5282,9 @@
       "name": "Cynthia's Garchomp ex",
       "number": "111/217",
       "series": "Ascended Heroes",
-      "slot": 329,
+      "slot": 328,
       "page": 37,
-      "pocket": 5,
+      "pocket": 4,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24692/",
         "https://www.serebii.net/card/ascendedheroes/111.shtml"
@@ -5302,9 +5295,9 @@
       "name": "Mega Lucario ex",
       "number": "113/217",
       "series": "Ascended Heroes",
-      "slot": 330,
+      "slot": 329,
       "page": 37,
-      "pocket": 6,
+      "pocket": 5,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24694/",
         "https://www.serebii.net/card/ascendedheroes/113.shtml"
@@ -5315,9 +5308,9 @@
       "name": "Stunfisk ex",
       "number": "114/217",
       "series": "Ascended Heroes",
-      "slot": 331,
+      "slot": 330,
       "page": 37,
-      "pocket": 7,
+      "pocket": 6,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24695/",
         "https://www.serebii.net/card/ascendedheroes/114.shtml"
@@ -5328,9 +5321,9 @@
       "name": "Mega Hawlucha ex",
       "number": "116/217",
       "series": "Ascended Heroes",
-      "slot": 332,
+      "slot": 331,
       "page": 37,
-      "pocket": 8,
+      "pocket": 7,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24697/",
         "https://www.serebii.net/card/ascendedheroes/116.shtml"
@@ -5341,9 +5334,9 @@
       "name": "Koraidon ex",
       "number": "121/217",
       "series": "Ascended Heroes",
-      "slot": 333,
+      "slot": 332,
       "page": 37,
-      "pocket": 9,
+      "pocket": 8,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24702/",
         "https://www.serebii.net/card/ascendedheroes/121.shtml"
@@ -5354,9 +5347,9 @@
       "name": "Mega Gengar ex",
       "number": "125/217",
       "series": "Ascended Heroes",
-      "slot": 334,
-      "page": 38,
-      "pocket": 1,
+      "slot": 333,
+      "page": 37,
+      "pocket": 9,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24706/",
         "https://www.serebii.net/card/ascendedheroes/125.shtml"
@@ -5367,9 +5360,9 @@
       "name": "Mega Scrafty ex",
       "number": "135/217",
       "series": "Ascended Heroes",
-      "slot": 335,
+      "slot": 334,
       "page": 38,
-      "pocket": 2,
+      "pocket": 1,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24716/",
         "https://www.serebii.net/card/ascendedheroes/135.shtml"
@@ -5380,9 +5373,9 @@
       "name": "N's Zoroark ex",
       "number": "137/217",
       "series": "Ascended Heroes",
-      "slot": 336,
+      "slot": 335,
       "page": 38,
-      "pocket": 3,
+      "pocket": 2,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24718/",
         "https://www.serebii.net/card/ascendedheroes/137.shtml"
@@ -5393,9 +5386,9 @@
       "name": "Mandibuzz ex",
       "number": "139/217",
       "series": "Ascended Heroes",
-      "slot": 337,
+      "slot": 336,
       "page": 38,
-      "pocket": 4,
+      "pocket": 3,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24720/",
         "https://www.serebii.net/card/ascendedheroes/139.shtml"
@@ -5406,9 +5399,9 @@
       "name": "Fezandipiti ex",
       "number": "142/217",
       "series": "Ascended Heroes",
-      "slot": 338,
+      "slot": 337,
       "page": 38,
-      "pocket": 5,
+      "pocket": 4,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24723/",
         "https://www.serebii.net/card/ascendedheroes/142.shtml"
@@ -5419,9 +5412,9 @@
       "name": "Registeel ex",
       "number": "145/217",
       "series": "Ascended Heroes",
-      "slot": 339,
+      "slot": 338,
       "page": 38,
-      "pocket": 6,
+      "pocket": 5,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24726/",
         "https://www.serebii.net/card/ascendedheroes/145.shtml"
@@ -5432,9 +5425,9 @@
       "name": "Togedemaru ex",
       "number": "149/217",
       "series": "Ascended Heroes",
-      "slot": 340,
+      "slot": 339,
       "page": 38,
-      "pocket": 7,
+      "pocket": 6,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24730/",
         "https://www.serebii.net/card/ascendedheroes/149.shtml"
@@ -5445,9 +5438,9 @@
       "name": "Mega Dragonite ex",
       "number": "152/217",
       "series": "Ascended Heroes",
-      "slot": 341,
+      "slot": 340,
       "page": 38,
-      "pocket": 8,
+      "pocket": 7,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24733/",
         "https://www.serebii.net/card/ascendedheroes/152.shtml"
@@ -5458,9 +5451,9 @@
       "name": "Dragapult ex",
       "number": "160/217",
       "series": "Ascended Heroes",
-      "slot": 342,
+      "slot": 341,
       "page": 38,
-      "pocket": 9,
+      "pocket": 8,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24741/",
         "https://www.serebii.net/card/ascendedheroes/160.shtml"
@@ -5471,9 +5464,9 @@
       "name": "Team Rocket's Kangaskhan ex",
       "number": "162/217",
       "series": "Ascended Heroes",
-      "slot": 343,
-      "page": 39,
-      "pocket": 1,
+      "slot": 342,
+      "page": 38,
+      "pocket": 9,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24743/",
         "https://www.serebii.net/card/ascendedheroes/162.shtml"
@@ -5484,9 +5477,9 @@
       "name": "Larry's Dudunsparce ex",
       "number": "164/217",
       "series": "Ascended Heroes",
-      "slot": 344,
+      "slot": 343,
       "page": 39,
-      "pocket": 2,
+      "pocket": 1,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24745/",
         "https://www.serebii.net/card/ascendedheroes/164.shtml"
@@ -5497,9 +5490,9 @@
       "name": "Zangoose ex",
       "number": "167/217",
       "series": "Ascended Heroes",
-      "slot": 345,
+      "slot": 344,
       "page": 39,
-      "pocket": 3,
+      "pocket": 2,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24748/",
         "https://www.serebii.net/card/ascendedheroes/167.shtml"
@@ -5510,9 +5503,9 @@
       "name": "Mega Audino ex",
       "number": "172/217",
       "series": "Ascended Heroes",
-      "slot": 346,
+      "slot": 345,
       "page": 39,
-      "pocket": 4,
+      "pocket": 3,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24753/",
         "https://www.serebii.net/card/ascendedheroes/172.shtml"
@@ -5523,9 +5516,9 @@
       "name": "Terapagos ex",
       "number": "179/217",
       "series": "Ascended Heroes",
-      "slot": 347,
+      "slot": 346,
       "page": 39,
-      "pocket": 5,
+      "pocket": 4,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24760/",
         "https://www.serebii.net/card/ascendedheroes/179.shtml"
@@ -5536,9 +5529,9 @@
       "name": "Mega Charizard X ex",
       "number": "MEP 029",
       "series": "Ascended Heroes",
-      "slot": 348,
+      "slot": 347,
       "page": 39,
-      "pocket": 6,
+      "pocket": 5,
       "sources": [
         "https://www.serebii.net/card/megapromos/029.shtml"
       ],
@@ -5550,9 +5543,9 @@
       "name": "Mega Charizard Y ex",
       "number": "MEP 030",
       "series": "Ascended Heroes",
-      "slot": 349,
+      "slot": 348,
       "page": 39,
-      "pocket": 7,
+      "pocket": 6,
       "sources": [
         "https://www.serebii.net/card/megapromos/030.shtml"
       ],
@@ -5564,9 +5557,9 @@
       "name": "Mega Meganium ex",
       "number": "MEP 034",
       "series": "Ascended Heroes",
-      "slot": 350,
+      "slot": 349,
       "page": 39,
-      "pocket": 8,
+      "pocket": 7,
       "sources": [
         "https://www.serebii.net/card/megapromos/034.shtml"
       ],
@@ -5578,9 +5571,9 @@
       "name": "Mega Emboar ex",
       "number": "MEP 035",
       "series": "Ascended Heroes",
-      "slot": 351,
+      "slot": 350,
       "page": 39,
-      "pocket": 9,
+      "pocket": 8,
       "sources": [
         "https://www.serebii.net/card/megapromos/035.shtml"
       ],
@@ -5592,9 +5585,9 @@
       "name": "Mega Feraligatr ex",
       "number": "MEP 036",
       "series": "Ascended Heroes",
-      "slot": 352,
-      "page": 40,
-      "pocket": 1,
+      "slot": 351,
+      "page": 39,
+      "pocket": 9,
       "sources": [
         "https://www.serebii.net/card/megapromos/036.shtml"
       ],
@@ -5606,9 +5599,9 @@
       "name": "Decidueye ex",
       "number": "012/088",
       "series": "Perfect Order",
-      "slot": 353,
+      "slot": 352,
       "page": 40,
-      "pocket": 2,
+      "pocket": 1,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24982/",
         "https://www.serebii.net/card/perfectorder/012.shtml"
@@ -5619,9 +5612,9 @@
       "name": "Salazzle ex",
       "number": "016/088",
       "series": "Perfect Order",
-      "slot": 354,
+      "slot": 353,
       "page": 40,
-      "pocket": 3,
+      "pocket": 2,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24986/",
         "https://www.serebii.net/card/perfectorder/016.shtml"
@@ -5632,9 +5625,9 @@
       "name": "Mega Starmie ex",
       "number": "021/088",
       "series": "Perfect Order",
-      "slot": 355,
+      "slot": 354,
       "page": 40,
-      "pocket": 4,
+      "pocket": 3,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24991/",
         "https://www.serebii.net/card/perfectorder/021.shtml"
@@ -5645,9 +5638,9 @@
       "name": "Lapras ex",
       "number": "022/088",
       "series": "Perfect Order",
-      "slot": 356,
+      "slot": 355,
       "page": 40,
-      "pocket": 5,
+      "pocket": 4,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/24992/",
         "https://www.serebii.net/card/perfectorder/022.shtml"
@@ -5658,9 +5651,9 @@
       "name": "Mega Clefable ex",
       "number": "031/088",
       "series": "Perfect Order",
-      "slot": 357,
+      "slot": 356,
       "page": 40,
-      "pocket": 6,
+      "pocket": 5,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25001/",
         "https://www.serebii.net/card/perfectorder/031.shtml"
@@ -5671,9 +5664,9 @@
       "name": "Mega Zygarde ex",
       "number": "047/088",
       "series": "Perfect Order",
-      "slot": 358,
+      "slot": 357,
       "page": 40,
-      "pocket": 7,
+      "pocket": 6,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25017/",
         "https://www.serebii.net/card/perfectorder/047.shtml"
@@ -5684,9 +5677,9 @@
       "name": "Yveltal ex",
       "number": "053/088",
       "series": "Perfect Order",
-      "slot": 359,
+      "slot": 358,
       "page": 40,
-      "pocket": 8,
+      "pocket": 7,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25023/",
         "https://www.serebii.net/card/perfectorder/053.shtml"
@@ -5697,9 +5690,9 @@
       "name": "Mega Skarmory ex",
       "number": "055/088",
       "series": "Perfect Order",
-      "slot": 360,
+      "slot": 359,
       "page": 40,
-      "pocket": 9,
+      "pocket": 8,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25025/",
         "https://www.serebii.net/card/perfectorder/055.shtml"
@@ -5710,9 +5703,9 @@
       "name": "Meowth ex",
       "number": "062/088",
       "series": "Perfect Order",
-      "slot": 361,
-      "page": 41,
-      "pocket": 1,
+      "slot": 360,
+      "page": 40,
+      "pocket": 9,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25032/",
         "https://www.serebii.net/card/perfectorder/062.shtml"
@@ -5723,9 +5716,9 @@
       "name": "Beedrill ex",
       "number": "003/086",
       "series": "Chaos Rising",
-      "slot": 362,
+      "slot": 361,
       "page": 41,
-      "pocket": 2,
+      "pocket": 1,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25194/",
         "https://www.serebii.net/card/chaosrising/003.shtml"
@@ -5736,9 +5729,9 @@
       "name": "Mega Pyroar ex",
       "number": "015/086",
       "series": "Chaos Rising",
-      "slot": 363,
+      "slot": 362,
       "page": 41,
-      "pocket": 3,
+      "pocket": 2,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25206/",
         "https://www.serebii.net/card/chaosrising/015.shtml"
@@ -5749,9 +5742,9 @@
       "name": "Mega Greninja ex",
       "number": "022/086",
       "series": "Chaos Rising",
-      "slot": 364,
+      "slot": 363,
       "page": 41,
-      "pocket": 4,
+      "pocket": 3,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25213/",
         "https://www.serebii.net/card/chaosrising/022.shtml"
@@ -5762,9 +5755,9 @@
       "name": "Mega Floette ex",
       "number": "035/086",
       "series": "Chaos Rising",
-      "slot": 365,
+      "slot": 364,
       "page": 41,
-      "pocket": 5,
+      "pocket": 4,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25226/",
         "https://www.serebii.net/card/chaosrising/035.shtml"
@@ -5775,9 +5768,9 @@
       "name": "Gourgeist ex",
       "number": "041/086",
       "series": "Chaos Rising",
-      "slot": 366,
+      "slot": 365,
       "page": 41,
-      "pocket": 6,
+      "pocket": 5,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25232/",
         "https://www.serebii.net/card/chaosrising/041.shtml"
@@ -5788,9 +5781,9 @@
       "name": "Mega Gallade ex",
       "number": "048/086",
       "series": "Chaos Rising",
-      "slot": 367,
+      "slot": 366,
       "page": 41,
-      "pocket": 7,
+      "pocket": 6,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25239/",
         "https://www.serebii.net/card/chaosrising/048.shtml"
@@ -5801,9 +5794,9 @@
       "name": "Krookodile ex",
       "number": "055/086",
       "series": "Chaos Rising",
-      "slot": 368,
+      "slot": 367,
       "page": 41,
-      "pocket": 8,
+      "pocket": 7,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25246/",
         "https://www.serebii.net/card/chaosrising/055.shtml"
@@ -5814,9 +5807,9 @@
       "name": "Cobalion ex",
       "number": "064/086",
       "series": "Chaos Rising",
-      "slot": 369,
+      "slot": 368,
       "page": 41,
-      "pocket": 9,
+      "pocket": 8,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25255/",
         "https://www.serebii.net/card/chaosrising/064.shtml"
@@ -5827,9 +5820,9 @@
       "name": "Mega Dragalge ex",
       "number": "065/086",
       "series": "Chaos Rising",
-      "slot": 370,
-      "page": 42,
-      "pocket": 1,
+      "slot": 369,
+      "page": 41,
+      "pocket": 9,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25256/",
         "https://www.serebii.net/card/chaosrising/065.shtml"
@@ -5840,9 +5833,9 @@
       "name": "Cinccino ex",
       "number": "073/086",
       "series": "Chaos Rising",
-      "slot": 371,
+      "slot": 370,
       "page": 42,
-      "pocket": 2,
+      "pocket": 1,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25264/",
         "https://www.serebii.net/card/chaosrising/073.shtml"
@@ -5853,9 +5846,9 @@
       "name": "Mega Zygarde ex",
       "number": "MEP 071",
       "series": "Chaos Rising",
-      "slot": 372,
+      "slot": 371,
       "page": 42,
-      "pocket": 3,
+      "pocket": 2,
       "sources": [
         "https://www.serebii.net/card/megapromos/071.shtml"
       ],
@@ -5867,9 +5860,9 @@
       "name": "Mega Clefable ex",
       "number": "MEP 072",
       "series": "Chaos Rising",
-      "slot": 373,
+      "slot": 372,
       "page": 42,
-      "pocket": 4,
+      "pocket": 3,
       "sources": [
         "https://www.serebii.net/card/megapromos/072.shtml"
       ],
@@ -5881,9 +5874,9 @@
       "name": "Mega Gengar ex",
       "number": "MEP 073",
       "series": "Chaos Rising",
-      "slot": 374,
+      "slot": 373,
       "page": 42,
-      "pocket": 5,
+      "pocket": 4,
       "sources": [
         "https://www.serebii.net/card/megapromos/073.shtml"
       ],
@@ -5895,9 +5888,9 @@
       "name": "Mega Greninja ex",
       "number": "MEP 081",
       "series": "Chaos Rising",
-      "slot": 375,
+      "slot": 374,
       "page": 42,
-      "pocket": 6,
+      "pocket": 5,
       "sources": [
         "https://www.serebii.net/card/megapromos/081.shtml"
       ],
@@ -5909,9 +5902,9 @@
       "name": "Lurantis ex",
       "number": "004/084",
       "series": "Pitch Black",
-      "slot": 376,
+      "slot": 375,
       "page": 42,
-      "pocket": 7,
+      "pocket": 6,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25694/",
         "https://www.serebii.net/card/pitchblack/004.shtml"
@@ -5922,9 +5915,9 @@
       "name": "Mega Delphox ex",
       "number": "008/084",
       "series": "Pitch Black",
-      "slot": 377,
+      "slot": 376,
       "page": 42,
-      "pocket": 8,
+      "pocket": 7,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25698/",
         "https://www.serebii.net/card/pitchblack/008.shtml"
@@ -5935,9 +5928,9 @@
       "name": "Wailord ex",
       "number": "016/084",
       "series": "Pitch Black",
-      "slot": 378,
+      "slot": 377,
       "page": 42,
-      "pocket": 9,
+      "pocket": 8,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25706/",
         "https://www.serebii.net/card/pitchblack/016.shtml"
@@ -5948,9 +5941,9 @@
       "name": "Mega Zeraora ex",
       "number": "027/084",
       "series": "Pitch Black",
-      "slot": 379,
-      "page": 43,
-      "pocket": 1,
+      "slot": 378,
+      "page": 42,
+      "pocket": 9,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25717/",
         "https://www.serebii.net/card/pitchblack/027.shtml"
@@ -5961,9 +5954,9 @@
       "name": "Mega Slowbro ex",
       "number": "031/084",
       "series": "Pitch Black",
-      "slot": 380,
+      "slot": 379,
       "page": 43,
-      "pocket": 2,
+      "pocket": 1,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25721/",
         "https://www.serebii.net/card/pitchblack/031.shtml"
@@ -5974,9 +5967,9 @@
       "name": "Mega Chandelure ex",
       "number": "038/084",
       "series": "Pitch Black",
-      "slot": 381,
+      "slot": 380,
       "page": 43,
-      "pocket": 3,
+      "pocket": 2,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25728/",
         "https://www.serebii.net/card/pitchblack/038.shtml"
@@ -5987,9 +5980,9 @@
       "name": "Rampardos ex",
       "number": "045/084",
       "series": "Pitch Black",
-      "slot": 382,
+      "slot": 381,
       "page": 43,
-      "pocket": 4,
+      "pocket": 3,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25735/",
         "https://www.serebii.net/card/pitchblack/045.shtml"
@@ -6000,9 +5993,9 @@
       "name": "Mega Darkrai ex",
       "number": "048/084",
       "series": "Pitch Black",
-      "slot": 383,
+      "slot": 382,
       "page": 43,
-      "pocket": 5,
+      "pocket": 4,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25738/",
         "https://www.serebii.net/card/pitchblack/048.shtml"
@@ -6013,9 +6006,9 @@
       "name": "Morpeko ex",
       "number": "055/084",
       "series": "Pitch Black",
-      "slot": 384,
+      "slot": 383,
       "page": 43,
-      "pocket": 6,
+      "pocket": 5,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25745/",
         "https://www.serebii.net/card/pitchblack/055.shtml"
@@ -6026,9 +6019,9 @@
       "name": "Mega Excadrill ex",
       "number": "065/084",
       "series": "Pitch Black",
-      "slot": 385,
+      "slot": 384,
       "page": 43,
-      "pocket": 7,
+      "pocket": 6,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25755/",
         "https://www.serebii.net/card/pitchblack/065.shtml"
@@ -6039,9 +6032,9 @@
       "name": "Mega Zeraora ex",
       "number": "MEP 089",
       "series": "Pitch Black",
-      "slot": 386,
+      "slot": 385,
       "page": 43,
-      "pocket": 8,
+      "pocket": 7,
       "sources": [
         "https://www.pokemon.com/us/pokemon-tcg/product-gallery/mega-forces-tin",
         "https://www.pokemon.com/uk/play-pokemon/about/pokemon-tcg-promo-card-legality-status"
@@ -6054,9 +6047,9 @@
       "name": "Mega Darkrai ex",
       "number": "MEP 090",
       "series": "Pitch Black",
-      "slot": 387,
+      "slot": 386,
       "page": 43,
-      "pocket": 9,
+      "pocket": 8,
       "sources": [
         "https://www.pokemon.com/us/pokemon-tcg/product-gallery/mega-forces-tin",
         "https://www.pokemon.com/uk/play-pokemon/about/pokemon-tcg-promo-card-legality-status"
@@ -6069,9 +6062,9 @@
       "name": "Mega Dragonite ex",
       "number": "MEP 091",
       "series": "Pitch Black",
-      "slot": 388,
-      "page": 44,
-      "pocket": 1,
+      "slot": 387,
+      "page": 43,
+      "pocket": 9,
       "sources": [
         "https://www.pokemon.com/us/pokemon-tcg/product-gallery/mega-forces-tin",
         "https://www.pokemon.com/uk/play-pokemon/about/pokemon-tcg-promo-card-legality-status"
@@ -6084,9 +6077,9 @@
       "name": "Fuecoco ex",
       "number": "015/128",
       "series": "30th Celebration",
-      "slot": 389,
+      "slot": 388,
       "page": 44,
-      "pocket": 2,
+      "pocket": 1,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25924/",
         "https://www.serebii.net/card/30thcelebration/015.shtml"
@@ -6097,9 +6090,9 @@
       "name": "Greninja ex",
       "number": "021/128",
       "series": "30th Celebration",
-      "slot": 390,
+      "slot": 389,
       "page": 44,
-      "pocket": 3,
+      "pocket": 2,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25930/",
         "https://www.serebii.net/card/30thcelebration/021.shtml"
@@ -6110,9 +6103,9 @@
       "name": "Pikachu ex — Day",
       "number": "053/128",
       "series": "30th Celebration",
-      "slot": 391,
+      "slot": 390,
       "page": 44,
-      "pocket": 4,
+      "pocket": 3,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25962/",
         "https://www.serebii.net/card/30thcelebration/053.shtml"
@@ -6123,9 +6116,9 @@
       "name": "Pikachu ex — Night",
       "number": "054/128",
       "series": "30th Celebration",
-      "slot": 392,
+      "slot": 391,
       "page": 44,
-      "pocket": 5,
+      "pocket": 4,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25963/",
         "https://www.serebii.net/card/30thcelebration/054.shtml"
@@ -6136,9 +6129,9 @@
       "name": "Mewtwo ex",
       "number": "064/128",
       "series": "30th Celebration",
-      "slot": 393,
+      "slot": 392,
       "page": 44,
-      "pocket": 6,
+      "pocket": 5,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25973/",
         "https://www.serebii.net/card/30thcelebration/064.shtml"
@@ -6149,9 +6142,9 @@
       "name": "Mew ex",
       "number": "066/128",
       "series": "30th Celebration",
-      "slot": 394,
+      "slot": 393,
       "page": 44,
-      "pocket": 7,
+      "pocket": 6,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25975/",
         "https://www.serebii.net/card/30thcelebration/066.shtml"
@@ -6162,9 +6155,9 @@
       "name": "Espeon ex",
       "number": "070/128",
       "series": "30th Celebration",
-      "slot": 395,
+      "slot": 394,
       "page": 44,
-      "pocket": 8,
+      "pocket": 7,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25979/",
         "https://www.serebii.net/card/30thcelebration/070.shtml"
@@ -6175,9 +6168,9 @@
       "name": "Sylveon ex",
       "number": "071/128",
       "series": "30th Celebration",
-      "slot": 396,
+      "slot": 395,
       "page": 44,
-      "pocket": 9,
+      "pocket": 8,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25980/",
         "https://www.serebii.net/card/30thcelebration/071.shtml"
@@ -6188,9 +6181,9 @@
       "name": "Gengar ex",
       "number": "090/128",
       "series": "30th Celebration",
-      "slot": 397,
-      "page": 45,
-      "pocket": 1,
+      "slot": 396,
+      "page": 44,
+      "pocket": 9,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/25999/",
         "https://www.serebii.net/card/30thcelebration/090.shtml"
@@ -6201,9 +6194,9 @@
       "name": "Umbreon ex",
       "number": "092/128",
       "series": "30th Celebration",
-      "slot": 398,
+      "slot": 397,
       "page": 45,
-      "pocket": 2,
+      "pocket": 1,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/26001/",
         "https://www.serebii.net/card/30thcelebration/092.shtml"
@@ -6214,9 +6207,9 @@
       "name": "Jirachi ex",
       "number": "102/128",
       "series": "30th Celebration",
-      "slot": 399,
+      "slot": 398,
       "page": 45,
-      "pocket": 3,
+      "pocket": 2,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/26011/",
         "https://www.serebii.net/card/30thcelebration/102.shtml"
@@ -6227,9 +6220,9 @@
       "name": "Salamence ex",
       "number": "109/128",
       "series": "30th Celebration",
-      "slot": 400,
+      "slot": 399,
       "page": 45,
-      "pocket": 4,
+      "pocket": 3,
       "sources": [
         "https://asia.pokemon-card.com/sg/card-search/detail/26018/",
         "https://www.serebii.net/card/30thcelebration/109.shtml"
@@ -6240,9 +6233,9 @@
       "name": "Greninja ex",
       "number": "MEP 099",
       "series": "30th Celebration",
-      "slot": 401,
+      "slot": 400,
       "page": 45,
-      "pocket": 5,
+      "pocket": 4,
       "sources": [
         "https://www.serebii.net/card/megapromos/099.shtml"
       ],
@@ -6254,9 +6247,9 @@
       "name": "Sylveon ex",
       "number": "MEP 100",
       "series": "30th Celebration",
-      "slot": 402,
+      "slot": 401,
       "page": 45,
-      "pocket": 6,
+      "pocket": 5,
       "sources": [
         "https://www.serebii.net/card/megapromos/100.shtml"
       ],
@@ -6264,7 +6257,7 @@
       "promoReleaseSource": "https://www.pokemon.com/us/news/pokemon-tcg-30th-celebration-product-showcase"
     }
   ],
-  "layoutNote": "70 ordinary ex promos regrouped by named expansion products or release period. US release dates preferred where regional calendars differ. These associations are binder organization, not official membership in numbered expansion sets. Dual Black Bolt / White Flare release-window promos appear once after both sets, at the end of Black Bolt. v4 compacts all targets consecutively at the owner’s request; supersedes per-set page reservations. No gaps between sets. Next unassigned position is page45 pocket7.",
+  "layoutNote": "Continuous slots 1–401, with no gaps or forced page breaks between sets. Ordinary ex precede the corresponding promo ex. v5 removes misclassified Full Art SVP166, formerly slot201; all following cards shift one pocket earlier.",
   "reservedSlots": [],
   "collectionConfirmation": {
     "series": "30th Celebration",
@@ -6422,171 +6415,171 @@
     {
       "series": "Surging Sparks",
       "mainEx": 18,
-      "promoEx": 2,
-      "total": 20,
+      "promoEx": 1,
+      "total": 19,
       "startSlot": 183,
-      "endSlot": 202,
+      "endSlot": 201,
       "startPage": 21,
       "endPage": 23,
       "reservedPockets": 0,
       "startPocket": 3,
-      "endPocket": 4
+      "endPocket": 3
     },
     {
       "series": "Prismatic Evolutions",
       "mainEx": 25,
       "promoEx": 4,
       "total": 29,
-      "startSlot": 203,
-      "endSlot": 231,
+      "startSlot": 202,
+      "endSlot": 230,
       "startPage": 23,
       "endPage": 26,
       "reservedPockets": 0,
-      "startPocket": 5,
-      "endPocket": 6
+      "startPocket": 4,
+      "endPocket": 5
     },
     {
       "series": "Journey Together",
       "mainEx": 16,
       "promoEx": 3,
       "total": 19,
-      "startSlot": 232,
-      "endSlot": 250,
+      "startSlot": 231,
+      "endSlot": 249,
       "startPage": 26,
       "endPage": 28,
       "reservedPockets": 0,
-      "startPocket": 7,
-      "endPocket": 7
+      "startPocket": 6,
+      "endPocket": 6
     },
     {
       "series": "Destined Rivals",
       "mainEx": 17,
       "promoEx": 2,
       "total": 19,
-      "startSlot": 251,
-      "endSlot": 269,
+      "startSlot": 250,
+      "endSlot": 268,
       "startPage": 28,
       "endPage": 30,
       "reservedPockets": 0,
-      "startPocket": 8,
-      "endPocket": 8
+      "startPocket": 7,
+      "endPocket": 7
     },
     {
       "series": "White Flare",
       "mainEx": 6,
       "promoEx": 0,
       "total": 6,
-      "startSlot": 270,
-      "endSlot": 275,
+      "startSlot": 269,
+      "endSlot": 274,
       "startPage": 30,
       "endPage": 31,
       "reservedPockets": 0,
-      "startPocket": 9,
-      "endPocket": 5
+      "startPocket": 8,
+      "endPocket": 4
     },
     {
       "series": "Black Bolt",
       "mainEx": 6,
       "promoEx": 3,
       "total": 9,
-      "startSlot": 276,
-      "endSlot": 284,
+      "startSlot": 275,
+      "endSlot": 283,
       "startPage": 31,
       "endPage": 32,
       "reservedPockets": 0,
-      "startPocket": 6,
-      "endPocket": 5
+      "startPocket": 5,
+      "endPocket": 4
     },
     {
       "series": "Mega Evolution",
       "mainEx": 10,
       "promoEx": 2,
       "total": 12,
-      "startSlot": 285,
-      "endSlot": 296,
+      "startSlot": 284,
+      "endSlot": 295,
       "startPage": 32,
       "endPage": 33,
       "reservedPockets": 0,
-      "startPocket": 6,
-      "endPocket": 8
+      "startPocket": 5,
+      "endPocket": 7
     },
     {
       "series": "Phantasmal Flames",
       "mainEx": 10,
       "promoEx": 2,
       "total": 12,
-      "startSlot": 297,
-      "endSlot": 308,
+      "startSlot": 296,
+      "endSlot": 307,
       "startPage": 33,
       "endPage": 35,
       "reservedPockets": 0,
-      "startPocket": 9,
-      "endPocket": 2
+      "startPocket": 8,
+      "endPocket": 1
     },
     {
       "series": "Ascended Heroes",
       "mainEx": 39,
       "promoEx": 5,
       "total": 44,
-      "startSlot": 309,
-      "endSlot": 352,
+      "startSlot": 308,
+      "endSlot": 351,
       "startPage": 35,
-      "endPage": 40,
+      "endPage": 39,
       "reservedPockets": 0,
-      "startPocket": 3,
-      "endPocket": 1
+      "startPocket": 2,
+      "endPocket": 9
     },
     {
       "series": "Perfect Order",
       "mainEx": 9,
       "promoEx": 0,
       "total": 9,
-      "startSlot": 353,
-      "endSlot": 361,
+      "startSlot": 352,
+      "endSlot": 360,
       "startPage": 40,
-      "endPage": 41,
+      "endPage": 40,
       "reservedPockets": 0,
-      "startPocket": 2,
-      "endPocket": 1
+      "startPocket": 1,
+      "endPocket": 9
     },
     {
       "series": "Chaos Rising",
       "mainEx": 10,
       "promoEx": 4,
       "total": 14,
-      "startSlot": 362,
-      "endSlot": 375,
+      "startSlot": 361,
+      "endSlot": 374,
       "startPage": 41,
       "endPage": 42,
       "reservedPockets": 0,
-      "startPocket": 2,
-      "endPocket": 6
+      "startPocket": 1,
+      "endPocket": 5
     },
     {
       "series": "Pitch Black",
       "mainEx": 10,
       "promoEx": 3,
       "total": 13,
-      "startSlot": 376,
-      "endSlot": 388,
+      "startSlot": 375,
+      "endSlot": 387,
       "startPage": 42,
-      "endPage": 44,
+      "endPage": 43,
       "reservedPockets": 0,
-      "startPocket": 7,
-      "endPocket": 1
+      "startPocket": 6,
+      "endPocket": 9
     },
     {
       "series": "30th Celebration",
       "mainEx": 12,
       "promoEx": 2,
       "total": 14,
-      "startSlot": 389,
-      "endSlot": 402,
+      "startSlot": 388,
+      "endSlot": 401,
       "startPage": 44,
       "endPage": 45,
       "reservedPockets": 0,
-      "startPocket": 2,
-      "endPocket": 6
+      "startPocket": 1,
+      "endPocket": 5
     }
   ],
   "promoAssignments": [
@@ -6933,15 +6926,6 @@
       "assignmentNote": ""
     },
     {
-      "number": "SVP 166",
-      "name": "Teal Mask Ogerpon ex",
-      "releaseDate": "2024-11-15",
-      "series": "Surging Sparks",
-      "releaseSource": "https://www.pokebeach.com/2024/08/ogerpon-ex-premium-collection-releasing-in-november",
-      "assignmentBasis": "release-window",
-      "assignmentNote": ""
-    },
-    {
       "number": "SVP 177",
       "name": "Bloodmoon Ursaluna ex",
       "releaseDate": "2024-11-15",
@@ -7233,9 +7217,9 @@
       "fix": "Full English card scans visually verified and substituted; ownership keys, numbers and slots unchanged."
     }
   ],
-  "nextAvailableSlot": 403,
+  "nextAvailableSlot": 402,
   "nextAvailablePosition": {
     "page": 45,
-    "pocket": 7
+    "pocket": 6
   }
 }
