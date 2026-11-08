@@ -4,6 +4,77 @@ const cards=groups.flatMap(g=>g.rows.map(r=>({...r,art:g,title:g.title})));
 const byId=new Map(cards.map(c=>[c.id,c]));
 const TARGETS=cards.filter(c=>c.status!=='pending');
 const TOTAL_PAGES=Math.ceil(cards.length/4);
+// Exact row-level image mappings only. Never fall back to another edition, language or finish.
+const VERIFIED_IMAGES={
+  "neo56|EN|56/111|1st Edition": {
+    "url": "https://images.scrydex.com/pokemon/neo1-56/large",
+    "evidence": "目視確認英文、56/111 及 1st Edition 印章"
+  },
+  "neo56|EN|56/111|Unlimited": {
+    "url": "https://storage.googleapis.com/images.pricecharting.com/871e75fe4dcddaafe6661a432e42d073dd6a9d843d00f7607d947cdda96134b9/1600.jpg",
+    "evidence": "目視確認英文、56/111、無 1st Edition 印章"
+  },
+  "neo56|JA|No.155|Promo": {
+    "url": "https://cdn.holofile.app/img/neo1pf_ja-155/medium.webp?v=0",
+    "evidence": "目視確認日文、LV.14、No.155 及 Premium File 插畫"
+  },
+  "neo57|EN|57/111|1st Edition": {
+    "url": "https://images.scrydex.com/pokemon/neo1-57/large",
+    "evidence": "目視確認英文、57/111 及 1st Edition 印章"
+  },
+  "neo57|EN|57/111|Unlimited": {
+    "url": "https://storage.googleapis.com/images.pricecharting.com/51df77f494310dacd7c399ecba2638eddbcb37947ade804cba67b0ef35e6ccc5/1600.jpg",
+    "evidence": "目視確認英文、57/111、無 1st Edition 印章"
+  },
+  "neo57|JA|No.155|普通": {
+    "url": "https://cdn.holofile.app/img/neo1_ja-18/medium.webp?v=0",
+    "evidence": "目視確認日文 LV.21 普通版，沒有活動紀念文字"
+  },
+  "destiny|EN|61/105|1st Edition": {
+    "url": "https://images.scrydex.com/pokemon/neo4-61/large",
+    "evidence": "目視確認英文、61/105 及 1st Edition 印章"
+  },
+  "destiny|EN|61/105|Unlimited": {
+    "url": "https://storage.googleapis.com/images.pricecharting.com/49df8cc46cc83bd3a19e2dd2e844f07f23040ebdecd752d2e050a9383c21dbe9/1600.jpg",
+    "evidence": "目視確認英文、61/105、無 1st Edition 印章"
+  },
+  "treasures|EN|79/123|普通": {
+    "url": "https://images.scrydex.com/pokemon/dp2-79/large",
+    "evidence": "目視核對英文、卡號、普通版卡面；不套用至 Reverse／Promo／其他語言"
+  },
+  "hgss|EN|61/123|普通": {
+    "url": "https://images.scrydex.com/pokemon/hgss1-61/large",
+    "evidence": "目視核對英文、卡號、普通版卡面；不套用至 Reverse／Promo／其他語言"
+  },
+  "col|EN|55/95|普通": {
+    "url": "https://images.scrydex.com/pokemon/col1-55/large",
+    "evidence": "目視核對英文、卡號、普通版卡面；不套用至 Reverse／Promo／其他語言"
+  },
+  "break|EN|18/162|普通": {
+    "url": "https://images.scrydex.com/pokemon/xy8-18/large",
+    "evidence": "目視核對英文、卡號、普通版卡面；不套用至 Reverse／Promo／其他語言"
+  },
+  "astral|EN|023/189|普通": {
+    "url": "https://images.scrydex.com/pokemon/swsh10-23/large",
+    "evidence": "目視核對英文、卡號、普通版卡面；不套用至 Reverse／Promo／其他語言"
+  },
+  "ethan|EN|032/182|普通": {
+    "url": "https://images.scrydex.com/pokemon/sv10-32/large",
+    "evidence": "目視核對英文、卡號、普通版卡面；不套用至 Reverse／Promo／其他語言"
+  },
+  "lost39|EN|39/214|Reverse Holo": {
+    "url": "https://images.scrydex.com/pokemon/sm8-39/large",
+    "evidence": "目視確認英文、卡號及文字區火屬性反閃圖紋"
+  },
+  "lost40|EN|40/214|Reverse Holo": {
+    "url": "https://images.scrydex.com/pokemon/sm8-40/large",
+    "evidence": "目視確認英文、卡號及文字區火屬性反閃圖紋"
+  },
+  "anniversary|EN|MEP047|30th Promo · Holo": {
+    "url": "https://images.scrydex.com/pokemon/mep-47/large",
+    "evidence": "目視確認英文 MEP047、30th 標誌及全圖版式"
+  }
+};
 const STORAGE='cyndaquil-masterset-owned-v1';
 const pos=['左上','右上','左下','右下'];
 const langs={'EN':'英文','JA':'日文','ZH-T':'繁中','ZH-S':'簡中'};
@@ -21,12 +92,8 @@ function physical(){return state.mode==='binder'&&!state.query&&!state.language&
 function filtered(){return cards.filter(c=>(state.mode!=='collection'||isOwned(c))&&(!state.language||c.lang===state.language)&&(!state.group||c.group===state.group)&&(!state.status||(state.status==='pending'?c.status==='pending':c.status==='owned'?isOwned(c):c.status!=='pending'&&!isOwned(c)))&&(!state.query||[c.title,c.set,c.number,c.variant,c.lang,langs[c.lang],c.note].join(' ').toLowerCase().includes(state.query.toLowerCase())));}
 function pageCount(){return physical()?TOTAL_PAGES:Math.max(1,Math.ceil(filtered().length/4));}
 function locationLabel(c){return '第 '+c.page+' 頁 · 第 '+c.pocket+' 格（'+pos[c.pocket-1]+'）';}
-function sources(c){
-  if(!c.art.image)return [];
-  const id=c.art.image;
-  const split=id.indexOf('-'),set=id.slice(0,split),num=id.slice(split+1);
-  return ['https://images.scrydex.com/pokemon/'+id+'/large','https://images.pokemontcg.io/'+set+'/'+num+'_hires.png'];
-}
+function sources(c){const match=VERIFIED_IMAGES[c.id];return match?[match.url]:[];}
+
 function render(){
   const done=TARGETS.filter(isOwned).length;
   $('progressText').textContent=done+' / '+TARGETS.length;
@@ -41,8 +108,8 @@ function render(){
   const visible=isPhysical?cards.slice(start,start+4):list.slice(start,start+4);
   const out=visible.map(c=>{
     const has=isOwned(c),pending=c.status==='pending',srcs=sources(c);
-    const image=srcs.length?'<img loading="lazy" src="'+esc(srcs[0])+'" data-fallback="'+esc(srcs[1])+'" alt="'+esc(c.title+' 插畫參考')+'">':'<div class="fallback"><strong>'+esc(c.title)+'</strong>'+esc(c.number)+'<br>此插畫暫無預覽<br>請查看下方卡圖來源</div>';
-    return '<article class="pocket '+(pending?'pending':'')+'"><button type="button" class="art '+(has?'owned':'missing')+'" data-id="'+esc(c.id)+'" aria-pressed="'+has+'" aria-label="'+esc(locationLabel(c)+' '+langs[c.lang]+' '+c.number+' '+c.variant+(pending?'，待核實':has?'，已收藏':'，未收藏'))+'" '+(pending?'disabled':'')+'>'+image+'<span class="statusdot"></span><span class="slot">#'+String(c.slot).padStart(3,'0')+'</span></button><div class="caption"><strong>'+esc(locationLabel(c))+'</strong><span class="lang">'+langs[c.lang]+'</span><span>'+esc(c.set)+'</span><span>'+esc(c.number)+'</span><span class="variant">'+(pending?'待核實預留 · ':'')+esc(c.variant)+'</span>'+(c.note?'<small>'+esc(c.note)+'</small>':'')+'<small>插畫參考，請按文字確認語言／版本</small><a target="_blank" rel="noopener" href="'+esc(c.art.source)+'">查看插畫及發行資料 ↗</a></div></article>';
+    const image=srcs.length?'<img loading="lazy" src="'+esc(srcs[0])+'" alt="'+esc(langs[c.lang]+' '+c.number+' '+c.variant+' 版本實圖')+'">':'<div class="fallback"><strong>'+esc(c.title)+'</strong>'+esc(langs[c.lang]+' '+c.number)+'<br>'+esc(c.variant)+'<br><br>此版本卡圖待補<br>尚未核對到對應實圖</div>';
+    return '<article class="pocket '+(pending?'pending':'')+'"><button type="button" class="art '+(has?'owned':'missing')+'" data-id="'+esc(c.id)+'" aria-pressed="'+has+'" aria-label="'+esc(locationLabel(c)+' '+langs[c.lang]+' '+c.number+' '+c.variant+(pending?'，待核實':has?'，已收藏':'，未收藏'))+'" '+(pending?'disabled':'')+'>'+image+'<span class="statusdot"></span><span class="slot">#'+String(c.slot).padStart(3,'0')+'</span></button><div class="caption"><strong>'+esc(locationLabel(c))+'</strong><span class="lang">'+langs[c.lang]+'</span><span>'+esc(c.set)+'</span><span>'+esc(c.number)+'</span><span class="variant">'+(pending?'待核實預留 · ':'')+esc(c.variant)+'</span>'+(c.note?'<small>'+esc(c.note)+'</small>':'')+'<small>'+(srcs.length?'此版本實圖 · 已核對語言／版本':'此版本卡圖待補；沒有用其他版本代替')+'</small><a target="_blank" rel="noopener" href="'+esc(c.art.source)+'">查看發行資料 ↗</a></div></article>';
   });
   if(isPhysical&&visible.length<4)for(let i=visible.length;i<4;i++)out.push('<div class="pocket"><div class="last-empty">尚未分配<br>第 '+(state.page+1)+' 頁 · 第 '+(i+1)+' 格</div></div>');
   $('grid').innerHTML=out.length?out.join(''):'<div class="empty">'+(state.mode==='collection'?'還未勾選任何火球鼠卡片。':'找不到符合的卡片。')+'</div>';
@@ -57,7 +124,7 @@ function render(){
   });
   document.querySelectorAll('.art img').forEach(img=>img.onerror=()=>{
     if(img.dataset.fallback){img.src=img.dataset.fallback;delete img.dataset.fallback;}
-    else{img.replaceWith(Object.assign(document.createElement('div'),{className:'fallback',textContent:'卡圖暫時無法載入；卡號及版本資料仍可使用。查看下方卡圖來源。'}));}
+    else{img.replaceWith(Object.assign(document.createElement('div'),{className:'fallback',textContent:'此版本圖片暫時載入失敗。卡號與格位仍保留；不以其他版本替代。'}));}
   });
 }
 function clear(){state.query='';state.language='';state.group='';state.status='';$('search').value='';$('language').value='';$('group').value='';$('status').value='';state.page=0;}
