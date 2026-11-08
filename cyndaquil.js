@@ -2,6 +2,7 @@
 const groups=window.CYNDAQUIL_GROUPS;
 const cards=groups.flatMap(g=>g.rows.map(r=>({...r,art:g,title:g.title})));
 const byId=new Map(cards.map(c=>[c.id,c]));
+const aliasToId=new Map(cards.flatMap(c=>(c.aliases||[c.id]).map(id=>[id,c.id])));
 const TARGETS=cards.filter(c=>c.status!=='pending');
 const TOTAL_PAGES=Math.ceil(cards.length/4);
 // Each entry is tied to a stable card version ID and a photographed specimen.
@@ -14,6 +15,8 @@ const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'
 let owned={},jumbo=false,storageIssue=false;
 try{const saved=JSON.parse(localStorage.getItem(STORAGE)||'{}');if(saved&&typeof saved==='object'&&!Array.isArray(saved)){owned=saved.owned||{};jumbo=saved.jumbo===true;}}catch(e){storageIssue=true;}
 if(!owned||typeof owned!=='object'||Array.isArray(owned))owned={};
+// Migrate previous code-specific checks to their merged target; retain original backup entries.
+for(const [id,value] of Object.entries(owned)){if(value===true&&aliasToId.has(id))owned[aliasToId.get(id)]=true;}
 let state={page:0,mode:'binder',query:'',language:'',group:'',status:''};
 let toastTimer;
 function toast(message){$('toast').textContent=message;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').textContent='',4500);}
@@ -54,7 +57,7 @@ function render(){
   $('prev').disabled=state.page===0;$('next').disabled=state.page===pages-1;
   document.querySelectorAll('.art[data-id]').forEach(b=>b.onclick=()=>{
     const c=byId.get(b.dataset.id);if(!c||c.status==='pending')return;
-    owned[c.id]=!isOwned(c);save();render();
+    const next=!isOwned(c);for(const id of c.aliases||[c.id])owned[id]=next;owned[c.id]=next;save();render();
   });
   document.querySelectorAll('[data-inspect]').forEach(b=>b.onclick=()=>openImage(b.dataset.inspect));
   document.querySelectorAll('.art img').forEach(img=>img.onerror=()=>{
@@ -82,7 +85,7 @@ $('importFile').onchange=async e=>{
  try{
    const data=JSON.parse(await file.text());
    if(data.collection!=='cyndaquil-masterset'||data.version!==1||!data.owned||typeof data.owned!=='object'||Array.isArray(data.owned))throw Error('invalid');
-   let count=0;for(const [id,value] of Object.entries(data.owned)){if(byId.has(id)&&typeof value==='boolean'&&byId.get(id).status!=='pending'){if(value){owned[id]=true;count++;}}}
+   let count=0;for(const [id,value] of Object.entries(data.owned)){const target=aliasToId.get(id);if(target&&typeof value==='boolean'&&byId.get(target).status!=='pending'){if(value){owned[target]=true;count++;}}}
    // Merge collected cards so importing an older backup cannot erase newer checks.
    jumbo=jumbo||data.jumbo===true;$('jumbo').checked=jumbo;
    const saved=save();render();toast(saved?'已合併 '+count+' 個收藏記錄；現有勾選已保留。':'已合併，但瀏覽器儲存失敗，請立即匯出備份。');
@@ -109,3 +112,4 @@ $('zoomIn').onclick=()=>setZoom(zoom+50);$('zoomOut').onclick=()=>setZoom(zoom-5
 $('photoZoom').oninput=e=>setZoom(Number(e.target.value));
 $('photoDialog').addEventListener('close',()=>{if(lastImageFocus?.isConnected)lastImageFocus.focus();});
 $('photoDialog').addEventListener('click',e=>{if(e.target===$('photoDialog'))$('photoDialog').close();});
+
