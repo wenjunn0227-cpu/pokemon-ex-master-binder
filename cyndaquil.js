@@ -45,8 +45,8 @@ function render(){
     const has=isOwned(c),pending=c.status==='pending',srcs=sources(c);
     const info=imageInfo(c);
     if(pending)return '<article class="pocket pending"><div class="research-slot"><strong>查證預留格</strong><span>'+esc(locationLabel(c))+'</span><p>'+esc(langs[c.lang]+' '+c.number+' '+c.variant)+'</p><p>尚未確認有此版本，未列入 Masterset 收藏目標。</p><small>保留此位置供查證；並非缺少一張已確認發行的卡。</small></div></article>';
-    const image=srcs.length?'<img loading="lazy" src="'+esc(srcs[0])+'" alt="'+esc(langs[c.lang]+' '+c.number+' '+c.variant+' 版本實圖')+'">':'<div class="fallback">圖片載入中</div>';
-    return '<article class="pocket '+(pending?'pending':'')+'"><button type="button" class="art '+(has?'owned':'missing')+'" data-id="'+esc(c.id)+'" aria-pressed="'+has+'" aria-label="'+esc(locationLabel(c)+' '+langs[c.lang]+' '+c.number+' '+c.variant+(pending?'，待核實':has?'，已收藏':'，未收藏'))+'" '+(pending?'disabled':'')+'>'+image+'<span class="statusdot"></span><span class="slot">#'+String(c.slot).padStart(3,'0')+'</span></button><div class="caption"><strong>'+esc(locationLabel(c))+'</strong><span class="lang">'+langs[c.lang]+'</span><span>'+esc(c.set)+'</span><span>'+esc(c.number)+'</span><span class="variant">'+(pending?'待核實預留 · ':'')+esc(c.variant)+'</span>'+(c.note?'<small>'+esc(c.note)+'</small>':'')+'<small>此版本實拍／掃描 · 保留原始印章及印刷碼</small><button type="button" class="inspect-btn" data-inspect="'+esc(c.id)+'">放大核對 ↗</button><a target="_blank" rel="noopener" href="'+esc(c.art.source)+'">查看發行資料 ↗</a></div></article>';
+    const image=srcs.length?'<img data-card-id="'+esc(c.id)+'" loading="lazy" src="'+esc(srcs[0])+'" alt="'+esc(langs[c.lang]+' '+c.number+' '+c.variant+' 版本實圖')+'">':'<div class="fallback">圖片載入中</div>';
+    return '<article class="pocket '+(pending?'pending':'')+'"><button type="button" class="art '+(has?'owned':'missing')+'" data-id="'+esc(c.id)+'" aria-pressed="'+has+'" aria-label="'+esc(locationLabel(c)+' '+langs[c.lang]+' '+c.number+' '+c.variant+(pending?'，待核實':has?'，已收藏':'，未收藏'))+'" '+(pending?'disabled':'')+'>'+image+'<span class="statusdot"></span><span class="slot">#'+String(c.slot).padStart(3,'0')+'</span></button><div class="caption"><strong>'+esc(locationLabel(c))+'</strong><span class="lang">'+langs[c.lang]+'</span><span>'+esc(c.set)+'</span><span>'+esc(c.number)+'</span><span class="variant">'+(pending?'待核實預留 · ':'')+esc(c.variant)+'</span>'+(c.note?'<small>'+esc(c.note)+'</small>':'')+'<small>完整卡面 · 點放大查看版次與閃膜</small><button type="button" class="inspect-btn" data-inspect="'+esc(c.id)+'">放大核對 ↗</button><a target="_blank" rel="noopener" href="'+esc(c.art.source)+'">查看發行資料 ↗</a></div></article>';
   });
   if(isPhysical&&visible.length<4)for(let i=visible.length;i<4;i++)out.push('<div class="pocket"><div class="last-empty">尚未分配<br>第 '+(state.page+1)+' 頁 · 第 '+(i+1)+' 格</div></div>');
   $('grid').innerHTML=out.length?out.join(''):'<div class="empty">'+(state.mode==='collection'?'還未勾選任何火球鼠卡片。':'找不到符合的卡片。')+'</div>';
@@ -60,10 +60,12 @@ function render(){
     const next=!isOwned(c);for(const id of c.aliases||[c.id])owned[id]=next;owned[c.id]=next;save();render();
   });
   document.querySelectorAll('[data-inspect]').forEach(b=>b.onclick=()=>openImage(b.dataset.inspect));
-  document.querySelectorAll('.art img').forEach(img=>img.onerror=()=>{
+  document.querySelectorAll('.art img').forEach(img=>{
+    attachCardFace(img,byId.get(img.dataset.cardId));
+    img.onerror=()=>{
     if(!img.dataset.retried){const c=byId.get(img.closest('[data-id]').dataset.id),m=imageInfo(c);if(m.url&&m.url!==img.src){img.dataset.retried='1';img.src=m.url;return;}}
     {img.replaceWith(Object.assign(document.createElement('div'),{className:'fallback',textContent:'此版本圖片暫時載入失敗。卡號與格位仍保留；不以其他版本替代。'}));}
-  });
+  };});
 }
 function clear(){state.query='';state.language='';state.group='';state.status='';$('search').value='';$('language').value='';$('group').value='';$('status').value='';state.page=0;}
 groups.forEach(g=>{const option=document.createElement('option');option.value=g.id;option.textContent=g.title;$('group').append(option);});
@@ -92,17 +94,17 @@ $('importFile').onchange=async e=>{
  }catch(error){toast('無法讀取這份備份，請選擇本頁匯出的火球鼠 JSON。');}
  e.target.value='';
 };
+let activeImage=null,zoom=100,lastImageFocus=null;
 render();
 if(storageIssue)toast('無法讀取瀏覽器收藏記錄；目前使用暫存進度，請保留原備份。');
 
 
-let activeImage=null,zoom=100,lastImageFocus=null;
-function setZoom(value){zoom=Math.max(100,Math.min(400,value));$('photoZoom').value=zoom;$('zoomLabel').textContent=zoom+'%';$('photoInner').style.width=(Math.min($('photoViewport').clientWidth-24,($('photoViewport').clientHeight-24)*.72)*zoom/100)+'px';}
+function setZoom(value){zoom=Math.max(100,Math.min(400,value));$('photoZoom').value=zoom;$('zoomLabel').textContent=zoom+'%';$('photoInner').style.width=(Math.min($('photoViewport').clientWidth-24,($('photoViewport').clientHeight-24)*.72)*zoom/100)+'px';if(activeImage)fitCardFace($('photoImg'),activeImage);}
 function openImage(id){
  const c=byId.get(id),m=VERIFIED_IMAGES[id];if(!c||!m)return;activeImage=c;lastImageFocus=document.activeElement;
  $('photoTitle').textContent=langs[c.lang]+' · '+c.number+' · '+c.variant;
  $('photoPosition').textContent=locationLabel(c)+' · '+c.set;
- $('photoImg').src=m.fullUrl||m.displayUrl||m.url;$('photoImg').alt=langs[c.lang]+' '+c.number+' '+c.variant+' 實圖';
+ $('photoImg').src=m.fullUrl||m.displayUrl||m.url;attachCardFace($('photoImg'),c);$('photoImg').alt=langs[c.lang]+' '+c.number+' '+c.variant+' 實圖';
  const code=c.variant.match(/[A-Z0-9]{3}-[A-Z0-9]{3}-[A-Z0-9]{3}/)?.[0];
  $('photoEvidence').textContent=code?'辨認重點：卡底印刷碼 '+code+'；再對照版次標誌。':c.variant.includes('Unlimited')?'辨認重點：此版本沒有 1st Edition 印章。':c.variant.includes('1st Edition')?'辨認重點：確認卡面上的 1st Edition 印章。':'辨認重點：'+langs[c.lang]+'、'+c.number+'、'+c.variant+'。請對照卡面印章及閃膜圖樣。';
  $('photoSource').href=m.url||m.source;$('photoDialog').showModal();setZoom(100);
@@ -113,3 +115,34 @@ $('photoZoom').oninput=e=>setZoom(Number(e.target.value));
 $('photoDialog').addEventListener('close',()=>{if(lastImageFocus?.isConnected)lastImageFocus.focus();});
 $('photoDialog').addEventListener('click',e=>{if(e.target===$('photoDialog'))$('photoDialog').close();});
 
+
+// Render the original photographed card as a front-facing card, without changing
+// its printed details. The original source photograph remains linked separately.
+function fitCardFace(img,c){
+ const corners=VERIFIED_IMAGES[c?.id]?.faceCorners;
+ if(!corners||!img.naturalWidth)return;
+ const box=img.parentElement,W=box.clientWidth,H=box.clientHeight;
+ if(!W||!H)return;
+ const imageH=W*img.naturalHeight/img.naturalWidth;
+ const source=corners.map(([x,y])=>[x*W,y*imageH]);
+ const target=[[0,0],[W,0],[W,H],[0,H]],a=[];
+ source.forEach(([x,y],i)=>{const [u,v]=target[i];a.push([x,y,1,0,0,0,-u*x,-u*y,u],[0,0,0,x,y,1,-v*x,-v*y,v]);});
+ for(let i=0;i<8;i++){
+  let pivot=i;for(let j=i+1;j<8;j++)if(Math.abs(a[j][i])>Math.abs(a[pivot][i]))pivot=j;
+  [a[i],a[pivot]]=[a[pivot],a[i]];const div=a[i][i];if(Math.abs(div)<1e-10)return;
+  for(let k=i;k<=8;k++)a[i][k]/=div;
+  for(let j=0;j<8;j++)if(j!==i){const mult=a[j][i];for(let k=i;k<=8;k++)a[j][k]-=mult*a[i][k];}
+ }
+ const [aa,b,cc,d,e,f,g,h]=a.map(r=>r[8]);
+ img.classList.add('face-corrected');
+ img.style.transform='matrix3d('+[aa,d,0,g,b,e,0,h,0,0,1,0,cc,f,0,1].join(',')+')';
+}
+function attachCardFace(img,c){
+ img.classList.remove('face-corrected');img.style.transform='';
+ img.onload=()=>fitCardFace(img,c);
+ if(img.complete)fitCardFace(img,c);
+}
+window.addEventListener('resize',()=>{
+ document.querySelectorAll('.art img[data-card-id]').forEach(img=>fitCardFace(img,byId.get(img.dataset.cardId)));
+ if(activeImage&&$('photoDialog').open)fitCardFace($('photoImg'),activeImage);
+});
