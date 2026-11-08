@@ -16,7 +16,10 @@ window.CYNDAQUIL_GROUPS = [
         "slot": 1,
         "page": 1,
         "pocket": 1,
-        "group": "neo56"
+        "group": "neo56",
+        "aliases": [
+          "neo56|EN|56/111|1st Edition"
+        ]
       },
       {
         "lang": "EN",
@@ -29,7 +32,10 @@ window.CYNDAQUIL_GROUPS = [
         "slot": 2,
         "page": 1,
         "pocket": 2,
-        "group": "neo56"
+        "group": "neo56",
+        "aliases": [
+          "neo56|EN|56/111|Unlimited"
+        ]
       },
       {
         "lang": "JA",
@@ -42,7 +48,10 @@ window.CYNDAQUIL_GROUPS = [
         "slot": 3,
         "page": 1,
         "pocket": 3,
-        "group": "neo56"
+        "group": "neo56",
+        "aliases": [
+          "neo56|JA|No.155|Promo"
+        ]
       }
     ]
   },
@@ -63,7 +72,10 @@ window.CYNDAQUIL_GROUPS = [
         "slot": 4,
         "page": 1,
         "pocket": 4,
-        "group": "neo57"
+        "group": "neo57",
+        "aliases": [
+          "neo57|EN|57/111|1st Edition"
+        ]
       },
       {
         "lang": "EN",
@@ -76,7 +88,10 @@ window.CYNDAQUIL_GROUPS = [
         "slot": 5,
         "page": 2,
         "pocket": 1,
-        "group": "neo57"
+        "group": "neo57",
+        "aliases": [
+          "neo57|EN|57/111|Unlimited"
+        ]
       },
       {
         "lang": "JA",
@@ -89,7 +104,10 @@ window.CYNDAQUIL_GROUPS = [
         "slot": 6,
         "page": 2,
         "pocket": 2,
-        "group": "neo57"
+        "group": "neo57",
+        "aliases": [
+          "neo57|JA|No.155|普通"
+        ]
       },
       {
         "lang": "JA",
@@ -102,7 +120,10 @@ window.CYNDAQUIL_GROUPS = [
         "slot": 7,
         "page": 2,
         "pocket": 3,
-        "group": "neo57"
+        "group": "neo57",
+        "aliases": [
+          "neo57|JA|No.155|紀念文字 Promo"
+        ]
       },
       {
         "lang": "JA",
@@ -115,7 +136,10 @@ window.CYNDAQUIL_GROUPS = [
         "slot": 8,
         "page": 2,
         "pocket": 4,
-        "group": "neo57"
+        "group": "neo57",
+        "aliases": [
+          "neo57|JA|No.155|紀念文字＋金色系列標誌"
+        ]
       }
     ]
   },
@@ -136,7 +160,10 @@ window.CYNDAQUIL_GROUPS = [
         "slot": 9,
         "page": 3,
         "pocket": 1,
-        "group": "intro"
+        "group": "intro",
+        "aliases": [
+          "intro|JA|16|牌組編號 16"
+        ]
       },
       {
         "lang": "JA",
@@ -149,7 +176,10 @@ window.CYNDAQUIL_GROUPS = [
         "slot": 10,
         "page": 3,
         "pocket": 2,
-        "group": "intro"
+        "group": "intro",
+        "aliases": [
+          "intro|JA|23|牌組編號 23"
+        ]
       }
     ]
   },
@@ -170,7 +200,10 @@ window.CYNDAQUIL_GROUPS = [
         "slot": 11,
         "page": 3,
         "pocket": 3,
-        "group": "destiny"
+        "group": "destiny",
+        "aliases": [
+          "destiny|EN|61/105|1st Edition"
+        ]
       },
       {
         "lang": "EN",
@@ -183,7 +216,10 @@ window.CYNDAQUIL_GROUPS = [
         "slot": 12,
         "page": 3,
         "pocket": 4,
-        "group": "destiny"
+        "group": "destiny",
+        "aliases": [
+          "destiny|EN|61/105|Unlimited"
+        ]
       },
       {
         "lang": "JA",
@@ -196,7 +232,10 @@ window.CYNDAQUIL_GROUPS = [
         "slot": 13,
         "page": 4,
         "pocket": 1,
-        "group": "destiny"
+        "group": "destiny",
+        "aliases": [
+          "destiny|JA|No.155|普通"
+        ]
       }
     ]
   },
@@ -217,7 +256,10 @@ window.CYNDAQUIL_GROUPS = [
         "slot": 14,
         "page": 4,
         "pocket": 2,
-        "group": "exp104"
+        "group": "exp104",
+        "aliases": [
+          "exp104|EN|104/165|普通"
+        ]
       },
       {
         "lang": "EN",
@@ -230,7 +272,10 @@ window.CYNDAQUIL_GROUPS = [
         "slot": 15,
         "page": 4,
         "pocket": 3,
-        "group": "exp104"
+        "group": "exp104",
+        "aliases": [
+          "exp104|EN|104/165|Reverse Holo"
+        ]
       },
       {
         "lang": "JA",
@@ -243,7 +288,10 @@ window.CYNDAQUIL_GROUPS = [
         "slot": 16,
         "page": 4,
         "pocket": 4,
-        "group": "exp104"
+        "group": "exp104",
+        "aliases": [
+          "exp104|JA|013/029|1st Edition"
+        ]
       },
       {
         "lang": "JA",
@@ -256,7 +304,10 @@ window.CYNDAQUIL_GROUPS = [
         "slot": 17,
         "page": 5,
         "pocket": 1,
-        "group": "exp104"
+        "group": "exp104",
+        "aliases": [
+          "exp104|JA|013/029|Unlimited"
+        ]
       }
     ]
   },
@@ -277,7 +328,10 @@ window.CYNDAQUIL_GROUPS = [
         "slot": 18,
         "page": 5,
         "pocket": 2,
-        "group": "exp105"
+        "group": "exp105",
+        "aliases": [
+          "exp105|EN|105/165|普通"
+        ]
       },
       {
         "lang": "EN",
@@ -290,7 +344,10 @@ window.CYNDAQUIL_GROUPS = [
         "slot": 19,
         "page": 5,
         "pocket": 3,
-        "group": "exp105"
+        "group": "exp105",
+        "aliases": [
+          "exp105|EN|105/165|Reverse Holo"
+        ]
       },
       {
         "lang": "JA",
@@ -303,7 +360,10 @@ window.CYNDAQUIL_GROUPS = [
         "slot": 20,
         "page": 5,
         "pocket": 4,
-        "group": "exp105"
+        "group": "exp105",
+        "aliases": [
+          "exp105|JA|014/029|1st Edition"
+        ]
       }
     ]
   },
@@ -324,7 +384,10 @@ window.CYNDAQUIL_GROUPS = [
         "slot": 21,
         "page": 6,
         "pocket": 1,
-        "group": "mcd2002"
+        "group": "mcd2002",
+        "aliases": [
+          "mcd2002|JA|006/018|普通"
+        ]
       }
     ]
   },
@@ -338,157 +401,73 @@ window.CYNDAQUIL_GROUPS = [
         "lang": "EN",
         "set": "EX Sandstorm",
         "number": "59/100",
-        "variant": "普通 · AKW-8FY-8QX",
+        "variant": "普通",
         "status": "listed",
-        "note": "",
+        "note": "純印刷代碼合併；任一代碼均算完成。圖片為其中一個代碼的實例。",
         "id": "sand|EN|59/100|普通 · AKW-8FY-8QX",
         "slot": 22,
         "page": 6,
         "pocket": 2,
-        "group": "sand"
+        "group": "sand",
+        "aliases": [
+          "sand|EN|59/100|普通 · AKW-8FY-8QX",
+          "sand|EN|59/100|普通 · AKW-8FY-H66",
+          "sand|EN|59/100|普通 · AKW-8FY-RG3"
+        ]
       },
       {
         "lang": "EN",
         "set": "EX Sandstorm",
         "number": "59/100",
-        "variant": "普通 · AKW-8FY-H66",
+        "variant": "Reverse",
         "status": "listed",
-        "note": "",
-        "id": "sand|EN|59/100|普通 · AKW-8FY-H66",
+        "note": "純印刷代碼合併；任一代碼均算完成。圖片為其中一個代碼的實例。",
+        "id": "sand|EN|59/100|Reverse · AKW-8FY-WA5",
         "slot": 23,
         "page": 6,
         "pocket": 3,
-        "group": "sand"
+        "group": "sand",
+        "aliases": [
+          "sand|EN|59/100|Reverse · AKW-8FY-WA5"
+        ]
       },
       {
-        "lang": "EN",
-        "set": "EX Sandstorm",
-        "number": "59/100",
-        "variant": "普通 · AKW-8FY-RG3",
+        "lang": "JA",
+        "set": "Miracle of the Desert",
+        "number": "011/053",
+        "variant": "1st Edition",
         "status": "listed",
-        "note": "",
-        "id": "sand|EN|59/100|普通 · AKW-8FY-RG3",
+        "note": "純印刷代碼合併；任一代碼均算完成。圖片為其中一個代碼的實例。",
+        "id": "sand|JA|011/053|1st Edition · B8H-BCT-GF6",
         "slot": 24,
         "page": 6,
         "pocket": 4,
-        "group": "sand"
+        "group": "sand",
+        "aliases": [
+          "sand|JA|011/053|1st Edition · B8H-BCT-GF6",
+          "sand|JA|011/053|1st Edition · B8H-BCT-B0P",
+          "sand|JA|011/053|1st Edition · B8H-BCT-FB5",
+          "sand|JA|011/053|1st Edition · B8H-BCT-N3X"
+        ]
       },
       {
-        "lang": "EN",
-        "set": "EX Sandstorm",
-        "number": "59/100",
-        "variant": "Reverse · AKW-8FY-WA5",
+        "lang": "JA",
+        "set": "Miracle of the Desert",
+        "number": "011/053",
+        "variant": "Unlimited",
         "status": "listed",
-        "note": "",
-        "id": "sand|EN|59/100|Reverse · AKW-8FY-WA5",
+        "note": "純印刷代碼合併；任一代碼均算完成。圖片為其中一個代碼的實例。",
+        "id": "sand|JA|011/053|Unlimited · B8H-BCT-GF6",
         "slot": 25,
         "page": 7,
         "pocket": 1,
-        "group": "sand"
-      },
-      {
-        "lang": "JA",
-        "set": "Miracle of the Desert",
-        "number": "011/053",
-        "variant": "1st Edition · B8H-BCT-GF6",
-        "status": "listed",
-        "note": "",
-        "id": "sand|JA|011/053|1st Edition · B8H-BCT-GF6",
-        "slot": 26,
-        "page": 7,
-        "pocket": 2,
-        "group": "sand"
-      },
-      {
-        "lang": "JA",
-        "set": "Miracle of the Desert",
-        "number": "011/053",
-        "variant": "Unlimited · B8H-BCT-GF6",
-        "status": "listed",
-        "note": "",
-        "id": "sand|JA|011/053|Unlimited · B8H-BCT-GF6",
-        "slot": 27,
-        "page": 7,
-        "pocket": 3,
-        "group": "sand"
-      },
-      {
-        "lang": "JA",
-        "set": "Miracle of the Desert",
-        "number": "011/053",
-        "variant": "1st Edition · B8H-BCT-B0P",
-        "status": "listed",
-        "note": "",
-        "id": "sand|JA|011/053|1st Edition · B8H-BCT-B0P",
-        "slot": 28,
-        "page": 7,
-        "pocket": 4,
-        "group": "sand"
-      },
-      {
-        "lang": "JA",
-        "set": "Miracle of the Desert",
-        "number": "011/053",
-        "variant": "Unlimited · B8H-BCT-B0P",
-        "status": "listed",
-        "note": "",
-        "id": "sand|JA|011/053|Unlimited · B8H-BCT-B0P",
-        "slot": 29,
-        "page": 8,
-        "pocket": 1,
-        "group": "sand"
-      },
-      {
-        "lang": "JA",
-        "set": "Miracle of the Desert",
-        "number": "011/053",
-        "variant": "1st Edition · B8H-BCT-FB5",
-        "status": "listed",
-        "note": "",
-        "id": "sand|JA|011/053|1st Edition · B8H-BCT-FB5",
-        "slot": 30,
-        "page": 8,
-        "pocket": 2,
-        "group": "sand"
-      },
-      {
-        "lang": "JA",
-        "set": "Miracle of the Desert",
-        "number": "011/053",
-        "variant": "Unlimited · B8H-BCT-FB5",
-        "status": "listed",
-        "note": "",
-        "id": "sand|JA|011/053|Unlimited · B8H-BCT-FB5",
-        "slot": 31,
-        "page": 8,
-        "pocket": 3,
-        "group": "sand"
-      },
-      {
-        "lang": "JA",
-        "set": "Miracle of the Desert",
-        "number": "011/053",
-        "variant": "1st Edition · B8H-BCT-N3X",
-        "status": "listed",
-        "note": "",
-        "id": "sand|JA|011/053|1st Edition · B8H-BCT-N3X",
-        "slot": 32,
-        "page": 8,
-        "pocket": 4,
-        "group": "sand"
-      },
-      {
-        "lang": "JA",
-        "set": "Miracle of the Desert",
-        "number": "011/053",
-        "variant": "Unlimited · B8H-BCT-N3X",
-        "status": "listed",
-        "note": "",
-        "id": "sand|JA|011/053|Unlimited · B8H-BCT-N3X",
-        "slot": 33,
-        "page": 9,
-        "pocket": 1,
-        "group": "sand"
+        "group": "sand",
+        "aliases": [
+          "sand|JA|011/053|Unlimited · B8H-BCT-GF6",
+          "sand|JA|011/053|Unlimited · B8H-BCT-B0P",
+          "sand|JA|011/053|Unlimited · B8H-BCT-FB5",
+          "sand|JA|011/053|Unlimited · B8H-BCT-N3X"
+        ]
       }
     ]
   },
@@ -502,53 +481,35 @@ window.CYNDAQUIL_GROUPS = [
         "lang": "EN",
         "set": "EX Hidden Legends",
         "number": "59/101",
-        "variant": "普通 · 9JX-UHZ-2B5",
+        "variant": "普通",
         "status": "listed",
-        "note": "",
+        "note": "純印刷代碼合併；任一代碼均算完成。圖片為其中一個代碼的實例。",
         "id": "hidden|EN|59/101|普通 · 9JX-UHZ-2B5",
-        "slot": 34,
-        "page": 9,
+        "slot": 26,
+        "page": 7,
         "pocket": 2,
-        "group": "hidden"
+        "group": "hidden",
+        "aliases": [
+          "hidden|EN|59/101|普通 · 9JX-UHZ-2B5",
+          "hidden|EN|59/101|普通 · 9JX-UHZ-ENP",
+          "hidden|EN|59/101|普通 · 9JX-UHZ-U3X"
+        ]
       },
       {
         "lang": "EN",
         "set": "EX Hidden Legends",
         "number": "59/101",
-        "variant": "普通 · 9JX-UHZ-ENP",
+        "variant": "Reverse",
         "status": "listed",
-        "note": "",
-        "id": "hidden|EN|59/101|普通 · 9JX-UHZ-ENP",
-        "slot": 35,
-        "page": 9,
-        "pocket": 3,
-        "group": "hidden"
-      },
-      {
-        "lang": "EN",
-        "set": "EX Hidden Legends",
-        "number": "59/101",
-        "variant": "普通 · 9JX-UHZ-U3X",
-        "status": "listed",
-        "note": "",
-        "id": "hidden|EN|59/101|普通 · 9JX-UHZ-U3X",
-        "slot": 36,
-        "page": 9,
-        "pocket": 4,
-        "group": "hidden"
-      },
-      {
-        "lang": "EN",
-        "set": "EX Hidden Legends",
-        "number": "59/101",
-        "variant": "Reverse · 9JX-UHZ-4QG",
-        "status": "listed",
-        "note": "",
+        "note": "純印刷代碼合併；任一代碼均算完成。圖片為其中一個代碼的實例。",
         "id": "hidden|EN|59/101|Reverse · 9JX-UHZ-4QG",
-        "slot": 37,
-        "page": 10,
-        "pocket": 1,
-        "group": "hidden"
+        "slot": 27,
+        "page": 7,
+        "pocket": 3,
+        "group": "hidden",
+        "aliases": [
+          "hidden|EN|59/101|Reverse · 9JX-UHZ-4QG"
+        ]
       },
       {
         "lang": "JA",
@@ -558,10 +519,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "hidden|JA|029/PCG-P|McDonald's Promo · Holo",
-        "slot": 38,
-        "page": 10,
-        "pocket": 2,
-        "group": "hidden"
+        "slot": 28,
+        "page": 7,
+        "pocket": 4,
+        "group": "hidden",
+        "aliases": [
+          "hidden|JA|029/PCG-P|McDonald's Promo · Holo"
+        ]
       }
     ]
   },
@@ -575,53 +539,35 @@ window.CYNDAQUIL_GROUPS = [
         "lang": "EN",
         "set": "EX Unseen Forces",
         "number": "54/115",
-        "variant": "普通 · FBM-9V0-0SG",
+        "variant": "普通",
         "status": "listed",
-        "note": "",
+        "note": "純印刷代碼合併；任一代碼均算完成。圖片為其中一個代碼的實例。",
         "id": "unseen|EN|54/115|普通 · FBM-9V0-0SG",
-        "slot": 39,
-        "page": 10,
-        "pocket": 3,
-        "group": "unseen"
-      },
-      {
-        "lang": "EN",
-        "set": "EX Unseen Forces",
-        "number": "54/115",
-        "variant": "普通 · FBM-9V0-J3X",
-        "status": "listed",
-        "note": "",
-        "id": "unseen|EN|54/115|普通 · FBM-9V0-J3X",
-        "slot": 40,
-        "page": 10,
-        "pocket": 4,
-        "group": "unseen"
-      },
-      {
-        "lang": "EN",
-        "set": "EX Unseen Forces",
-        "number": "54/115",
-        "variant": "普通 · FBM-9V0-STD",
-        "status": "listed",
-        "note": "",
-        "id": "unseen|EN|54/115|普通 · FBM-9V0-STD",
-        "slot": 41,
-        "page": 11,
+        "slot": 29,
+        "page": 8,
         "pocket": 1,
-        "group": "unseen"
+        "group": "unseen",
+        "aliases": [
+          "unseen|EN|54/115|普通 · FBM-9V0-0SG",
+          "unseen|EN|54/115|普通 · FBM-9V0-J3X",
+          "unseen|EN|54/115|普通 · FBM-9V0-STD"
+        ]
       },
       {
         "lang": "EN",
         "set": "EX Unseen Forces",
         "number": "54/115",
-        "variant": "系列印章 Reverse · FBM-9V0-6PY",
+        "variant": "系列印章 Reverse",
         "status": "listed",
-        "note": "",
+        "note": "純印刷代碼合併；任一代碼均算完成。圖片為其中一個代碼的實例。",
         "id": "unseen|EN|54/115|系列印章 Reverse · FBM-9V0-6PY",
-        "slot": 42,
-        "page": 11,
+        "slot": 30,
+        "page": 8,
         "pocket": 2,
-        "group": "unseen"
+        "group": "unseen",
+        "aliases": [
+          "unseen|EN|54/115|系列印章 Reverse · FBM-9V0-6PY"
+        ]
       },
       {
         "lang": "JA",
@@ -631,10 +577,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "unseen|JA|001/016|1st Edition",
-        "slot": 43,
-        "page": 11,
+        "slot": 31,
+        "page": 8,
         "pocket": 3,
-        "group": "unseen"
+        "group": "unseen",
+        "aliases": [
+          "unseen|JA|001/016|1st Edition"
+        ]
       },
       {
         "lang": "JA",
@@ -644,10 +593,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "unseen|JA|001/016|Unlimited",
-        "slot": 44,
-        "page": 11,
+        "slot": 32,
+        "page": 8,
         "pocket": 4,
-        "group": "unseen"
+        "group": "unseen",
+        "aliases": [
+          "unseen|JA|001/016|Unlimited"
+        ]
       }
     ]
   },
@@ -665,10 +617,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "delta|EN|45/101|普通",
-        "slot": 45,
-        "page": 12,
+        "slot": 33,
+        "page": 9,
         "pocket": 1,
-        "group": "delta"
+        "group": "delta",
+        "aliases": [
+          "delta|EN|45/101|普通"
+        ]
       },
       {
         "lang": "EN",
@@ -678,10 +633,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "delta|EN|45/101|系列印章 Reverse",
-        "slot": 46,
-        "page": 12,
+        "slot": 34,
+        "page": 9,
         "pocket": 2,
-        "group": "delta"
+        "group": "delta",
+        "aliases": [
+          "delta|EN|45/101|系列印章 Reverse"
+        ]
       },
       {
         "lang": "JA",
@@ -691,10 +649,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "delta|JA|032/068|1st Edition",
-        "slot": 47,
-        "page": 12,
+        "slot": 35,
+        "page": 9,
         "pocket": 3,
-        "group": "delta"
+        "group": "delta",
+        "aliases": [
+          "delta|JA|032/068|1st Edition"
+        ]
       },
       {
         "lang": "JA",
@@ -704,10 +665,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "delta|JA|032/068|Unlimited",
-        "slot": 48,
-        "page": 12,
+        "slot": 36,
+        "page": 9,
         "pocket": 4,
-        "group": "delta"
+        "group": "delta",
+        "aliases": [
+          "delta|JA|032/068|Unlimited"
+        ]
       }
     ]
   },
@@ -725,10 +689,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "treasures|EN|79/123|普通",
-        "slot": 49,
-        "page": 13,
+        "slot": 37,
+        "page": 10,
         "pocket": 1,
-        "group": "treasures"
+        "group": "treasures",
+        "aliases": [
+          "treasures|EN|79/123|普通"
+        ]
       },
       {
         "lang": "EN",
@@ -738,10 +705,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "treasures|EN|79/123|Reverse Holo",
-        "slot": 50,
-        "page": 13,
+        "slot": 38,
+        "page": 10,
         "pocket": 2,
-        "group": "treasures"
+        "group": "treasures",
+        "aliases": [
+          "treasures|EN|79/123|Reverse Holo"
+        ]
       },
       {
         "lang": "JA",
@@ -751,10 +721,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "日版卡面使用 DPBP 編號；舊 ID 保留以維持收藏記錄。",
         "id": "treasures|JA|023/080|1st Edition",
-        "slot": 51,
-        "page": 13,
+        "slot": 39,
+        "page": 10,
         "pocket": 3,
-        "group": "treasures"
+        "group": "treasures",
+        "aliases": [
+          "treasures|JA|023/080|1st Edition"
+        ]
       },
       {
         "lang": "JA",
@@ -764,10 +737,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "日版卡面使用 DPBP 編號；舊 ID 保留以維持收藏記錄。",
         "id": "treasures|JA|023/080|Unlimited",
-        "slot": 52,
-        "page": 13,
+        "slot": 40,
+        "page": 10,
         "pocket": 4,
-        "group": "treasures"
+        "group": "treasures",
+        "aliases": [
+          "treasures|JA|023/080|Unlimited"
+        ]
       }
     ]
   },
@@ -785,10 +761,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "movie|JA|004/022|電影版 Cyndaquil M",
-        "slot": 53,
-        "page": 14,
+        "slot": 41,
+        "page": 11,
         "pocket": 1,
-        "group": "movie"
+        "group": "movie",
+        "aliases": [
+          "movie|JA|004/022|電影版 Cyndaquil M"
+        ]
       }
     ]
   },
@@ -806,10 +785,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "hgss|EN|61/123|普通",
-        "slot": 54,
-        "page": 14,
+        "slot": 42,
+        "page": 11,
         "pocket": 2,
-        "group": "hgss"
+        "group": "hgss",
+        "aliases": [
+          "hgss|EN|61/123|普通"
+        ]
       },
       {
         "lang": "EN",
@@ -819,10 +801,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "hgss|EN|61/123|Reverse Holo",
-        "slot": 55,
-        "page": 14,
+        "slot": 43,
+        "page": 11,
         "pocket": 3,
-        "group": "hgss"
+        "group": "hgss",
+        "aliases": [
+          "hgss|EN|61/123|Reverse Holo"
+        ]
       },
       {
         "lang": "EN",
@@ -832,10 +817,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "實拍圖上的 NOT TOURNAMENT LEGAL 黑色斜帶是賣家水印，並非卡面原有文字。此版本重點為銀框、選手簽名及世界賽卡背。",
         "id": "hgss|EN|61/123|簽名複製版／特殊卡背",
-        "slot": 56,
-        "page": 14,
+        "slot": 44,
+        "page": 11,
         "pocket": 4,
-        "group": "hgss"
+        "group": "hgss",
+        "aliases": [
+          "hgss|EN|61/123|簽名複製版／特殊卡背"
+        ]
       },
       {
         "lang": "JA",
@@ -845,10 +833,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "hgss|JA|014/070|1st Edition · 普通",
-        "slot": 57,
-        "page": 15,
+        "slot": 45,
+        "page": 12,
         "pocket": 1,
-        "group": "hgss"
+        "group": "hgss",
+        "aliases": [
+          "hgss|JA|014/070|1st Edition · 普通"
+        ]
       },
       {
         "lang": "JA",
@@ -858,10 +849,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "hgss|JA|014/070|Unlimited · 普通",
-        "slot": 58,
-        "page": 15,
+        "slot": 46,
+        "page": 12,
         "pocket": 2,
-        "group": "hgss"
+        "group": "hgss",
+        "aliases": [
+          "hgss|JA|014/070|Unlimited · 普通"
+        ]
       },
       {
         "lang": "JA",
@@ -871,10 +865,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "hgss|JA|014/070|1st Edition · Mirror",
-        "slot": 59,
-        "page": 15,
+        "slot": 47,
+        "page": 12,
         "pocket": 3,
-        "group": "hgss"
+        "group": "hgss",
+        "aliases": [
+          "hgss|JA|014/070|1st Edition · Mirror"
+        ]
       },
       {
         "lang": "JA",
@@ -884,10 +881,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "hgss|JA|035/L-P|Pokémon Center 印章",
-        "slot": 60,
-        "page": 15,
+        "slot": 48,
+        "page": 12,
         "pocket": 4,
-        "group": "hgss"
+        "group": "hgss",
+        "aliases": [
+          "hgss|JA|035/L-P|Pokémon Center 印章"
+        ]
       }
     ]
   },
@@ -905,10 +905,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "col|EN|55/95|普通",
-        "slot": 61,
-        "page": 16,
+        "slot": 49,
+        "page": 13,
         "pocket": 1,
-        "group": "col"
+        "group": "col",
+        "aliases": [
+          "col|EN|55/95|普通"
+        ]
       },
       {
         "lang": "EN",
@@ -918,10 +921,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "col|EN|55/95|Reverse Holo",
-        "slot": 62,
-        "page": 16,
+        "slot": 50,
+        "page": 13,
         "pocket": 2,
-        "group": "col"
+        "group": "col",
+        "aliases": [
+          "col|EN|55/95|Reverse Holo"
+        ]
       },
       {
         "lang": "JA",
@@ -931,10 +937,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "col|JA|006/L-P|購買 HGSS 擴充包贈卡",
-        "slot": 63,
-        "page": 16,
+        "slot": 51,
+        "page": 13,
         "pocket": 3,
-        "group": "col"
+        "group": "col",
+        "aliases": [
+          "col|JA|006/L-P|購買 HGSS 擴充包贈卡"
+        ]
       }
     ]
   },
@@ -952,10 +961,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "break|EN|18/162|普通",
-        "slot": 64,
-        "page": 16,
+        "slot": 52,
+        "page": 13,
         "pocket": 4,
-        "group": "break"
+        "group": "break",
+        "aliases": [
+          "break|EN|18/162|普通"
+        ]
       },
       {
         "lang": "EN",
@@ -965,10 +977,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "break|EN|18/162|Reverse Holo",
-        "slot": 65,
-        "page": 17,
+        "slot": 53,
+        "page": 14,
         "pocket": 1,
-        "group": "break"
+        "group": "break",
+        "aliases": [
+          "break|EN|18/162|Reverse Holo"
+        ]
       },
       {
         "lang": "JA",
@@ -978,10 +993,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "break|JA|009/059|1st Edition",
-        "slot": 66,
-        "page": 17,
+        "slot": 54,
+        "page": 14,
         "pocket": 2,
-        "group": "break"
+        "group": "break",
+        "aliases": [
+          "break|JA|009/059|1st Edition"
+        ]
       },
       {
         "lang": "JA",
@@ -991,10 +1009,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "break|JA|009/059|Unlimited",
-        "slot": 67,
-        "page": 17,
+        "slot": 55,
+        "page": 14,
         "pocket": 3,
-        "group": "break"
+        "group": "break",
+        "aliases": [
+          "break|JA|009/059|Unlimited"
+        ]
       },
       {
         "lang": "JA",
@@ -1004,10 +1025,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "break|JA|223/XY-P|Pokémon Center 印章 · Holo",
-        "slot": 68,
-        "page": 17,
+        "slot": 56,
+        "page": 14,
         "pocket": 4,
-        "group": "break"
+        "group": "break",
+        "aliases": [
+          "break|JA|223/XY-P|Pokémon Center 印章 · Holo"
+        ]
       }
     ]
   },
@@ -1025,10 +1049,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "lost39|EN|39/214|普通",
-        "slot": 69,
-        "page": 18,
+        "slot": 57,
+        "page": 15,
         "pocket": 1,
-        "group": "lost39"
+        "group": "lost39",
+        "aliases": [
+          "lost39|EN|39/214|普通"
+        ]
       },
       {
         "lang": "EN",
@@ -1038,10 +1065,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "lost39|EN|39/214|Reverse Holo",
-        "slot": 70,
-        "page": 18,
+        "slot": 58,
+        "page": 15,
         "pocket": 2,
-        "group": "lost39"
+        "group": "lost39",
+        "aliases": [
+          "lost39|EN|39/214|Reverse Holo"
+        ]
       },
       {
         "lang": "JA",
@@ -1051,10 +1081,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "lost39|JA|016/095|普通",
-        "slot": 71,
-        "page": 18,
+        "slot": 59,
+        "page": 15,
         "pocket": 3,
-        "group": "lost39"
+        "group": "lost39",
+        "aliases": [
+          "lost39|JA|016/095|普通"
+        ]
       }
     ]
   },
@@ -1072,10 +1105,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "lost40|EN|40/214|普通",
-        "slot": 72,
-        "page": 18,
+        "slot": 60,
+        "page": 15,
         "pocket": 4,
-        "group": "lost40"
+        "group": "lost40",
+        "aliases": [
+          "lost40|EN|40/214|普通"
+        ]
       },
       {
         "lang": "EN",
@@ -1085,10 +1121,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "lost40|EN|40/214|Reverse Holo",
-        "slot": 73,
-        "page": 19,
+        "slot": 61,
+        "page": 16,
         "pocket": 1,
-        "group": "lost40"
+        "group": "lost40",
+        "aliases": [
+          "lost40|EN|40/214|Reverse Holo"
+        ]
       },
       {
         "lang": "JA",
@@ -1098,10 +1137,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "lost40|JA|017/095|普通",
-        "slot": 74,
-        "page": 19,
+        "slot": 62,
+        "page": 16,
         "pocket": 2,
-        "group": "lost40"
+        "group": "lost40",
+        "aliases": [
+          "lost40|JA|017/095|普通"
+        ]
       },
       {
         "lang": "EN",
@@ -1111,10 +1153,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "lost40|EN|010/025|普通",
-        "slot": 75,
-        "page": 19,
+        "slot": 63,
+        "page": 16,
         "pocket": 3,
-        "group": "lost40"
+        "group": "lost40",
+        "aliases": [
+          "lost40|EN|010/025|普通"
+        ]
       },
       {
         "lang": "EN",
@@ -1124,10 +1169,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "lost40|EN|010/025|McDonald's Holo",
-        "slot": 76,
-        "page": 19,
+        "slot": 64,
+        "page": 16,
         "pocket": 4,
-        "group": "lost40"
+        "group": "lost40",
+        "aliases": [
+          "lost40|EN|010/025|McDonald's Holo"
+        ]
       }
     ]
   },
@@ -1145,10 +1193,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "promo2022|EN|SWSH221|Mirror / Sheen Holo",
-        "slot": 77,
-        "page": 20,
+        "slot": 65,
+        "page": 17,
         "pocket": 1,
-        "group": "promo2022"
+        "group": "promo2022",
+        "aliases": [
+          "promo2022|EN|SWSH221|Mirror / Sheen Holo"
+        ]
       },
       {
         "lang": "EN",
@@ -1158,10 +1209,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "promo2022|EN|SWSH221|Cosmos Holo",
-        "slot": 78,
-        "page": 20,
+        "slot": 66,
+        "page": 17,
         "pocket": 2,
-        "group": "promo2022"
+        "group": "promo2022",
+        "aliases": [
+          "promo2022|EN|SWSH221|Cosmos Holo"
+        ]
       },
       {
         "lang": "JA",
@@ -1171,10 +1225,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "promo2022|JA|275/S-P|普通",
-        "slot": 79,
-        "page": 20,
+        "slot": 67,
+        "page": 17,
         "pocket": 3,
-        "group": "promo2022"
+        "group": "promo2022",
+        "aliases": [
+          "promo2022|JA|275/S-P|普通"
+        ]
       }
     ]
   },
@@ -1192,10 +1249,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "astral|EN|023/189|普通",
-        "slot": 80,
-        "page": 20,
+        "slot": 68,
+        "page": 17,
         "pocket": 4,
-        "group": "astral"
+        "group": "astral",
+        "aliases": [
+          "astral|EN|023/189|普通"
+        ]
       },
       {
         "lang": "EN",
@@ -1205,10 +1265,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "astral|EN|023/189|Reverse Holo",
-        "slot": 81,
-        "page": 21,
+        "slot": 69,
+        "page": 18,
         "pocket": 1,
-        "group": "astral"
+        "group": "astral",
+        "aliases": [
+          "astral|EN|023/189|Reverse Holo"
+        ]
       },
       {
         "lang": "JA",
@@ -1218,10 +1281,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "astral|JA|009/067|普通",
-        "slot": 82,
-        "page": 21,
+        "slot": 70,
+        "page": 18,
         "pocket": 2,
-        "group": "astral"
+        "group": "astral",
+        "aliases": [
+          "astral|JA|009/067|普通"
+        ]
       }
     ]
   },
@@ -1239,10 +1305,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "ethan|EN|032/182|普通",
-        "slot": 83,
-        "page": 21,
+        "slot": 71,
+        "page": 18,
         "pocket": 3,
-        "group": "ethan"
+        "group": "ethan",
+        "aliases": [
+          "ethan|EN|032/182|普通"
+        ]
       },
       {
         "lang": "EN",
@@ -1252,10 +1321,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "ethan|EN|032/182|Reverse Holo",
-        "slot": 84,
-        "page": 21,
+        "slot": 72,
+        "page": 18,
         "pocket": 4,
-        "group": "ethan"
+        "group": "ethan",
+        "aliases": [
+          "ethan|EN|032/182|Reverse Holo"
+        ]
       },
       {
         "lang": "JA",
@@ -1265,10 +1337,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "ethan|JA|015/063|普通",
-        "slot": 85,
-        "page": 22,
+        "slot": 73,
+        "page": 19,
         "pocket": 1,
-        "group": "ethan"
+        "group": "ethan",
+        "aliases": [
+          "ethan|JA|015/063|普通"
+        ]
       }
     ]
   },
@@ -1286,10 +1361,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "anniversary|EN|MEP047|30th Promo · Holo",
-        "slot": 86,
-        "page": 22,
+        "slot": 74,
+        "page": 19,
         "pocket": 2,
-        "group": "anniversary"
+        "group": "anniversary",
+        "aliases": [
+          "anniversary|EN|MEP047|30th Promo · Holo"
+        ]
       },
       {
         "lang": "JA",
@@ -1299,10 +1377,13 @@ window.CYNDAQUIL_GROUPS = [
         "status": "listed",
         "note": "",
         "id": "anniversary|JA|105/M-P|30th Promo · Holo",
-        "slot": 87,
-        "page": 22,
+        "slot": 75,
+        "page": 19,
         "pocket": 3,
-        "group": "anniversary"
+        "group": "anniversary",
+        "aliases": [
+          "anniversary|JA|105/M-P|30th Promo · Holo"
+        ]
       }
     ]
   }
