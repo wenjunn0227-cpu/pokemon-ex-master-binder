@@ -195,4 +195,4 @@ document.getElementById('next').onclick=()=>{const p=viewPages();state.page=(sta
 document.getElementById('search').oninput=e=>{state.query=e.target.value.trim();state.page=0;render();};
 document.getElementById('jumpForm').onsubmit=e=>{e.preventDefault();const p=Number(document.getElementById('jumpPage').value);if(!Number.isInteger(p)||p<1||p>60)return;clearSearch();state.mode='binder';state.page=p-1;render();};
 render();
-</script></body></html>
+</script><script src="transfer-progress.js?v=20261109"></script></body></html>
